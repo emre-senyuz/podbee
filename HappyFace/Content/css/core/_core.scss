@@ -1,0 +1,213 @@
+﻿@font-face {
+    font-family: 'Montserrat';
+    src: url('/Content/fonts/montserrat/montserrat-light-webfont.woff2') format('woff2'), url('/Content/fonts/montserrat/montserrat-light-webfont.woff') format('woff'), url('/Content/fonts/montserrat/montserrat-light-webfont.svg#montserratlight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/Content/fonts/montserrat/montserrat-regular-webfont.woff2') format('woff2'), url('/Content/fonts/montserrat/montserrat-regular-webfont.woff') format('woff'), url('/Content/fonts/montserrat/montserrat-regular-webfont.svg#montserratregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/Content/fonts/montserrat/montserrat-medium-webfont.woff2') format('woff2'), url('/Content/fonts/montserrat/montserrat-medium-webfont.woff') format('woff'), url('/Content/fonts/montserrat/montserrat-medium-webfont.svg#montserratmedium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/Content/fonts/montserrat/montserrat-semibold-webfont.woff2') format('woff2'), url('/Content/fonts/montserrat/montserrat-semibold-webfont.woff') format('woff'), url('/Content/fonts/montserrat/montserrat-semibold-webfont.svg#montserratsemibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/Content/fonts/montserrat/montserrat-bold-webfont.woff2') format('woff2'), url('/Content/fonts/montserrat/montserrat-bold-webfont.woff') format('woff'), url('/Content/fonts/montserrat/montserrat-bold-webfont.svg#montserratbold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    @media (min-width: 992px) {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    z-index: 1;
+
+    &.loader {
+        overflow: hidden;
+    }
+}
+
+* {
+    outline: none !important;
+
+    &:hover,
+    &:focus {
+        outline: none !important;
+        box-shadow: unset !important;
+    }
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    flex-grow: 1;
+    padding-top: 50px;
+}
+
+.notifies {
+    &.position-fixed {
+        top: 0;
+        right: 0;
+        z-index: 1040;
+    }
+
+    .alert {
+        font-size: 12px;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .25s;
+
+        &.show {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+.drop-down {
+    .drop-down-menu {
+        top: 100%;
+        min-width: 250px;
+
+        &:not(.right) {
+            left: 0;
+        }
+
+        &.right {
+            right: 0;
+        }
+    }
+}
+
+@-webkit-keyframes spinner {
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinner {
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes show-loader {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes show-loader {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes hide-loader {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes hide-loader {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.loading {
+    height: 100%;
+    background: rgba(0, 0, 0, 0.70);
+    -webkit-animation: show-loader .25s;
+    animation: show-loader .25s;
+
+    &.hide {
+        -webkit-animation: hide-loader .25s;
+        animation: hide-loader .25s;
+    }
+
+    span {
+        top: 50%;
+        left: 50%;
+        width: 40px;
+        height: 40px;
+        background: $white;
+        border-radius: 3px;
+        transform: translate(-50%, -50%);
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 24px;
+            height: 24px;
+            border: 2px solid #d8d9e2;
+            border-top-color: #222433;
+            border-radius: 50%;
+            margin-top: -12px;
+            margin-left: -12px;
+            box-sizing: border-box;
+            -webkit-animation: spinner .5s linear infinite;
+            animation: spinner .5s linear infinite;
+        }
+    }
+}

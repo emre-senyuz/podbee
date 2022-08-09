@@ -1,0 +1,16 @@
+﻿header {
+    height: 50px;
+    z-index: 2;
+
+    .drop-down-toggle {
+        height: 50px;
+
+        &.js-active {
+            background: $gray-200;
+        }
+    }
+
+    .drop-down-menu {
+        background: $gray-200;
+    }
+}

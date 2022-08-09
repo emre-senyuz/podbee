@@ -1,0 +1,15 @@
+﻿@model List<Language>
+<div class="position-relative drop-down">
+    <button class="btn drop-down-toggle border-0 rounded-0" type="button" data-js="drop-down-toggle" data-target="language-menu">
+        @Html.SvgIcon("ui-globe", new { role = "img", title = LanguageHelper.GetValue("LanguageSelection"), width = "20", height = "20" })
+    </button>
+    <ul class="position-absolute drop-down-menu right p-3 d-none" data-js="drop-down-menu" data-id="language-menu">
+        @foreach (var language in Model)
+        {
+            string classes = language.Prefix == LanguageHelper.CurrentLanguage ? "dropdown-item active" : "dropdown-item";
+            <li>
+                <button class="@classes" type="button" data-prefix="@language.Prefix">@language.Title</button>
+            </li>
+        }
+    </ul>
+</div>

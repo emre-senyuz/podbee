@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html dir="@LanguageHelper.CurrentDirection" lang="@LanguageHelper.CurrentLanguage" xml:lang="@LanguageHelper.CurrentLanguage" xmlns="http://www.w3.org/1999/xhtml" class="w-100">
+<head>
+    <title>@ViewBag.Title</title>
+    <meta charset="UTF-8">
+    <meta name="title" content="@ViewBag.Title" />
+    <meta name="description" content="@ViewBag.Description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="docsearch:language" content="@LanguageHelper.CurrentLanguage">
+    <meta name="docsearch:version" content="1.0">
+    @if (IsSectionDefined("metatags"))
+    {
+        @RenderSection("metatags", required: false)
+    }
+    else
+    {
+        @Html.Partial(SiteVariables.GetValue("MetaTagsView"))
+    }
+    @Html.Partial(SiteVariables.GetValue("CanonicalView"))
+    @Html.Partial(SiteVariables.GetValue("JsVariablesView"))
+    @Html.Partial(SiteVariables.GetValue("PreloadsView"))
+    @RenderSection("preloads", required: false)
+    @RenderSection("critical", required: false)
+    @Html.Partial(SiteVariables.GetValue("StylesView"))
+</head>
+<body class="w-100 d-flex flex-column">
+    @Html.Action("Header", "Layout")
+    @Html.Action("Sidebar", "Layout")
+    <main class="main">
+        <div class="container-fluid">
+            @RenderBody()
+        </div>
+    </main>
+    @Html.Action("Footer", "Layout")
+    <div class="d-none assets">
+        <div data-js="javascripts">
+            @Html.Partial(SiteVariables.GetValue("JavaScriptsView"))
+            @RenderSection("scripts", required: false)
+        </div>
+    </div>
+    <div class="position-fixed pt-3 px-3 notifies" data-js="notifies"></div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = LanguageHelper.GetValue("PageLoginTitle");
+    string ReturnUrl = Request.QueryString["ReturnUrl"];
+}
+<div class="row row--grid">
+    <!-- breadcrumb -->
+    <div class="col-12">
+        <ul class="breadcrumb">
+            <li class="breadcrumb__item"><a href="@(LanguageHelper.CurrentLanguage == LanguageHelper.DefaultLanguage ? "/" : "/" + LanguageHelper.CurrentLanguage)">@LanguageHelper.GetValue("HomePage")</a></li>
+            <li class="breadcrumb__item breadcrumb__item--active">@LanguageHelper.GetValue("PageLoginTitle")</li>
+        </ul>
+    </div>
+    <!-- end breadcrumb -->
+    <!-- sign in -->
+    <div class="col-12">
+        <div class="sign">
+            <div class="sign__content">
+                <!-- authorization form -->
+                <form action="/member/login" class="sign__form" data-js="login-form" method="post">
+                    @Html.AntiForgeryToken()
+                    @if (!string.IsNullOrEmpty(ReturnUrl))
+                    {
+                        @Html.Hidden("ReturnUrl", ReturnUrl);
+                    }
+                    <a href="index.html" class="sign__logo">
+                        <img src="/Content/img/logo.png" alt="">
+                    </a>
+                    @if (!String.IsNullOrEmpty(ViewBag.Message))
+                    {
+                        <p>@ViewBag.Message</p>
+                    }
+
+                    <div class="w-100" data-js="login-message"></div>
+
+                    <div class="sign__group">
+                        <input type="text" class="sign__input" name="Email" id="Email" placeholder="@LanguageHelper.GetValue("FormEmail")">
+                    </div>
+
+                    <div class="sign__group">
+                        <input type="password" class="sign__input" name="Password" id="Password" placeholder="@LanguageHelper.GetValue("FormPassword")">
+                    </div>
+
+                    <div class="sign__group sign__group--checkbox">
+                        @Html.CheckBox("Remember", new { @class = "form-check-input" })
+                        <label class="form-check-label" for="Remember">@LanguageHelper.GetValue("FormRemember")</label>
+                    </div>
+
+                    <button class="sign__btn" type="button" data-js="button-login">@LanguageHelper.GetValue("ButtonLogin")</button>
+
+                    <span class="sign__text"><a href="@LanguageMethods.GetLanguageUrl("UrlTypeMember", LanguageHelper.GetValue("UrlTypeRegister"))">@LanguageHelper.GetValue("LinkRegister")!</a></span>
+
+                    <span class="sign__text"><a href="@LanguageMethods.GetLanguageUrl("UrlTypeMember", LanguageHelper.GetValue("UrlTypeForgetPassword"))">@LanguageHelper.GetValue("LinkForgetPassword")</a></span>
+                </form>
+                <!-- end authorization form -->
+            </div>
+        </div>
+    </div>
+    <!-- end sign in -->
+</div>
+@section preloads{
+    @if (SiteVariables.GetState("Production") == "true")
+    {
+        <link rel="preload" href="@Url.Content("~/Public/js/login.min.js")" as="script">
+    }
+    else
+    {
+        <link rel="preload" href="@Url.Content("~/Scripts/views/Member/Login.js")" as="script">
+    }
+}
+@section scripts{
+    @if (SiteVariables.GetState("Production") == "true")
+    {
+        <script defer async src="@Url.Content("~/Public/js/login.min.js")" type="text/javascript"></script>
+    }
+    else
+    {
+        <script defer async src="@Url.Content("~/Scripts/views/Member/Login.js")" type="text/javascript"></script>
+    }
+}

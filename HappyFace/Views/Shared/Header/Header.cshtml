@@ -1,0 +1,73 @@
+﻿@model HeaderModel
+<header class="header">
+    <div class="header__content">
+        <div class="header__logo">
+            <a href="@(LanguageHelper.CurrentLanguage == LanguageHelper.DefaultLanguage ? "/" : "/" + LanguageHelper.CurrentLanguage)">
+                <img src="/Content/img/logo.png" alt="">
+            </a>
+        </div>
+
+        <nav class="header__nav">
+            <a href="@(LanguageHelper.CurrentLanguage == LanguageHelper.DefaultLanguage ? "/" : "/" + LanguageHelper.CurrentLanguage)">@LanguageHelper.GetValue("HomePage")</a>
+            @if (Model.RoleID != 0)
+            {
+                <a href="/@LanguageHelper.GetValue("UrlTypeMember")/@LanguageHelper.GetValue("UrlTypeProfile")">@LanguageHelper.GetValue("PageProfileTitle")</a>
+            }
+            <a href="/@LanguageHelper.GetValue("UrlTypeAds")">@LanguageHelper.GetValue("PageAdsTitle")</a>
+            <a href="/@LanguageHelper.GetValue("UrlTypeAboutUs")">@LanguageHelper.GetValue("PageAboutUsTitle")</a>
+            <a href="/@LanguageHelper.GetValue("UrlTypeFaq")">@LanguageHelper.GetValue("PageFaqTitleShort")</a>
+            <a href="/@LanguageHelper.GetValue("UrlTypeContactUs")">@LanguageHelper.GetValue("PageContactUsTitle")</a>
+        </nav>
+
+        <form action="/podcast" class="header__search">
+            <input type="text" name="search" placeholder="Podcast">
+            <button type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.71,20.29,18,16.61A9,9,0,1,0,16.61,18l3.68,3.68a1,1,0,0,0,1.42,0A1,1,0,0,0,21.71,20.29ZM11,18a7,7,0,1,1,7-7A7,7,0,0,1,11,18Z" /></svg></button>
+            <button type="button" class="close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.41,12l6.3-6.29a1,1,0,1,0-1.42-1.42L12,10.59,5.71,4.29A1,1,0,0,0,4.29,5.71L10.59,12l-6.3,6.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l6.29,6.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z" /></svg></button>
+        </form>
+
+        <div class="header__actions">
+            <div class="header__action header__action--search">
+                <button class="header__action-btn" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.71,20.29,18,16.61A9,9,0,1,0,16.61,18l3.68,3.68a1,1,0,0,0,1.42,0A1,1,0,0,0,21.71,20.29ZM11,18a7,7,0,1,1,7-7A7,7,0,0,1,11,18Z" /></svg></button>
+            </div>
+
+            <div class="header__action">
+                <a class="header__action-btn" href="javascript:void(0);" data-js="set-language" data-prefix="@(LanguageHelper.CurrentLanguage == "tr" ? "en" : "tr")">
+                    <span class="mobile-visible">@Html.Raw(LanguageHelper.CurrentLanguage == "tr" ? "EN" : "TR")</span>
+                </a>
+            </div>
+
+            @if (Model.RoleID == 0)
+            {
+                <div class="header__action header__action--signin">
+                    <a class="header__action-btn" href="/@LanguageHelper.GetValue("UrlTypeMember")/@LanguageHelper.GetValue("UrlTypeLogin")">
+                        <span>@LanguageHelper.GetValue("LinkLogin")</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,12a1,1,0,0,0-1-1H11.41l2.3-2.29a1,1,0,1,0-1.42-1.42l-4,4a1,1,0,0,0-.21.33,1,1,0,0,0,0,.76,1,1,0,0,0,.21.33l4,4a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42L11.41,13H19A1,1,0,0,0,20,12ZM17,2H7A3,3,0,0,0,4,5V19a3,3,0,0,0,3,3H17a3,3,0,0,0,3-3V16a1,1,0,0,0-2,0v3a1,1,0,0,1-1,1H7a1,1,0,0,1-1-1V5A1,1,0,0,1,7,4H17a1,1,0,0,1,1,1V8a1,1,0,0,0,2,0V5A3,3,0,0,0,17,2Z" /></svg>
+                    </a>
+                </div>
+            }
+            else
+            {
+                <div class="header__action header__action--signin">
+                    <a class="header__action-btn" href="/@LanguageHelper.GetValue("UrlTypeMember")/@LanguageHelper.GetValue("UrlTypeLogin")">
+                        <span>@Model.UserName</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.81,12.28a3.73,3.73,0,0,0,1-2.5,3.78,3.78,0,0,0-7.56,0,3.73,3.73,0,0,0,1,2.5A5.94,5.94,0,0,0,6,16.89a1,1,0,0,0,2,.22,4,4,0,0,1,7.94,0A1,1,0,0,0,17,18h.11a1,1,0,0,0,.88-1.1A5.94,5.94,0,0,0,14.81,12.28ZM12,11.56a1.78,1.78,0,1,1,1.78-1.78A1.78,1.78,0,0,1,12,11.56ZM19,2H5A3,3,0,0,0,2,5V19a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V5A3,3,0,0,0,19,2Zm1,17a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V5A1,1,0,0,1,5,4H19a1,1,0,0,1,1,1Z"></path></svg>
+                    </a>
+                </div>
+                if (Model.RoleID == 1 || Model.RoleID == 2)
+                {
+                    <div class="header__action">
+                        <a href="/dashboard" class="header__action-btn">
+                            @Html.SvgIcon("ui-cog", new { role = "img", title = LanguageHelper.GetValue("Settings"), width = "22", height = "22", fill = "#fff" }, "mobile-visible")
+                        </a>
+                    </div>
+                }
+            }
+        </div>
+
+        <button class="header__btn" type="button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</header>

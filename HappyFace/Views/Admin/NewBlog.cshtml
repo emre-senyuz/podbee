@@ -1,0 +1,140 @@
+﻿@model AdminBlogViewModel
+@{
+    ViewBag.Title = LanguageHelper.GetValue("AdminBlog") + " - " + LanguageHelper.GetValue("AdminAddNew");
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    var _model = Model;
+}
+<div class="kt-subheader kt-grid__item" id="kt_subheader">
+    <div class="kt-subheader__main">
+        <h3 class="kt-subheader__title">
+            @LanguageHelper.GetValue("AdminAddNew")
+        </h3>
+        <span class="kt-subheader__separator kt-hidden"></span>
+        <div class="kt-subheader__breadcrumbs">
+            <a href="/dashboard" class="kt-subheader__breadcrumbs-home"><i class="flaticon2-shelter"></i></a>
+            <span class="kt-subheader__breadcrumbs-separator"></span>
+            <a href="/blogs" class="kt-subheader__breadcrumbs-link">
+                @LanguageHelper.GetValue("AdminBlog")
+            </a>
+            <span class="kt-subheader__breadcrumbs-separator"></span>
+            <span class="kt-subheader__breadcrumbs-link">
+                @LanguageHelper.GetValue("AdminAddNew")
+            </span>
+        </div>
+    </div>
+    <div class="kt-subheader__toolbar">
+        <div class="kt-subheader__wrapper">
+            <a href="/blogs" class="btn btn-clean btn-bold btn-sm btn-icon-h kt-margin-l-10">
+                <i class="la la-long-arrow-left"></i> @LanguageHelper.GetValue("AdminBack")
+            </a>
+        </div>
+    </div>
+</div>
+<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
+    <div class="kt-portlet mb-0">
+        <div class="kt-portlet__head">
+            <div class="kt-portlet__head-label">
+                <h3 class="kt-portlet__head-title">
+                    @LanguageHelper.GetValue("AdminAddNew")
+                </h3>
+            </div>
+        </div>
+        <form action="/new-blog" method="post" class="kt-form mb-0" data-js="new-blog" enctype="multipart/form-data">
+            @Html.AntiForgeryToken()
+            <div class="kt-portlet__body">
+                <div class="form-group">
+                    <label for="Title">
+                        @LanguageHelper.GetValue("FormTitle")
+                    </label>
+                    <input type="text" class="form-control" id="Title" name="Title" data-js="title">
+                </div>
+                <div class="form-group">
+                    <label for="Description">
+                        @LanguageHelper.GetValue("FormDescription")
+                    </label>
+                    <input type="text" class="form-control" id="Description" name="Description">
+                </div>
+                <div class="form-group">
+                    <label for="Keywords">
+                        @LanguageHelper.GetValue("FormKeywords")
+                    </label>
+                    <input type="text" class="form-control" id="Keywords" name="Keywords">
+                </div>
+                <div class="form-group">
+                    <label for="Url">
+                        @LanguageHelper.GetValue("FormUrl")
+                    </label>
+                    <input type="text" class="form-control" id="Url" name="Url" data-js="url">
+                </div>
+                <div class="form-group">
+                    <label for="Content">
+                        @LanguageHelper.GetValue("FormContent")
+                    </label>
+                    <textarea class="form-control" id="Content" name="Content" data-js="Content"></textarea>
+                </div>
+                @Html.Hidden("Lang", LanguageHelper.DefaultLanguage)
+                <div class="form-group">
+                    <label for="CategoryID">
+                        @LanguageHelper.GetValue("FormCategory")
+                    </label>
+                    <div></div>
+                    <select class="custom-select form-control" id="CategoryID" name="CategoryID" data-lang="@LanguageHelper.DefaultLanguage">
+                        <option value="0" selected="selected">@LanguageHelper.GetValue("SelectCategory")</option>
+                        @foreach (var category in Model.Categories)
+                        {
+                            <option value="@category.SharedID">@category.Title</option>
+                        }
+                    </select>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="Thumbnail">
+                                @LanguageHelper.GetValue("FormThumbnail")
+                            </label>
+                            <div></div>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="Thumbnail" name="Thumbnail">
+                                <label class="custom-file-label" data-button-text="@LanguageHelper.GetValue("Browse")">@LanguageHelper.GetValue("ChooseFile")</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group mb-0">
+                            <label for="Banner">
+                                @LanguageHelper.GetValue("FormBanner")
+                            </label>
+                            <div></div>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="Banner" name="Banner">
+                                <label class="custom-file-label" data-button-text="@LanguageHelper.GetValue("Browse")">@LanguageHelper.GetValue("ChooseFile")</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row mb-0">
+                    <label class="col-3 col-form-label" for="Status">
+                        @LanguageHelper.GetValue("FormStatus")
+                    </label>
+                    <div class="col-3">
+                        <span class="kt-switch">
+                            <label>
+                                @Html.CheckBox("Status")
+                                <span></span>
+                            </label>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="kt-portlet__foot">
+                <div class="kt-form__actions">
+                    <button type="button" class="btn btn-success" data-js="add-blog">@LanguageHelper.GetValue("ButtonSave")</button>
+                    <a href="/blogs" class="btn btn-secondary">@LanguageHelper.GetValue("ButtonCancel")</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+@section scripts{
+    <script defer src="@Url.Content("~/Scripts/views/Admin/Blog.js")"></script>
+}

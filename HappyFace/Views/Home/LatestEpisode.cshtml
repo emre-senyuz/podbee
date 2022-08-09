@@ -1,0 +1,33 @@
+﻿@model List<AdminLatestPostModel>
+@{
+    ViewBag.Title = LanguageHelper.GetValue("PageLatestEpisodesTitle");
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row row--grid">
+    <!-- breadcrumb -->
+    <div class="col-12">
+        <ul class="breadcrumb">
+            <li class="breadcrumb__item"><a href="@(LanguageHelper.CurrentLanguage == LanguageHelper.DefaultLanguage ? "/" : "/" + LanguageHelper.CurrentLanguage)">@LanguageHelper.GetValue("HomePage")</a></li>
+            <li class="breadcrumb__item breadcrumb__item--active">@LanguageHelper.GetValue("PageLatestEpisodesTitle")</li>
+        </ul>
+    </div>
+    <!-- end breadcrumb -->
+    <!-- title -->
+    <div class="col-12">
+        <div class="main__title main__title--page">
+            <h1>@LanguageHelper.GetValue("PageLatestEpisodesTitle")</h1>
+        </div>
+    </div>
+</div>
+
+<div class="row row--grid">
+    <div class="col-12">
+        <div class="row row--grid">
+            @Html.Partial("_LatestEpisodeList", Model)
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var type = "LatestEpisode";
+</script>

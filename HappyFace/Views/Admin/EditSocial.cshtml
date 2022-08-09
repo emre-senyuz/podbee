@@ -1,0 +1,101 @@
+﻿@model SocialModel
+@{
+    ViewBag.Title = LanguageHelper.GetValue("AdminSocial") + " - " + Model.Name;
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="kt-subheader kt-grid__item" id="kt_subheader">
+    <div class="kt-subheader__main">
+        <h3 class="kt-subheader__title">
+            @Model.Name
+        </h3>
+        <span class="kt-subheader__separator kt-hidden"></span>
+        <div class="kt-subheader__breadcrumbs">
+            <a href="/dashboard" class="kt-subheader__breadcrumbs-home"><i class="flaticon2-shelter"></i></a>
+            <span class="kt-subheader__breadcrumbs-separator"></span>
+            <a href="/socials" class="kt-subheader__breadcrumbs-link">
+                @LanguageHelper.GetValue("AdminSocial")
+            </a>
+            <span class="kt-subheader__breadcrumbs-separator"></span>
+            <span class="kt-subheader__breadcrumbs-link">
+                @LanguageHelper.GetValue("AdminEdit")
+            </span>
+        </div>
+    </div>
+    <div class="kt-subheader__toolbar">
+        <div class="d-flex kt-subheader__wrapper">
+            <a href="/socials" class="btn btn-clean btn-bold btn-sm btn-icon-h kt-margin-l-10">
+                <i class="la la-long-arrow-left"></i> @LanguageHelper.GetValue("AdminBack")
+            </a>
+            <a href="/new-social" class="btn btn-label-success btn-bold btn-sm btn-icon-h kt-margin-l-10">
+                <i class="flaticon2-plus"></i> @LanguageHelper.GetValue("AdminAddNew")
+            </a>
+        </div>
+    </div>
+</div>
+<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
+    <div class="kt-portlet mb-0">
+        <div class="kt-portlet__head">
+            <div class="kt-portlet__head-label">
+                <h3 class="kt-portlet__head-title">
+                    @LanguageHelper.GetValue("AdminAddNew")
+                </h3>
+            </div>
+        </div>
+        <form action="/edit-social" method="post" class="kt-form mb-0" data-js="edit-social" data-type="social-form" enctype="multipart/form-data">
+            @Html.AntiForgeryToken()
+            @Html.Hidden("ID", Model.ID)
+            <div class="kt-portlet__body">
+                <div class="form-group">
+                    <label for="Title">
+                        @LanguageHelper.GetValue("FormPlatform")
+                    </label>
+                    <input type="text" class="form-control" id="Name" name="Name" value="@Model.Name">
+                </div>
+                <div class="form-group">
+                    <label for="Url">
+                        @LanguageHelper.GetValue("FormUrl")
+                    </label>
+                    <input type="text" class="form-control" id="Url" name="Url" data-js="url" value="@Model.Url">
+                </div>
+                <div class="form-group">
+                    <label for="Thumbnail">
+                        @LanguageHelper.GetValue("FormIcon")
+                    </label>
+                    <div></div>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="Icon" name="Icon">
+                        <label class="custom-file-label" data-button-text="@LanguageHelper.GetValue("Browse")">@LanguageHelper.GetValue("ChooseFile")</label>
+                    </div>
+                    @if (!string.IsNullOrEmpty(Model.Icon) && Model.Icon != Model.Name.ToLower())
+                    {
+                        <div class="pt-3">
+                            <img src="@Model.Icon" alt="@Model.Name Thumbnail" class="img-fluid" />
+                        </div>
+                    }
+                </div>
+                <div class="form-group row mb-0">
+                    <label class="col-3 col-form-label" for="Status">
+                        @LanguageHelper.GetValue("FormStatus")
+                    </label>
+                    <div class="col-3">
+                        <span class="kt-switch">
+                            <label>
+                                @Html.CheckBox("Status", Model.Status)
+                                <span></span>
+                            </label>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="kt-portlet__foot">
+                <div class="kt-form__actions">
+                    <button type="button" class="btn btn-success" data-js="update-social">@LanguageHelper.GetValue("ButtonSave")</button>
+                    <button type="button" class="btn btn-danger" data-js="delete-record" data-id="@Model.ID">@LanguageHelper.GetValue("ButtonDelete")</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+@section scripts{
+    <script defer src="@Url.Content("~/Scripts/views/Admin/Social.js")"></script>
+}

@@ -1,0 +1,1260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutTextAbout" xml:space="preserve">
+    <value>Podbee Media is a podcast network. He aims to realize the transformation in the media and entertainment industry in the audio vertical with the podcast shows he produces.</value>
+  </data>
+  <data name="AboutTextHow" xml:space="preserve">
+    <value>With the Information Age, our pace of life has increased like never before. We try to capture every moment of life by learning, experiencing, having fun, sometimes doing all of them at the same time. While we are on the road, working in the office, cleaning the house, cooking in the kitchen, we get information by listening to podcasts, sometimes we laugh with laughter and add value to the fast flowing time.</value>
+  </data>
+  <data name="AboutTextHow2ndLine" xml:space="preserve">
+    <value>While Podbee Media accompanies the activities of the listeners with its shows, it also brings the sponsor brands together with their target consumers who are not exposed to advertisements.</value>
+  </data>
+  <data name="AboutTextOurMission" xml:space="preserve">
+    <value>Podbee Media, with the aim of becoming the largest podcast network in Turkey, by producing quality Turkish podcasts; conducts studies to ensure the habit of listening to podcasts.</value>
+  </data>
+  <data name="AboutTitleHow" xml:space="preserve">
+    <value>We Are With You Every Moment Of The Day (What Are We Doing?)</value>
+  </data>
+  <data name="AboutTitleOurMission" xml:space="preserve">
+    <value>Our Mission</value>
+  </data>
+  <data name="AdminAdd" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="AdminAddNew" xml:space="preserve">
+    <value>Add New</value>
+  </data>
+  <data name="AdminBack" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="AdminBlog" xml:space="preserve">
+    <value>Blog</value>
+  </data>
+  <data name="AdminCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="AdminCarousel" xml:space="preserve">
+    <value>Carousel</value>
+  </data>
+  <data name="AdminCategories" xml:space="preserve">
+    <value>Categories</value>
+  </data>
+  <data name="AdminCategory" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="AdminComment" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="AdminCommentDetail" xml:space="preserve">
+    <value>Comment Detail</value>
+  </data>
+  <data name="AdminComments" xml:space="preserve">
+    <value>Comments</value>
+  </data>
+  <data name="AdminContacts" xml:space="preserve">
+    <value>Contact Messages</value>
+  </data>
+  <data name="AdminCopy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="AdminDashboard" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="AdminDelete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="AdminEdit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="AdminFooter" xml:space="preserve">
+    <value>Footer</value>
+  </data>
+  <data name="AdminGeneral" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="AdminHeader" xml:space="preserve">
+    <value>Header</value>
+  </data>
+  <data name="AdminHi" xml:space="preserve">
+    <value>Hi</value>
+  </data>
+  <data name="AdminHomepage" xml:space="preserve">
+    <value>Homepage</value>
+  </data>
+  <data name="AdminLanguages" xml:space="preserve">
+    <value>Languages</value>
+  </data>
+  <data name="AdminLink" xml:space="preserve">
+    <value>Link</value>
+  </data>
+  <data name="AdminMediaLibrary" xml:space="preserve">
+    <value>Media Library</value>
+  </data>
+  <data name="AdminMember" xml:space="preserve">
+    <value>Member</value>
+  </data>
+  <data name="AdminMembers" xml:space="preserve">
+    <value>Members</value>
+  </data>
+  <data name="AdminMenu" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="AdminNew" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="AdminNewComment" xml:space="preserve">
+    <value>New Comment</value>
+  </data>
+  <data name="AdminNews" xml:space="preserve">
+    <value>News</value>
+  </data>
+  <data name="AdminNewses" xml:space="preserve">
+    <value>News</value>
+  </data>
+  <data name="AdminNewsletters" xml:space="preserve">
+    <value>E-Newsletter Subscriptions</value>
+  </data>
+  <data name="AdminPage" xml:space="preserve">
+    <value>Page</value>
+  </data>
+  <data name="AdminPages" xml:space="preserve">
+    <value>Pages</value>
+  </data>
+  <data name="AdminPodcast" xml:space="preserve">
+    <value>Podcast</value>
+  </data>
+  <data name="AdminPodcasts" xml:space="preserve">
+    <value>Podcasts</value>
+  </data>
+  <data name="AdminPost" xml:space="preserve">
+    <value>Post</value>
+  </data>
+  <data name="AdminPosts" xml:space="preserve">
+    <value>Posts</value>
+  </data>
+  <data name="AdminRemove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="AdminRole" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="AdminSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="AdminSlide" xml:space="preserve">
+    <value>Slide</value>
+  </data>
+  <data name="AdminSocial" xml:space="preserve">
+    <value>Social Media</value>
+  </data>
+  <data name="AdsTextAdvantages" xml:space="preserve">
+    <value>Thanks to the collaborations with the podcast broadcasts in the Podbee Media network, brands and institutions can make their voices heard correctly to their target audience – 94% of them with a high education level and 43% of them who want to learn something and be informed about innovations.</value>
+  </data>
+  <data name="AdsTextAdvantagesFourth" xml:space="preserve">
+    <value>In Podbee Media, we basically proceed with four different advertising models.</value>
+  </data>
+  <data name="AdsTextAdvantagesSecond" xml:space="preserve">
+    <value>Podcasts give you the quick and easy door to reach a community! Today, brands use age range, gender, educational status, etc. to emphasize themselves, their products, and the subjects they own. now tries to capture targeting created through parameters through communities. Because communities provide access to the right audience through their interests. Thanks to podcasts, you can reach and even activate your target consumers who are open to innovations and cannot be discovered in focus groups.</value>
+  </data>
+  <data name="AdsTextSecondAdvantages" xml:space="preserve">
+    <value>&lt;ul&gt;
+&lt;li&gt;Connecting listeners with podcasters,&lt;/li&gt;
+&lt;li&gt;Loyalty of users who actively listen to podcasts,&lt;/li&gt;
+&lt;li&gt;Easy access to educated and high purchasing power audience,&lt;/li&gt;
+&lt;li&gt;Uninterrupted announcement of special ad texts voiced by podcast publishers, without being skipped with the skip ad option, as in different channels.&lt;/li&gt;
+&lt;/ul&gt;</value>
+  </data>
+  <data name="AdsTitleAdvantages" xml:space="preserve">
+    <value>Advantages of Podcast Ads</value>
+  </data>
+  <data name="AdsTitleAdvantagesFourth" xml:space="preserve">
+    <value>How to advertise a podcast?</value>
+  </data>
+  <data name="AdsTitleAdvantagesSecond" xml:space="preserve">
+    <value>Community Access!</value>
+  </data>
+  <data name="AdsTitleAdvantagesThird" xml:space="preserve">
+    <value>Reaching Target Consumers Without Advertising</value>
+  </data>
+  <data name="AdsTitleSecondAdvantages" xml:space="preserve">
+    <value>Why should brands and institutions prefer podcast ads?</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="AllPodcast" xml:space="preserve">
+    <value>All Podcasts</value>
+  </data>
+  <data name="Answer" xml:space="preserve">
+    <value>Answer</value>
+  </data>
+  <data name="Blog" xml:space="preserve">
+    <value>Blog</value>
+  </data>
+  <data name="Browse" xml:space="preserve">
+    <value>Browse</value>
+  </data>
+  <data name="ButtonActions" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="ButtonActive" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="ButtonAddSubCategory" xml:space="preserve">
+    <value>Add Sub Category</value>
+  </data>
+  <data name="ButtonAll" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="ButtonBackToSite" xml:space="preserve">
+    <value>Back to Site</value>
+  </data>
+  <data name="ButtonCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ButtonChange" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="ButtonClickHere" xml:space="preserve">
+    <value>Click Here</value>
+  </data>
+  <data name="ButtonConfirm" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="ButtonCopy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="ButtonDelete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="ButtonDeleteAll" xml:space="preserve">
+    <value>Delete All</value>
+  </data>
+  <data name="ButtonDeleteSubCategory" xml:space="preserve">
+    <value>Delete Sub Categories</value>
+  </data>
+  <data name="ButtonDetailedInformation" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="ButtonEdit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="ButtonGetOffer" xml:space="preserve">
+    <value>Get Offer</value>
+  </data>
+  <data name="ButtonLogin" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="ButtonMove" xml:space="preserve">
+    <value>Move</value>
+  </data>
+  <data name="ButtonPassive" xml:space="preserve">
+    <value>Passive</value>
+  </data>
+  <data name="ButtonRegister" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="ButtonRemove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="ButtonSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="ButtonSend" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="ButtonUpdateStatus" xml:space="preserve">
+    <value>Update Status</value>
+  </data>
+  <data name="ChooseFile" xml:space="preserve">
+    <value>Choose file</value>
+  </data>
+  <data name="CommentAnsweredText" xml:space="preserve">
+    <value>Your comment was replied by another user or administrator</value>
+  </data>
+  <data name="CommentSendedText" xml:space="preserve">
+    <value>Your comment will be published after admin approval.</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ErrorAddBlog" xml:space="preserve">
+    <value>Blog add failed</value>
+  </data>
+  <data name="ErrorAddCategory" xml:space="preserve">
+    <value>Category addition failed</value>
+  </data>
+  <data name="ErrorAddLanguage" xml:space="preserve">
+    <value>Language addition failed</value>
+  </data>
+  <data name="ErrorAddLatestEpisodes" xml:space="preserve">
+    <value>Episode add failed</value>
+  </data>
+  <data name="ErrorAddPost" xml:space="preserve">
+    <value>Podcast addition failed</value>
+  </data>
+  <data name="ErrorAddSlide" xml:space="preserve">
+    <value>Slide add failed</value>
+  </data>
+  <data name="ErrorAddSocial" xml:space="preserve">
+    <value>Social media platform add failed</value>
+  </data>
+  <data name="ErrorAnswerContact" xml:space="preserve">
+    <value>Message answer failed</value>
+  </data>
+  <data name="ErrorAnswerEmpty" xml:space="preserve">
+    <value>Answer Required</value>
+  </data>
+  <data name="ErrorAuthenticateComment" xml:space="preserve">
+    <value>Please login</value>
+  </data>
+  <data name="ErrorCheckField" xml:space="preserve">
+    <value>Check the fields</value>
+  </data>
+  <data name="ErrorCommentEmpty" xml:space="preserve">
+    <value>Comment Required</value>
+  </data>
+  <data name="ErrorCopyBlog" xml:space="preserve">
+    <value>Blog copy failed</value>
+  </data>
+  <data name="ErrorCopyCategory" xml:space="preserve">
+    <value>Category copy failed</value>
+  </data>
+  <data name="ErrorCopyPost" xml:space="preserve">
+    <value>Podcast copy failed</value>
+  </data>
+  <data name="ErrorCopySlide" xml:space="preserve">
+    <value>Slide copy failed</value>
+  </data>
+  <data name="ErrorDeleteBlog" xml:space="preserve">
+    <value>Blog delete failed</value>
+  </data>
+  <data name="ErrorDeleteCategory" xml:space="preserve">
+    <value>Delete category failed</value>
+  </data>
+  <data name="ErrorDeleteComment" xml:space="preserve">
+    <value>Comment delete failed</value>
+  </data>
+  <data name="ErrorDeleteContact" xml:space="preserve">
+    <value>Contact message delete failed</value>
+  </data>
+  <data name="ErrorDeleteLanguage" xml:space="preserve">
+    <value>Delete language failed</value>
+  </data>
+  <data name="ErrorDeleteLatestEpisode" xml:space="preserve">
+    <value>Episode delete failed</value>
+  </data>
+  <data name="ErrorDeleteMember" xml:space="preserve">
+    <value>Member delete failed</value>
+  </data>
+  <data name="ErrorDeletePost" xml:space="preserve">
+    <value>Podcast delete failed</value>
+  </data>
+  <data name="ErrorDeleteSlide" xml:space="preserve">
+    <value>Slide delete failed</value>
+  </data>
+  <data name="ErrorDeleteSocial" xml:space="preserve">
+    <value>Social media platform delete failed</value>
+  </data>
+  <data name="ErrorDeleteTrailer" xml:space="preserve">
+    <value>Trailer delete failed</value>
+  </data>
+  <data name="ErrorEmail" xml:space="preserve">
+    <value>E-Mail Address Incorrect</value>
+  </data>
+  <data name="ErrorEmailEmpty" xml:space="preserve">
+    <value>E-Mail Address Required</value>
+  </data>
+  <data name="ErrorEmailExist" xml:space="preserve">
+    <value>E-Mail Address Is Exist</value>
+  </data>
+  <data name="ErrorEmailInvalid" xml:space="preserve">
+    <value>Invalid E-Mail</value>
+  </data>
+  <data name="ErrorEmailSend" xml:space="preserve">
+    <value>An Error Occurred While Sending E-Mail</value>
+  </data>
+  <data name="ErrorEmailUndefined" xml:space="preserve">
+    <value>There is no registered membership to the e-mail address</value>
+  </data>
+  <data name="ErrorForgetPassword" xml:space="preserve">
+    <value>Password Reset Failed, Check Your E-Mail Address</value>
+  </data>
+  <data name="ErrorImageEmpty" xml:space="preserve">
+    <value>Image Required</value>
+  </data>
+  <data name="ErrorIncorrectPageType" xml:space="preserve">
+    <value>Incorrect page type</value>
+  </data>
+  <data name="ErrorInvalidLanguageName" xml:space="preserve">
+    <value>Invalid Language Name</value>
+  </data>
+  <data name="ErrorInvalidPageType" xml:space="preserve">
+    <value>Invalid Page Type</value>
+  </data>
+  <data name="ErrorLangEmpty" xml:space="preserve">
+    <value>Language Required</value>
+  </data>
+  <data name="ErrorLastLanguage" xml:space="preserve">
+    <value>At least 1 language must be</value>
+  </data>
+  <data name="ErrorLogin" xml:space="preserve">
+    <value>Login Failed, Check Your E-Mail and Password</value>
+  </data>
+  <data name="ErrorMessageEmpty" xml:space="preserve">
+    <value>Message Required</value>
+  </data>
+  <data name="ErrorMoveBlog" xml:space="preserve">
+    <value>Blog move failed</value>
+  </data>
+  <data name="ErrorMoveCategory" xml:space="preserve">
+    <value>Category move failed</value>
+  </data>
+  <data name="ErrorMovePost" xml:space="preserve">
+    <value>Podcast move failed</value>
+  </data>
+  <data name="ErrorNameEmpty" xml:space="preserve">
+    <value>Name Required</value>
+  </data>
+  <data name="ErrorNewPasswordConfirmEmpty" xml:space="preserve">
+    <value>New Password Confirm Required</value>
+  </data>
+  <data name="ErrorNewPasswordEmpty" xml:space="preserve">
+    <value>New Password Required</value>
+  </data>
+  <data name="ErrorNewPasswordMustBeSame" xml:space="preserve">
+    <value>The New Password Confirm Should Be The Same With The New Password</value>
+  </data>
+  <data name="ErrorParentNeedAllLanguages" xml:space="preserve">
+    <value>Add the translation of the upper category for all languages</value>
+  </data>
+  <data name="ErrorPassiveDefaultLanguage" xml:space="preserve">
+    <value>Passive language cannot be default</value>
+  </data>
+  <data name="ErrorPassiveLanguage" xml:space="preserve">
+    <value>Target language is passive</value>
+  </data>
+  <data name="ErrorPassword" xml:space="preserve">
+    <value>Pasword Incorrect</value>
+  </data>
+  <data name="ErrorPasswordEmpty" xml:space="preserve">
+    <value>Password Required</value>
+  </data>
+  <data name="ErrorPasswordMinLength" xml:space="preserve">
+    <value>Password Must Have At Least 6 Digits</value>
+  </data>
+  <data name="ErrorPrefixEmpty" xml:space="preserve">
+    <value>Code Required</value>
+  </data>
+  <data name="ErrorRegister" xml:space="preserve">
+    <value>Sign Up Failed</value>
+  </data>
+  <data name="ErrorSameUrl" xml:space="preserve">
+    <value>There is a record with the same URL</value>
+  </data>
+  <data name="ErrorSelectPost" xml:space="preserve">
+    <value>Please select episode</value>
+  </data>
+  <data name="ErrorSubjectEmpty" xml:space="preserve">
+    <value>Subject Required</value>
+  </data>
+  <data name="ErrorSurnameEmpty" xml:space="preserve">
+    <value>Surname Required</value>
+  </data>
+  <data name="ErrorTitleEmpty" xml:space="preserve">
+    <value>Title Required</value>
+  </data>
+  <data name="ErrorTypeEmpty" xml:space="preserve">
+    <value>Type Required</value>
+  </data>
+  <data name="ErrorUndefinedLanguage" xml:space="preserve">
+    <value>Undefined Language</value>
+  </data>
+  <data name="ErrorUpdateBlog" xml:space="preserve">
+    <value>Blog update failed</value>
+  </data>
+  <data name="ErrorUpdateCategory" xml:space="preserve">
+    <value>Category update failed</value>
+  </data>
+  <data name="ErrorUpdateComment" xml:space="preserve">
+    <value>Comment update failed</value>
+  </data>
+  <data name="ErrorUpdateInformation" xml:space="preserve">
+    <value>Personel information updat failed</value>
+  </data>
+  <data name="ErrorUpdateLanguage" xml:space="preserve">
+    <value>Language update failed</value>
+  </data>
+  <data name="ErrorUpdateLatestEpisodes" xml:space="preserve">
+    <value>Episode update failed</value>
+  </data>
+  <data name="ErrorUpdateMember" xml:space="preserve">
+    <value>Member update failed</value>
+  </data>
+  <data name="ErrorUpdatePost" xml:space="preserve">
+    <value>Podcast update failed</value>
+  </data>
+  <data name="ErrorUpdateSlide" xml:space="preserve">
+    <value>Slide update failed</value>
+  </data>
+  <data name="ErrorUpdateSocial" xml:space="preserve">
+    <value>Social media platform update failed</value>
+  </data>
+  <data name="ErrorUpdateWeeklyBees" xml:space="preserve">
+    <value>Weekly Bees update failed</value>
+  </data>
+  <data name="ErrorVoteComment" xml:space="preserve">
+    <value>Comment vote failed</value>
+  </data>
+  <data name="FormAlternateCategory" xml:space="preserve">
+    <value>Alternate Categories</value>
+  </data>
+  <data name="FormBanner" xml:space="preserve">
+    <value>Banner</value>
+  </data>
+  <data name="FormBirthDate" xml:space="preserve">
+    <value>Birth Date</value>
+  </data>
+  <data name="FormCategory" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="FormCode" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="FormComment" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="FormConfirmationStatus" xml:space="preserve">
+    <value>Confirmation Status</value>
+  </data>
+  <data name="FormContent" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="FormDate" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="FormDefault" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="FormDescription" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="FormDirection" xml:space="preserve">
+    <value>Direction</value>
+  </data>
+  <data name="FormDislike" xml:space="preserve">
+    <value>Dislike</value>
+  </data>
+  <data name="FormEmail" xml:space="preserve">
+    <value>E-Mail</value>
+  </data>
+  <data name="FormEpisode" xml:space="preserve">
+    <value>Episode</value>
+  </data>
+  <data name="FormIcon" xml:space="preserve">
+    <value>Icon</value>
+  </data>
+  <data name="FormIdentityNumber" xml:space="preserve">
+    <value>Identity Number</value>
+  </data>
+  <data name="FormKeywords" xml:space="preserve">
+    <value>Keywords</value>
+  </data>
+  <data name="FormLanguage" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="FormLike" xml:space="preserve">
+    <value>Like</value>
+  </data>
+  <data name="FormMember" xml:space="preserve">
+    <value>Member</value>
+  </data>
+  <data name="FormMessage" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="FormName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="FormNewPassword" xml:space="preserve">
+    <value>New Password</value>
+  </data>
+  <data name="FormNewPasswordConfirm" xml:space="preserve">
+    <value>New Password Confirm</value>
+  </data>
+  <data name="FormOldPassword" xml:space="preserve">
+    <value>Old Password</value>
+  </data>
+  <data name="FormOrder" xml:space="preserve">
+    <value>Order</value>
+  </data>
+  <data name="FormParent" xml:space="preserve">
+    <value>Parent</value>
+  </data>
+  <data name="FormPassword" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="FormPhone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="FormPlatform" xml:space="preserve">
+    <value>Platform</value>
+  </data>
+  <data name="FormPodcast" xml:space="preserve">
+    <value>Podcast</value>
+  </data>
+  <data name="FormPost" xml:space="preserve">
+    <value>Podcasts</value>
+  </data>
+  <data name="FormPrefix" xml:space="preserve">
+    <value>Prefix</value>
+  </data>
+  <data name="FormRemember" xml:space="preserve">
+    <value>Remember Me</value>
+  </data>
+  <data name="FormShowMenu" xml:space="preserve">
+    <value>Show Menu</value>
+  </data>
+  <data name="FormStatus" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="FormSubject" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="FormSurname" xml:space="preserve">
+    <value>Surname</value>
+  </data>
+  <data name="FormThumbnail" xml:space="preserve">
+    <value>Thumbnail</value>
+  </data>
+  <data name="FormTitle" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="FormTrailer" xml:space="preserve">
+    <value>Trailer</value>
+  </data>
+  <data name="FormType" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="FormUrl" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="HeaderMemberTitle" xml:space="preserve">
+    <value>Login / Register</value>
+  </data>
+  <data name="HomePage" xml:space="preserve">
+    <value>Homepage</value>
+  </data>
+  <data name="LanguageSelection" xml:space="preserve">
+    <value>Language Selection</value>
+  </data>
+  <data name="LinkClickHere" xml:space="preserve">
+    <value>Click here</value>
+  </data>
+  <data name="LinkForgetPassword" xml:space="preserve">
+    <value>Forget Your Password?</value>
+  </data>
+  <data name="LinkLogin" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="LinkRegister" xml:space="preserve">
+    <value>Don't have an account? Sign Up!</value>
+  </data>
+  <data name="LinkSignOut" xml:space="preserve">
+    <value>Sign Out</value>
+  </data>
+  <data name="LoginBeforeComment" xml:space="preserve">
+    <value>You must login to comment.</value>
+  </data>
+  <data name="MainCategory" xml:space="preserve">
+    <value>Main Category</value>
+  </data>
+  <data name="Man" xml:space="preserve">
+    <value>Man</value>
+  </data>
+  <data name="MessageSendedText" xml:space="preserve">
+    <value>After reviewing your message, you will be returned to you.</value>
+  </data>
+  <data name="ModalBonusPartSubTitle" xml:space="preserve">
+    <value>Bonus Episode Example</value>
+  </data>
+  <data name="ModalBonusPartText" xml:space="preserve">
+    <value>&lt;p&gt;In the podcast series within the Podbee Media network, it is an advertising model work in which the brand itself or the content it wants to announce, such as the campaign and news, are announced with a bonus episode to be made on their behalf. The topic to be discussed in the bonus section is mutually agreed with the brand, in line with the current language of the podcast broadcast. While the recorded episode is uploaded to all podcast channels, the name of the collaborating brand is mentioned in the episode name. As long as the related podcast series is actively on the platforms, this bonus episode also remains in the series.&lt;/p&gt;</value>
+  </data>
+  <data name="ModalBonusPartTitle" xml:space="preserve">
+    <value>Bonus Part</value>
+  </data>
+  <data name="ModalBrandedShowsSubTitle" xml:space="preserve">
+    <value>Branded Shows Examples</value>
+  </data>
+  <data name="ModalBrandedShowsText" xml:space="preserve">
+    <value>&lt;p&gt;It is an advertising model that meets the needs of 360 degree project creation, content development and all other production and distribution needs by advancing on the point where brands want to position themselves or the topics they want to own. It is a type of broadcast in which the brand name with the podcast name.&lt;/p&gt;</value>
+  </data>
+  <data name="ModalBrandedShowsTitle" xml:space="preserve">
+    <value>Branded Shows</value>
+  </data>
+  <data name="ModalDynamicAdsSubTitle" xml:space="preserve">
+    <value>Dynamic Ad Examples</value>
+  </data>
+  <data name="ModalDynamicAdsText" xml:space="preserve">
+    <value>&lt;p&gt;It is an advertising model in which brands can announce themselves by reaching more users in order to promote brand awareness or product promotion in the regular content of podcast broadcasts within the Podbee Media network.&lt;/p&gt;
+&lt;p&gt;Advertising texts prepared within the agreed period are voiced by the podcast publisher and used for 15 seconds at the beginning, 30 seconds in the middle and 15 seconds in the ending of all podcast episodes. At the same time, additions such as a referral link or a promotional code can also be made in the section descriptions.&lt;/p&gt;</value>
+  </data>
+  <data name="ModalDynamicAdsTitle" xml:space="preserve">
+    <value>Dynamic Ad</value>
+  </data>
+  <data name="ModalSponsoredShowSubTitle" xml:space="preserve">
+    <value>Sponsored Series Examples</value>
+  </data>
+  <data name="ModalSponsoredShowText" xml:space="preserve">
+    <value>&lt;p&gt;It is an advertising model in which opportunities such as sponsorship of the series or product placement in the episode, linking the character and the product are offered to the brands with the agreement to be made in the podcast series prepared with the infrastructure of Podbee Media.&lt;/p&gt;</value>
+  </data>
+  <data name="ModalSponsoredShowTitle" xml:space="preserve">
+    <value>Sponsored Series</value>
+  </data>
+  <data name="More" xml:space="preserve">
+    <value>More</value>
+  </data>
+  <data name="NewsletterRegister" xml:space="preserve">
+    <value>Your e-newsletter subscription has been completed.</value>
+  </data>
+  <data name="NewsletterText" xml:space="preserve">
+    <value>By registering for the Podbee Media newsletter; You can be the first to know about new episode announcements and the latest developments in the podcast world.</value>
+  </data>
+  <data name="NoCommentFound" xml:space="preserve">
+    <value>No comments yet</value>
+  </data>
+  <data name="NoRecordFound" xml:space="preserve">
+    <value>No record found</value>
+  </data>
+  <data name="PageAboutUsTitle" xml:space="preserve">
+    <value>About Us</value>
+  </data>
+  <data name="PageActivationErrorText" xml:space="preserve">
+    <value>The activation link is incorrect or invalid. You can contact the administrator or request a new activation link.</value>
+  </data>
+  <data name="PageActivationErrorTitle" xml:space="preserve">
+    <value>Activation Failed!</value>
+  </data>
+  <data name="PageActivationReLinkRouteText" xml:space="preserve">
+    <value>Click for the new activation link.</value>
+  </data>
+  <data name="PageActivationSuccessText" xml:space="preserve">
+    <value>Your membership has been successfully activated.</value>
+  </data>
+  <data name="PageActivationSuccessTitle" xml:space="preserve">
+    <value>Activation Successful!</value>
+  </data>
+  <data name="PageActivationTitle" xml:space="preserve">
+    <value>Activation</value>
+  </data>
+  <data name="PageAdsSecondSubTitle" xml:space="preserve">
+    <value>CONTENT AND COLLABORATIONS CONNECTED EVERY MINUTE</value>
+  </data>
+  <data name="PageAdsSubTitle" xml:space="preserve">
+    <value>PODCAST ADVERTISING</value>
+  </data>
+  <data name="PageAdsTitle" xml:space="preserve">
+    <value>Ads</value>
+  </data>
+  <data name="PageBlogTitle" xml:space="preserve">
+    <value>Blog</value>
+  </data>
+  <data name="PageChangePasswordTitle" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="PageCommentsTitle" xml:space="preserve">
+    <value>Comments</value>
+  </data>
+  <data name="PageContactUsTitle" xml:space="preserve">
+    <value>Contact Us</value>
+  </data>
+  <data name="PageFaqTitle" xml:space="preserve">
+    <value>Frequently Asked Questions</value>
+  </data>
+  <data name="PageFaqTitleShort" xml:space="preserve">
+    <value>F.A.Q.</value>
+  </data>
+  <data name="PageForgetPasswordTitle" xml:space="preserve">
+    <value>Forget Password</value>
+  </data>
+  <data name="PageHomeRouteText" xml:space="preserve">
+    <value>Click on the link to return to the homepage.</value>
+  </data>
+  <data name="PageInformationCheckMailBoxText" xml:space="preserve">
+    <value>Please check your e-mail box for activation.</value>
+  </data>
+  <data name="PageInformationInActiveTitle" xml:space="preserve">
+    <value>Your Account Is Inactive!</value>
+  </data>
+  <data name="PageInformationNeedActicationText" xml:space="preserve">
+    <value>In order to activate your account, you must confirm the activation mail sent to your e-mail address.</value>
+  </data>
+  <data name="PageInformationNeedActicationTitle" xml:space="preserve">
+    <value>Almost Done!</value>
+  </data>
+  <data name="PageInformationTitle" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="PageLatestEpisodesTitle" xml:space="preserve">
+    <value>Latest Episodes</value>
+  </data>
+  <data name="PageLoginTitle" xml:space="preserve">
+    <value>Member Login</value>
+  </data>
+  <data name="PageLogoutTitle" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="PageMemberPanelTitle" xml:space="preserve">
+    <value>Member Panel</value>
+  </data>
+  <data name="PagePersonelInformationTitle" xml:space="preserve">
+    <value>Personel Information</value>
+  </data>
+  <data name="PagePodcastTitle" xml:space="preserve">
+    <value>Podcast</value>
+  </data>
+  <data name="PagePostTitle" xml:space="preserve">
+    <value>Post</value>
+  </data>
+  <data name="PageProfileTitle" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="PageReActivationTitle" xml:space="preserve">
+    <value>New Activation Link</value>
+  </data>
+  <data name="PageReferencesTitle" xml:space="preserve">
+    <value>References</value>
+  </data>
+  <data name="PageRegisterTitle" xml:space="preserve">
+    <value>Sign Up</value>
+  </data>
+  <data name="PageResetPasswordTitle" xml:space="preserve">
+    <value>Reset Password</value>
+  </data>
+  <data name="Podcast" xml:space="preserve">
+    <value>Podcast</value>
+  </data>
+  <data name="Records" xml:space="preserve">
+    <value>Records</value>
+  </data>
+  <data name="SeeAll" xml:space="preserve">
+    <value>See All</value>
+  </data>
+  <data name="SelectCategory" xml:space="preserve">
+    <value>Select Category</value>
+  </data>
+  <data name="SelectDirection" xml:space="preserve">
+    <value>Select Direction</value>
+  </data>
+  <data name="SelectLanguage" xml:space="preserve">
+    <value>Select Language</value>
+  </data>
+  <data name="SelectParent" xml:space="preserve">
+    <value>Select Parent</value>
+  </data>
+  <data name="SelectPost" xml:space="preserve">
+    <value>Select Podcast</value>
+  </data>
+  <data name="SelectType" xml:space="preserve">
+    <value>Select Type</value>
+  </data>
+  <data name="SendEMail" xml:space="preserve">
+    <value>Send E-Mail</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Share" xml:space="preserve">
+    <value>Share</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>Registered membership to the e-mail address</value>
+  </data>
+  <data name="String2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="SuccessAddBlog" xml:space="preserve">
+    <value>Blog added successful</value>
+  </data>
+  <data name="SuccessAddCategory" xml:space="preserve">
+    <value>Category added successfully</value>
+  </data>
+  <data name="SuccessAddLanguage" xml:space="preserve">
+    <value>Language added successfully</value>
+  </data>
+  <data name="SuccessAddLatestEpisodes" xml:space="preserve">
+    <value>Episode added failed</value>
+  </data>
+  <data name="SuccessAddPost" xml:space="preserve">
+    <value>Podcast added successfully</value>
+  </data>
+  <data name="SuccessAddSlide" xml:space="preserve">
+    <value>Slide added successful</value>
+  </data>
+  <data name="SuccessAddSocial" xml:space="preserve">
+    <value>Social media platform added successful</value>
+  </data>
+  <data name="SuccessAnswerContact" xml:space="preserve">
+    <value>Message answered successful</value>
+  </data>
+  <data name="SuccessChangePassword" xml:space="preserve">
+    <value>Password Change Successful</value>
+  </data>
+  <data name="SuccessComment" xml:space="preserve">
+    <value>Comment sended</value>
+  </data>
+  <data name="SuccessContact" xml:space="preserve">
+    <value>Your message sended successful</value>
+  </data>
+  <data name="SuccessCopyBlog" xml:space="preserve">
+    <value>Blog copy successful</value>
+  </data>
+  <data name="SuccessCopyCategory" xml:space="preserve">
+    <value>Category copy successful</value>
+  </data>
+  <data name="SuccessCopyPost" xml:space="preserve">
+    <value>Podcast copy successful</value>
+  </data>
+  <data name="SuccessCopySlide" xml:space="preserve">
+    <value>Slide copy successful</value>
+  </data>
+  <data name="SuccessDeleteBlog" xml:space="preserve">
+    <value>Blog deleted successful</value>
+  </data>
+  <data name="SuccessDeleteCategory" xml:space="preserve">
+    <value>Category deleted successful</value>
+  </data>
+  <data name="SuccessDeleteComment" xml:space="preserve">
+    <value>Comment deleted successful</value>
+  </data>
+  <data name="SuccessDeleteContact" xml:space="preserve">
+    <value>Contact message deleted successful</value>
+  </data>
+  <data name="SuccessDeleteLanguage" xml:space="preserve">
+    <value>Language deleted successfully</value>
+  </data>
+  <data name="SuccessDeleteLatestEpisode" xml:space="preserve">
+    <value>Episode deleted successful</value>
+  </data>
+  <data name="SuccessDeleteMember" xml:space="preserve">
+    <value>Member deleted successful</value>
+  </data>
+  <data name="SuccessDeletePost" xml:space="preserve">
+    <value>Podcast deleted successfully</value>
+  </data>
+  <data name="SuccessDeleteSlide" xml:space="preserve">
+    <value>Slide deleted successful</value>
+  </data>
+  <data name="SuccessDeleteSocial" xml:space="preserve">
+    <value>Social media platform deleted successful</value>
+  </data>
+  <data name="SuccessDeleteTrailer" xml:space="preserve">
+    <value>Trailer deleted successful</value>
+  </data>
+  <data name="SuccessForgetPassword" xml:space="preserve">
+    <value>A Password Reset Link Has Been Sent To Your Email Address</value>
+  </data>
+  <data name="SuccessLanguageChanged" xml:space="preserve">
+    <value>Language Changed</value>
+  </data>
+  <data name="SuccessLogin" xml:space="preserve">
+    <value>Login Successful</value>
+  </data>
+  <data name="SuccessMoveBlog" xml:space="preserve">
+    <value>Blog move successful</value>
+  </data>
+  <data name="SuccessMoveCategory" xml:space="preserve">
+    <value>Category move successful</value>
+  </data>
+  <data name="SuccessMovePost" xml:space="preserve">
+    <value>Podcast move successful</value>
+  </data>
+  <data name="SuccessNewsletter" xml:space="preserve">
+    <value>Newsletter registration has been successfully completed</value>
+  </data>
+  <data name="SuccessRegister" xml:space="preserve">
+    <value>Sign Up Successful</value>
+  </data>
+  <data name="SuccessUpdateBlog" xml:space="preserve">
+    <value>Blog updated successful</value>
+  </data>
+  <data name="SuccessUpdateCategory" xml:space="preserve">
+    <value>Language update successful</value>
+  </data>
+  <data name="SuccessUpdateComment" xml:space="preserve">
+    <value>Comment updated successful</value>
+  </data>
+  <data name="SuccessUpdateInformation" xml:space="preserve">
+    <value>Personel information updated successful</value>
+  </data>
+  <data name="SuccessUpdateLanguage" xml:space="preserve">
+    <value>Language update successful</value>
+  </data>
+  <data name="SuccessUpdateLatestEpisodes" xml:space="preserve">
+    <value>Episode updated successful</value>
+  </data>
+  <data name="SuccessUpdateMember" xml:space="preserve">
+    <value>Member updated successful</value>
+  </data>
+  <data name="SuccessUpdatePost" xml:space="preserve">
+    <value>Podcast update successful</value>
+  </data>
+  <data name="SuccessUpdateSlide" xml:space="preserve">
+    <value>Slide updated successful</value>
+  </data>
+  <data name="SuccessUpdateSocial" xml:space="preserve">
+    <value>Social media platform updated successful</value>
+  </data>
+  <data name="SuccessUpdateWeeklyBees" xml:space="preserve">
+    <value>Weekly Bees updated successfull</value>
+  </data>
+  <data name="SuccessVoteComment" xml:space="preserve">
+    <value>Comment voted successful</value>
+  </data>
+  <data name="TitleAddress" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="TitleInfo" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="TitleNewsletter" xml:space="preserve">
+    <value>Newsletter</value>
+  </data>
+  <data name="TypeBlog" xml:space="preserve">
+    <value>Blog</value>
+  </data>
+  <data name="TypeCategory" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="TypeNews" xml:space="preserve">
+    <value>News</value>
+  </data>
+  <data name="TypePage" xml:space="preserve">
+    <value>Page</value>
+  </data>
+  <data name="TypePodcast" xml:space="preserve">
+    <value>Podcast</value>
+  </data>
+  <data name="TypeProduct" xml:space="preserve">
+    <value>Product</value>
+  </data>
+  <data name="UrlTypeAboutUs" xml:space="preserve">
+    <value>about-us</value>
+  </data>
+  <data name="UrlTypeActivation" xml:space="preserve">
+    <value>activation</value>
+  </data>
+  <data name="UrlTypeAds" xml:space="preserve">
+    <value>ads</value>
+  </data>
+  <data name="UrlTypeBlog" xml:space="preserve">
+    <value>blog</value>
+  </data>
+  <data name="UrlTypeCategory" xml:space="preserve">
+    <value>category</value>
+  </data>
+  <data name="UrlTypeChangePassword" xml:space="preserve">
+    <value>change-password</value>
+  </data>
+  <data name="UrlTypeComments" xml:space="preserve">
+    <value>comments</value>
+  </data>
+  <data name="UrlTypeContact" xml:space="preserve">
+    <value>contact</value>
+  </data>
+  <data name="UrlTypeContactUs" xml:space="preserve">
+    <value>contact-us</value>
+  </data>
+  <data name="UrlTypeContent" xml:space="preserve">
+    <value>content</value>
+  </data>
+  <data name="UrlTypeFaq" xml:space="preserve">
+    <value>frequently-asked-questions</value>
+  </data>
+  <data name="UrlTypeForgetPassword" xml:space="preserve">
+    <value>forget-password</value>
+  </data>
+  <data name="UrlTypeInformation" xml:space="preserve">
+    <value>information</value>
+  </data>
+  <data name="UrlTypeLatestEpisode" xml:space="preserve">
+    <value>latest-episodes</value>
+  </data>
+  <data name="UrlTypeLogin" xml:space="preserve">
+    <value>login</value>
+  </data>
+  <data name="UrlTypeMember" xml:space="preserve">
+    <value>member</value>
+  </data>
+  <data name="UrlTypeNews" xml:space="preserve">
+    <value>news</value>
+  </data>
+  <data name="UrlTypePage" xml:space="preserve">
+    <value>page</value>
+  </data>
+  <data name="UrlTypePersonelInformation" xml:space="preserve">
+    <value>personel-information</value>
+  </data>
+  <data name="UrlTypePodcast" xml:space="preserve">
+    <value>podcast</value>
+  </data>
+  <data name="UrlTypeProduct" xml:space="preserve">
+    <value>product</value>
+  </data>
+  <data name="UrlTypeProfile" xml:space="preserve">
+    <value>profile</value>
+  </data>
+  <data name="UrlTypeReActivation" xml:space="preserve">
+    <value>re-activation</value>
+  </data>
+  <data name="UrlTypeReference" xml:space="preserve">
+    <value>references</value>
+  </data>
+  <data name="UrlTypeRegister" xml:space="preserve">
+    <value>sign-up</value>
+  </data>
+  <data name="UrlTypeResetPassword" xml:space="preserve">
+    <value>reset-password</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="Woman" xml:space="preserve">
+    <value>Woman</value>
+  </data>
+  <data name="YourCommentAnswered" xml:space="preserve">
+    <value>Your comment answered</value>
+  </data>
+  <data name="YourCommentSended" xml:space="preserve">
+    <value>Your comment has been received</value>
+  </data>
+  <data name="YourMessageAnswered" xml:space="preserve">
+    <value>Your message answered</value>
+  </data>
+  <data name="YourMessageSended" xml:space="preserve">
+    <value>Your message sended successful</value>
+  </data>
+  <data name="YourMessageSended1" xml:space="preserve">
+    <value>Mesajınız başarıyla gönderildi</value>
+  </data>
+</root>

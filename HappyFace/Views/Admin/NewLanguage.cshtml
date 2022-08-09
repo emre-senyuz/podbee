@@ -1,0 +1,114 @@
+﻿@{
+    ViewBag.Title = LanguageHelper.GetValue("AdminLanguages") + " - " + LanguageHelper.GetValue("AdminAddNew");
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="kt-subheader kt-grid__item" id="kt_subheader">
+    <div class="kt-subheader__main">
+        <h3 class="kt-subheader__title">
+            @LanguageHelper.GetValue("AdminAddNew")
+        </h3>
+        <span class="kt-subheader__separator kt-hidden"></span>
+        <div class="kt-subheader__breadcrumbs">
+            <a href="/dashboard" class="kt-subheader__breadcrumbs-home"><i class="flaticon2-shelter"></i></a>
+            <span class="kt-subheader__breadcrumbs-separator"></span>
+            <a href="/languages" class="kt-subheader__breadcrumbs-link">
+                @LanguageHelper.GetValue("AdminLanguages")
+            </a>
+            <span class="kt-subheader__breadcrumbs-separator"></span>
+            <span class="kt-subheader__breadcrumbs-link">
+                @LanguageHelper.GetValue("AdminEdit")
+            </span>
+        </div>
+    </div>
+    <div class="kt-subheader__toolbar">
+        <div class="kt-subheader__wrapper">
+            <a href="/languages" class="btn btn-clean btn-bold btn-sm btn-icon-h kt-margin-l-10">
+                <i class="la la-long-arrow-left"></i> @LanguageHelper.GetValue("AdminBack")
+            </a>
+        </div>
+    </div>
+</div>
+<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
+    <div class="kt-portlet mb-0">
+        <div class="kt-portlet__head">
+            <div class="kt-portlet__head-label">
+                <h3 class="kt-portlet__head-title">
+                    @LanguageHelper.GetValue("AdminAddNew")
+                </h3>
+            </div>
+        </div>
+        <form action="/new-language" method="post" class="kt-form mb-0" data-js="new-language" enctype="multipart/form-data">
+            @Html.AntiForgeryToken()
+            <div class="kt-portlet__body">
+                <div class="form-group">
+                    <label for="Title">
+                        @LanguageHelper.GetValue("FormTitle")
+                    </label>
+                    <input type="text" class="form-control" id="Title" name="Title">
+                </div>
+                <div class="form-group">
+                    <label for="Prefix">
+                        @LanguageHelper.GetValue("FormCode")
+                    </label>
+                    <input type="text" class="form-control" id="Prefix" name="Prefix">
+                </div>
+                <div class="form-group">
+                    <label for="Direction">
+                        @LanguageHelper.GetValue("FormDirection")
+                    </label>
+                    <div></div>
+                    <select class="custom-select form-control" id="Direction" name="Direction">
+                        <option selected="selected">@LanguageHelper.GetValue("SelectDirection")</option>
+                        <option value="ltr">ltr</option>
+                        <option value="rtl">rtl</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="Icon">
+                        @LanguageHelper.GetValue("FormIcon")
+                    </label>
+                    <div></div>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="Icon" name="Icon">
+                        <label class="custom-file-label" data-button-text="@LanguageHelper.GetValue("Browse")">@LanguageHelper.GetValue("ChooseFile")</label>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-3 col-form-label" for="IsDefault">
+                        @LanguageHelper.GetValue("FormDefault")
+                    </label>
+                    <div class="col-3">
+                        <span class="kt-switch">
+                            <label>
+                                @Html.CheckBox("IsDefault")
+                                <span></span>
+                            </label>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group row mb-0">
+                    <label class="col-3 col-form-label" for="Status">
+                        @LanguageHelper.GetValue("FormStatus")
+                    </label>
+                    <div class="col-3">
+                        <span class="kt-switch">
+                            <label>
+                                @Html.CheckBox("Status")
+                                <span></span>
+                            </label>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="kt-portlet__foot">
+                <div class="kt-form__actions">
+                    <button type="button" class="btn btn-success" data-js="add-language">@LanguageHelper.GetValue("ButtonSave")</button>
+                    <a href="/languages" class="btn btn-secondary">@LanguageHelper.GetValue("ButtonCancel")</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+@section scripts{
+    <script defer src="@Url.Content("~/Scripts/views/Admin/Language.js")"></script>
+}

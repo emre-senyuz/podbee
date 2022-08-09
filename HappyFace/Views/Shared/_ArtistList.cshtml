@@ -1,0 +1,47 @@
+﻿@model List<PostModel>
+@{
+    Layout = null;
+    string langUrl = (LanguageHelper.CurrentLanguage == LanguageHelper.DefaultLanguage ? "/" : "/" + LanguageHelper.CurrentLanguage + "/") + LanguageHelper.GetValue("UrlTypePodcast");
+}
+@if (Model.Count > 0)
+{
+    foreach (var podcast in Model)
+    {
+        string image = !string.IsNullOrEmpty(podcast.Thumbnail) ? podcast.Thumbnail : podcast.Banner;
+        <div class="artist">
+            <div class="album__cover">
+                <img src="@image" alt="@podcast.Title">
+                @if (!string.IsNullOrEmpty(podcast.Trailer))
+                {
+                    <a href="#" class="trailer-button" @(!string.IsNullOrEmpty(podcast.Trailer) ? " data-js=trailer" : "")>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"></path>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="d-none">
+                            <path d="M16,2a3,3,0,0,0-3,3V19a3,3,0,0,0,6,0V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-2,0V5a1,1,0,0,1,2,0ZM8,2A3,3,0,0,0,5,5V19a3,3,0,0,0,6,0V5A3,3,0,0,0,8,2ZM9,19a1,1,0,0,1-2,0V5A1,1,0,0,1,9,5Z"></path>
+                        </svg>
+                    </a>
+                }
+            </div>
+            <a href="@langUrl/@podcast.Url">
+                <h3 class="artist__title">@podcast.Title</h3>
+            </a>
+            @if (!string.IsNullOrEmpty(podcast.Trailer))
+            {
+                <audio src="@podcast.Trailer" id="audio" class="d-none trailer" controls></audio>
+            }
+        </div>
+        @*<div class="col-6 col-sm-4 col-lg-3">
+                <div class="album">
+                    <a href="@langUrl/@podcast.Url" class="album__cover" title="@podcast.Title">
+                        <img src="@image" alt="@podcast.Title">
+                    </a>
+                    <div class="album__title">
+                        <h3>
+                            <a href="@langUrl/@podcast.Url" title="@podcast.Title">@podcast.Title</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>*@
+    }
+}

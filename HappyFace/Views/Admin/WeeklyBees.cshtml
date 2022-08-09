@@ -1,0 +1,46 @@
+﻿@model AdminWeeklyBeesModel
+@{
+    ViewBag.Title = "Weekly Bees";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="kt-subheader kt-grid__item" id="kt_subheader">
+    <div class="kt-subheader__main">
+        <h3 class="kt-subheader__title">
+            Weekly Bees
+        </h3>
+        <span class="kt-subheader__separator kt-hidden"></span>
+        <div class="kt-subheader__breadcrumbs">
+            <a href="/dashboard" class="kt-subheader__breadcrumbs-home"><i class="flaticon2-shelter"></i></a>
+        </div>
+    </div>
+</div>
+<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
+    <div class="kt-portlet kt-portlet--tabs mb-0">
+        <div class="kt-portlet__head">
+            <div class="kt-portlet__head-label">
+                <h3 class="kt-portlet__head-title">
+                    Weekly Bees
+                </h3>
+            </div>
+        </div>
+        <div class="kt-portlet__body p-0">
+            <form action="/weekly-bees" method="post" class="kt-form mb-0" data-js="weekly-bees-form">
+                @Html.AntiForgeryToken()
+                @Html.Hidden("ID", Model.ID)
+                <div class="kt-portlet__body">
+                    <div class="form-group mb-0">
+                        <input type="text" class="form-control" id="IFrame" name="IFrame" value="@Model.IFrame">
+                    </div>
+                </div>
+                <div class="kt-portlet__foot">
+                    <div class="kt-form__actions">
+                        <button type="button" class="btn btn-success" data-js="update-weekly-bees">@LanguageHelper.GetValue("ButtonSave")</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script defer src="@Url.Content("~/Scripts/views/Admin/Post.js")"></script>
+}

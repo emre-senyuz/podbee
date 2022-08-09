@@ -1,0 +1,601 @@
+﻿@{
+    ViewBag.Title = LanguageHelper.GetValue("PageAdsTitle");
+    //ViewBag.Description = "Hey corç";
+}
+
+<div class="row row--grid">
+    <!-- breadcrumb -->
+    <div class="col-12">
+        <ul class="breadcrumb">
+            <li class="breadcrumb__item"><a href="@(LanguageHelper.CurrentLanguage == LanguageHelper.DefaultLanguage ? "/" : "/" + LanguageHelper.CurrentLanguage)">@LanguageHelper.GetValue("HomePage")</a></li>
+            <li class="breadcrumb__item breadcrumb__item--active">@LanguageHelper.GetValue("PageAdsTitle")</li>
+        </ul>
+    </div>
+    <!-- end breadcrumb -->
+
+    <div class="col-12 about-banner">
+        <img src="@Url.Content("~/Content/img/ads/ad-banner.jpg")" alt="Ads" class="img-fluid" />
+    </div>
+
+    <!-- title -->
+    <div class="col-12">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg">
+                <div class="main__title">
+                    <h1 class="w-100 justify-content-center font-weight-bold text-center mb-4">@LanguageHelper.GetValue("PageAdsSubTitle")</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg">
+                <div class="main__title">
+                    <h2 class="w-100 font-weight-bold">@LanguageHelper.GetValue("AdsTitleAdvantages")</h2>
+                    <p class="mb-0">@LanguageHelper.GetValue("AdsTextAdvantages")</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg">
+                <div class="main__title">
+                    <h2 class="w-100 font-weight-bold">@LanguageHelper.GetValue("AdsTitleAdvantagesSecond")</h2>
+                    <p class="mb-0">@LanguageHelper.GetValue("AdsTextAdvantagesSecond")</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <div class="row mx-0 mx-lg-n3">
+            <div class="col-12 main__title">
+                <h2 class="w-100 font-weight-bold">@LanguageHelper.GetValue("AdsTitleAdvantagesThird")</h2>
+            </div>
+            <div class="col-12 col-lg-4 pt-4 d-flex text-center">
+                <div class="w-100 h-100 d-flex flex-column align-items-center justify-content-center pb-3 by-the-numbers">
+                    <span class="number">%75</span>
+                    <span>18-34 yaş aralığında</span>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 pt-4 d-flex text-center">
+                <div class="w-100 h-100 d-flex flex-column align-items-center justify-content-center pb-3 by-the-numbers">
+                    <span class="number">%90</span>
+                    <span>Üniversite mezunu ya da mezun adayı</span>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 pt-4 d-flex text-center">
+                <div class="w-100 h-100 d-flex flex-column align-items-center justify-content-center pb-3 by-the-numbers">
+                    <span class="number">%80</span>
+                    <span>Çeşitli platformlarda, en az bir adet Premium üyeliği olan ve bu sayede '<strong>reklamla karşılaşmayan</strong>'</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg">
+                <div class="main__title">
+                    <h2 class="w-100 font-weight-bold pb-3">@LanguageHelper.GetValue("AdsTitleSecondAdvantages")</h2>
+                    @Html.Raw(LanguageHelper.GetValue("AdsTextSecondAdvantages"))
+                </div>
+            </div>
+            @*<div class="col-12 col-lg-6 col-xl-5 offset-xl-1">
+                    <div class="row">
+                        <div class="col-6 py-3">
+                            Bonus Part
+                            <a href="#" role="button" class="w-100 d-flex flex-column" data-bs-toggle="modal" data-bs-target="#bonusPartModal">
+                                <img src="@Url.Content("~/Content/img/ads/bonus_bolum.jpg")" alt="@LanguageHelper.GetValue("ModalBonusPartTitle")" class="w-100 mb-3" />
+                                <span class="btn sign__btn">@LanguageHelper.GetValue("ButtonDetailedInformation")</span>
+                            </a>
+                            <!-- Modal -->
+                            <div class="modal custom dark fade" id="bonusPartModal" tabindex="-1" aria-labelledby="bonusPartModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-fullscreen">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">
+                                                @LanguageHelper.GetValue("ModalBonusPartTitle")
+                                            </h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="w-100 d-flex flex-column">
+                                                <img src="@Url.Content("~/Content/img/ads/bonusbolum_banner.jpg")" alt="@LanguageHelper.GetValue("ModalBonusPartTitle")" class="w-100 mb-3" />
+                                                <div class="col-12">
+                                                    <div class="row justify-content-center text-center">
+                                                        <div class="col-12 col-lg-8 pt-4">
+                                                            @Html.Raw(LanguageHelper.GetValue("ModalBonusPartText"))
+                                                            <h3 class="pt-4 pb-3">
+                                                                @LanguageHelper.GetValue("ModalBonusPartSubTitle")
+                                                            </h3>
+                                                            <iframe src="https://art19.com/shows/fularsz-entellik/episodes/0fbb0264-2917-490e-89cf-35c800eff92c/embed" class="w-100"></iframe>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            Bonus Part
+                        </div>
+                        <div class="col-6 py-3">
+                            Dynamic Ad
+                            <a href="#" role="button" class="w-100 d-flex flex-column" data-bs-toggle="modal" data-bs-target="#dynamicAdsModal">
+                                <img src="@Url.Content("~/Content/img/ads/dinamik_reklam.jpg")" alt="@LanguageHelper.GetValue("ModalDynamicAdsTitle")" class="w-100 mb-3" />
+                                <span class="btn sign__btn">@LanguageHelper.GetValue("ButtonDetailedInformation")</span>
+                            </a>
+                            <!-- Modal -->
+                            <div class="modal custom dark fade" id="dynamicAdsModal" tabindex="-1" aria-labelledby="dynamicAdsModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-fullscreen">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">
+                                                @LanguageHelper.GetValue("ModalDynamicAdsTitle")
+                                            </h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="w-100 d-flex flex-column">
+                                                <img src="@Url.Content("~/Content/img/ads/dinamik_reklam_banner.jpg")" alt="@LanguageHelper.GetValue("ModalDynamicAdsTitle")" class="w-100 mb-3" />
+                                                <div class="col-12">
+                                                    <div class="row justify-content-center text-center">
+                                                        <div class="col-12 col-lg-8 pt-4">
+                                                            @Html.Raw(LanguageHelper.GetValue("ModalDynamicAdsText"))
+                                                            <h3 class="py-4">
+                                                                @LanguageHelper.GetValue("ModalDynamicAdsSubTitle")
+                                                            </h3>
+                                                            <div class="row justify-content-center">
+                                                                <div class="col-12 col-md-6 col-lg-4">
+                                                                    <div class="player__content">
+                                                                        <span class="player__track">
+                                                                            <b class="player__title">
+                                                                                Fularsız Entellik – Europcar
+                                                                            </b>
+                                                                        </span>
+                                                                        <audio src="@Url.Content(" ~/Content/mp3/Europcar_uzayzaman.mp3")" controls></audio>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12 col-md-6 col-lg-4">
+                                                                    <div class="player__content">
+                                                                        <span class="player__track">
+                                                                            <b class="player__title">
+                                                                                Deniz Göktaş – Tosla
+                                                                            </b>
+                                                                        </span>
+                                                                        <audio src="@Url.Content("~/Content/mp3/Tosla-Deniz-Goktas.mp3")" controls></audio>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12 col-md-6 col-lg-4">
+                                                                    <div class="player__content">
+                                                                        <span class="player__track">
+                                                                            <b class="player__title">
+                                                                                Olumlu Dünya – Akbank
+                                                                            </b>
+                                                                        </span>
+                                                                        <audio src="@Url.Content("~/Content/mp3/Akbank-Olumlu-Dunya.mp3")" controls></audio>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            Dynamic Ad
+                        </div>
+                        <div class="col-6 py-3">
+                            Sponsored Show
+                            <a href="#" role="button" class="w-100 d-flex flex-column" data-bs-toggle="modal" data-bs-target="#sponsoredShowModal">
+                                <img src="@Url.Content("~/Content/img/ads/dizisponsorluk.jpg")" alt="@LanguageHelper.GetValue("ModalSponsoredShowTitle")" class="w-100 mb-3" />
+                                <span class="btn sign__btn">@LanguageHelper.GetValue("ButtonDetailedInformation")</span>
+                            </a>
+                            <!-- Modal -->
+                            <div class="modal custom dark fade" id="sponsoredShowModal" tabindex="-1" aria-labelledby="sponsoredShowModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-fullscreen">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">
+                                                @LanguageHelper.GetValue("ModalSponsoredShowTitle")
+                                            </h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="w-100 d-flex flex-column">
+                                                <img src="@Url.Content("~/Content/img/ads/dizisponsorluk_banner.jpg")" alt="@LanguageHelper.GetValue("ModalSponsoredShowTitle")" class="w-100 mb-3" />
+                                                <div class="col-12">
+                                                    <div class="row justify-content-center text-center">
+                                                        <div class="col-12 col-lg-8 pt-4">
+                                                            @Html.Raw(LanguageHelper.GetValue("ModalSponsoredShowText"))
+                                                            <h3 class="py-4">
+                                                                @LanguageHelper.GetValue("ModalSponsoredShowSubTitle")
+                                                            </h3>
+                                                            <div class="row justify-content-center">
+                                                                <div class="col-12 col-md-6">
+                                                                    <div class="player__content">
+                                                                        <span class="player__track">
+                                                                            <b class="player__title">
+                                                                                Karanlık Bölge – BMW
+                                                                            </b>
+                                                                        </span>
+                                                                        <audio src="@Url.Content(" ~/Content/mp3/KBolgeBMWmid.mp3")" controls></audio>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12 col-md-6">
+                                                                    <div class="player__content">
+                                                                        <span class="player__track">
+                                                                            <b class="player__title">
+                                                                                Karanlık Bölge – Yandex
+                                                                            </b>
+                                                                        </span>
+                                                                        <audio src="@Url.Content("~/Content/mp3/KBolgeYANDEXmid.mp3")" controls></audio>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            Sponsored Show
+                        </div>
+                        <div class="col-6 py-3">
+                            Branded Shows
+                            <a href="#" role="button" class="w-100 d-flex flex-column" data-bs-toggle="modal" data-bs-target="#brandedShows">
+                                <img src="@Url.Content("~/Content/img/ads/markali_icerik.jpg")" alt="@LanguageHelper.GetValue("ModalBrandedShowsTitle")" class="w-100 mb-3" />
+                                <span class="btn sign__btn">@LanguageHelper.GetValue("ButtonDetailedInformation")</span>
+                            </a>
+                            <!-- Modal -->
+                            <div class="modal custom dark fade" id="brandedShows" tabindex="-1" aria-labelledby="brandedShowsLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-fullscreen">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">
+                                                @LanguageHelper.GetValue("ModalBrandedShowsTitle")
+                                            </h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="w-100 d-flex flex-column">
+                                                <img src="@Url.Content("~/Content/img/ads/markaliicerik.jpg")" alt="@LanguageHelper.GetValue("ModalBrandedShowsTitle")" class="w-100 mb-3" />
+                                                <div class="col-12">
+                                                    <div class="row justify-content-center text-center">
+                                                        <div class="col-12 col-lg-8 pt-4">
+                                                            @Html.Raw(LanguageHelper.GetValue("ModalBrandedShowsText"))
+                                                            <h3 class="pt-4 pb-3">
+                                                                @LanguageHelper.GetValue("ModalBrandedShowsSubTitle")
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            Branded Shows
+                        </div>
+
+                    </div>
+                </div>*@
+        </div>
+    </div>
+
+    <div class="col-12" id="ads-models">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg">
+                <div class="main__title">
+                    <h2 class="w-100 font-weight-bold">@LanguageHelper.GetValue("AdsTitleAdvantagesFourth")</h2>
+                    <p class="mb-0">@LanguageHelper.GetValue("AdsTextAdvantagesFourth")</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <div class="step">
+                    <span class="step__number">01</span>
+                    <h3 class="step__title">Dinamik Reklam</h3>
+                    <p class="step__text">
+                        Podcastlerin bir mecra olabilmesi için ülkemizde geliştirmeye devam ettiğimiz reklam modeli.<br />
+                        <a href="#" role="button" data-bs-toggle="modal" data-bs-target="#dynamicAdsModal">Detaylı bilgi al</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="step">
+                    <span class="step__number">02</span>
+                    <h3 class="step__title">Bonus Bölümler</h3>
+                    <p class="step__text">
+                        Haftalık düzenli yayınlanan bir podcast şovunda markaya özel bölüm yayınlanmasına bonus bölüm diyoruz.<br />
+                        <a href="#" role="button" data-bs-toggle="modal" data-bs-target="#bonusPartModal">Detaylı bilgi al</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="step">
+                    <span class="step__number">03</span>
+                    <h3 class="step__title">Branded Podcast</h3>
+                    <p class="step__text">
+                        Branded Podcast’ler markanın içerik üreticisi olduğu, Podbee Media’nın gelen briefe istinaden yaratıcıyı, formatı, prodüksiyonu, post-prodüksiyonu, yayına alma...<br />
+                        <a href="#" role="button" data-bs-toggle="modal" data-bs-target="#brandedShows">Detaylı bilgi al</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="step">
+                    <span class="step__number">04</span>
+                    <h3 class="step__title">Münhasır İşbirliği</h3>
+                    <p class="step__text">
+                        Podbee Media’nın yarattığı içeriklerde markanızın logosunun posterde yer alacağı ve sadece markanıza ait pre-mid-post roll reklamların yayınlanacağı işbirliği modelidir.<br />
+                        <a href="#" role="button" data-bs-toggle="modal" data-bs-target="#sponsoredShowModal">Detaylı bilgi al</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*<div class="col-12" id="dynamic-ads">
+            <div class="row align-items-center">
+                <div class="col-12 col-lg">
+                    <div class="main__title">
+                        <h2 class="w-100 mt-4">Dinamik Reklam</h2>
+                        <p>
+                            Podcastlerin bir mecra olabilmesi için ülkemizde geliştirmeye devam ettiğimiz reklam modeli. Bu sayede markalar belirledikleri süre boyunca Podbee Media dinleyicilerine ulaşıp mesajlarını paylaşıyor, ürünlerini tanıtabiliyorlar. Maksimum dinleyiciye erişimin sağlandığı bu reklam modelinde sadece yeni yayınlanan bölümlere değil, arşiv bölümlere de Pre-Mid-Post roll reklamları entegre ediliyor ve kampanyanın bitişiyle birlikte tüm bölümler başka markaların kullanımına açılıyor. Örneklerini aşağıdan dinleyebilirsiniz.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12" id="bonus-parts">
+            <div class="row align-items-center">
+                <div class="col-12 col-lg">
+                    <div class="main__title">
+                        <h2 class="w-100 mt-4">Bonus Bölümler</h2>
+                        <p>
+                            Haftalık düzenli yayınlanan bir podcast şovunda markaya özel bölüm yayınlanmasına bonus bölüm diyoruz. Yaratıcıların sürecine müdahale etmeden markanın konuşulmasını istediği konuyu ve vermek istediği mesajı dinleyicilerimizle buluşturuyoruz. Dinamik reklamdan farklı olarak, bonus bölüm süresiz olarak yayında kalıyor fakat dinamik reklamda eriştiğimiz kişi sayısına ulaşamıyor.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12" id="branded-podcast">
+            <div class="row align-items-center">
+                <div class="col-12 col-lg">
+                    <div class="main__title">
+                        <h2 class="w-100 mt-4">Branded Podcast</h2>
+                        <p>
+                            Branded Podcast’ler markanın içerik üreticisi olduğu, Podbee Media’nın gelen briefe istinaden yaratıcıyı, formatı, prodüksiyonu, post-prodüksiyonu, yayına alma ve raporlama gibi süreçlerin tümünü yürüttüğü ve anahtar teslim içerik ürettiği projelerdir. Branded podcastler ile markalar mesaj ve ürünlerini ön plana çıkarır, hedef kitlesiyle duygusal bağını kuvvetlendirir.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12" id="exclusive-partnership">
+            <div class="row align-items-center">
+                <div class="col-12 col-lg">
+                    <div class="main__title">
+                        <h2 class="w-100 mt-4">Münhasır İşbirliği</h2>
+                        <p>
+                            Podbee Media’nın yarattığı içeriklerde markanızın logosunun posterde yer alacağı ve sadece markanıza ait pre-mid-post roll reklamların yayınlanacağı işbirliği modelidir. En az 6 aylık bir çalışma süresi marka tarafından taahhüt edilmelidir. Bu sayede marka hedef kitlesine hitap eden ya da sahiplenmek istediği konularda geliştirilen podcastlere ait topluluğa erişim sağlar, uzun süreli çalışma sayesinde vermek istediği mesajı perçinler.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+
+    <div class="col-12 pt-5 py-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-4">
+                <a href="/@LanguageHelper.GetValue("UrlTypeContactUs")" class="sign__btn">@LanguageHelper.GetValue("ButtonGetOffer")</a>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal custom dark fade" id="bonusPartModal" tabindex="-1" aria-labelledby="bonusPartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        @LanguageHelper.GetValue("ModalBonusPartTitle")
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="w-100 d-flex flex-column">
+                        <img src="@Url.Content("~/Content/img/ads/bonusbolum_banner.jpg")" alt="@LanguageHelper.GetValue("ModalBonusPartTitle")" class="w-100 mb-3" />
+                        <div class="col-12">
+                            <div class="row justify-content-center text-center">
+                                <div class="col-12 col-lg-8 pt-4">
+                                    Haftalık düzenli yayınlanan bir podcast şovunda markaya özel bölüm yayınlanmasına bonus bölüm diyoruz. Yaratıcıların sürecine müdahale etmeden markanın konuşulmasını istediği konuyu ve vermek istediği mesajı dinleyicilerimizle buluşturuyoruz. Dinamik reklamdan farklı olarak, bonus bölüm süresiz olarak yayında kalıyor fakat dinamik reklamda eriştiğimiz kişi sayısına ulaşamıyor.
+                                    <h3 class="pt-4 pb-3">
+                                        @LanguageHelper.GetValue("ModalBonusPartSubTitle")
+                                    </h3>
+                                    @*<iframe src="https://art19.com/shows/fularsz-entellik/episodes/0fbb0264-2917-490e-89cf-35c800eff92c/embed" class="w-100"></iframe>*@
+                                    <div class="row justify-content-center">
+                                        <div class="col-12 col-md-6 col-lg-4">
+                                            <div class="player__content">
+                                                <span class="player__track">
+                                                    <b class="player__title">
+                                                        Barış Özcan – WWF Market Midroll
+                                                    </b>
+                                                </span>
+                                                <audio src="@Url.Content("~/Content/mp3/WWF_kurgu_1.mp3")" controls></audio>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal custom dark fade" id="dynamicAdsModal" tabindex="-1" aria-labelledby="dynamicAdsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        @LanguageHelper.GetValue("ModalDynamicAdsTitle")
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="w-100 d-flex flex-column">
+                        <img src="@Url.Content("~/Content/img/ads/dinamik_reklam_banner.jpg")" alt="@LanguageHelper.GetValue("ModalDynamicAdsTitle")" class="w-100 mb-3" />
+                        <div class="col-12">
+                            <div class="row justify-content-center text-center">
+                                <div class="col-12 col-lg-8 pt-4">
+                                    Podcastlerin bir mecra olabilmesi için ülkemizde geliştirmeye devam ettiğimiz reklam modeli. Bu sayede markalar belirledikleri süre boyunca Podbee Media dinleyicilerine ulaşıp mesajlarını paylaşıyor, ürünlerini tanıtabiliyorlar. Maksimum dinleyiciye erişimin sağlandığı bu reklam modelinde sadece yeni yayınlanan bölümlere değil, arşiv bölümlere de Pre-Mid-Post roll reklamları entegre ediliyor ve kampanyanın bitişiyle birlikte tüm bölümler başka markaların kullanımına açılıyor. Örneklerini aşağıdan dinleyebilirsiniz.
+                                    <h3 class="py-4">
+                                        @LanguageHelper.GetValue("ModalDynamicAdsSubTitle")
+                                    </h3>
+                                    <div class="row justify-content-center">
+                                        <div class="col-12 col-md-6 col-lg-4">
+                                            <div class="player__content">
+                                                <span class="player__track">
+                                                    <b class="player__title">
+                                                        Fularsız Entellik – WWF Market Midroll
+                                                    </b>
+                                                </span>
+                                                <audio src="@Url.Content("~/Content/mp3/FularsizEntellik_WWF-Market_Midroll.mp3")" controls></audio>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4">
+                                            <div class="player__content">
+                                                <span class="player__track">
+                                                    <b class="player__title">
+                                                        Deniz Göktaş – Tosla
+                                                    </b>
+                                                </span>
+                                                <audio src="@Url.Content("~/Content/mp3/Tosla-DenizGoktas.mp3")" controls></audio>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4">
+                                            <div class="player__content">
+                                                <span class="player__track">
+                                                    <b class="player__title">
+                                                        Barış Özcan - Samsung A53 Pre
+                                                    </b>
+                                                </span>
+                                                <audio src="@Url.Content("~/Content/mp3/BarisOzcan_Samsung-A53_Pre.mp3")" controls></audio>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal custom dark fade" id="sponsoredShowModal" tabindex="-1" aria-labelledby="sponsoredShowModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        Münhasır İşbirliği
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="w-100 d-flex flex-column">
+                        <img src="@Url.Content("~/Content/img/ads/dizisponsorluk_banner.jpg")" alt="@LanguageHelper.GetValue("ModalSponsoredShowTitle")" class="w-100 mb-3" />
+                        <div class="col-12">
+                            <div class="row justify-content-center text-center">
+                                <div class="col-12 col-lg-8 pt-4">
+                                    Podbee Media’nın yarattığı içeriklerde markanızın logosunun posterde yer alacağı ve sadece markanıza ait pre-mid-post roll reklamların yayınlanacağı işbirliği modelidir. En az 6 aylık bir çalışma süresi marka tarafından taahhüt edilmelidir. Bu sayede marka hedef kitlesine hitap eden ya da sahiplenmek istediği konularda geliştirilen podcastlere ait topluluğa erişim sağlar, uzun süreli çalışma sayesinde vermek istediği mesajı perçinler.
+                                    <h3 class="py-4">
+                                        Münhasır İşbirliği İçerikleri
+                                    </h3>
+                                    <div class="row justify-content-center">
+                                        <div class="col-12 col-md-6">
+                                            <a href="/podcast/esmiyor" class="player__content">
+                                                <img src="@Url.Content("~/Content/img/esmiyor.jpeg")" alt="Esmiyor" width="300" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal custom dark fade" id="brandedShows" tabindex="-1" aria-labelledby="brandedShowsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        @LanguageHelper.GetValue("ModalBrandedShowsTitle")
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="w-100 d-flex flex-column">
+                        <img src="@Url.Content("~/Content/img/ads/markaliicerik.jpg")" alt="@LanguageHelper.GetValue("ModalBrandedShowsTitle")" class="w-100 mb-3" />
+                        <div class="col-12">
+                            <div class="row justify-content-center text-center">
+                                <div class="col-12 col-lg-8 pt-4">
+                                    Branded Podcast’ler markanın içerik üreticisi olduğu, Podbee Media’nın gelen briefe istinaden yaratıcıyı, formatı, prodüksiyonu, post-prodüksiyonu, yayına alma ve raporlama gibi süreçlerin tümünü yürüttüğü ve anahtar teslim içerik ürettiği projelerdir. Branded podcastler ile markalar mesaj ve ürünlerini ön plana çıkarır, hedef kitlesiyle duygusal bağını kuvvetlendirir.
+                                    <div class="row justify-content-center mt-3">
+                                        <div class="col-12 col-md-6 col-lg-4 py-3">
+                                            <a href="/podcast/beymen-hayallerim-kadar-gucluyum-" class="player__content">
+                                                <img src="@Url.Content("~/Content/img/beymencover.jpg")" alt="Beymen" class="w-100" />
+                                            </a>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4 py-3">
+                                            <a href="/podcast/hayallerim-kadar-gucluyum" class="player__content">
+                                                <img src="@Url.Content("~/Content/img/isinözücover.jpg")" alt="İşin Özü" class="w-100" />
+                                            </a>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4 py-3">
+                                            <a href="/podcast/iyi-ki-agesa" class="player__content">
+                                                <img src="@Url.Content("~/Content/img/iyikiagesacover.jpg")" alt="İyiki Agesa" class="w-100" />
+                                            </a>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4 py-3">
+                                            <a href="/podcast/kaldiğin-yerden" class="player__content">
+                                                <img src="@Url.Content("~/Content/img/kaldiginyerdencover.jpg")" alt="Kaldığın Yerden" class="w-100" />
+                                            </a>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4 py-3">
+                                            <a href="/podcast/yolculuğun-hikayesi" class="player__content">
+                                                <img src="@Url.Content("~/Content/img/yolculugunhikayesicover.jpg")" alt="Yolculuğun Hikayesi" class="w-100" />
+                                            </a>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4 py-3">
+                                            <a href="/podcast/nilay-ornek-ile-yolculuk" class="player__content">
+                                                <img src="@Url.Content("~/Content/img/yolculuknereyecover.jpg")" alt="Yolculuk Nereye" class="w-100" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var type = "Ads";
+    </script>

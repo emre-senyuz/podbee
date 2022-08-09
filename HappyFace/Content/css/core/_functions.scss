@@ -1,0 +1,15 @@
+﻿@mixin _extend-colors($colors-map) {
+    @each $key, $value in $colors-map {
+        .text-#{$key} {
+            color: #{$value} !important;
+        }
+
+        .fill-#{$key} {
+            fill: #{$value} !important;
+        }
+
+        .bg-#{$key} {
+            background-color: #{$value} !important;
+        }
+    }
+}

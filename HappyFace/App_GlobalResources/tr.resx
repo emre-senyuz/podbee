@@ -1,0 +1,1257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutTextAbout" xml:space="preserve">
+    <value>Podbee Media bir podcast ağı. Medya ve Eğlence endüstrisinde gerçekleşen dönüşümü yapımcılığını üstlendiği podcast şovlarıyla audio dikeyinde gerçekleştirmeyi amaçlıyor.</value>
+  </data>
+  <data name="AboutTextHow" xml:space="preserve">
+    <value>Bilgi Çağı ile yaşam hızımız hiç olmadığı kadar arttı. Öğrenerek, tecrübe ederek, eğlenerek, bazen aynı anda hepsini birden yaparak hayatın her anını yakalamaya çalışıyoruz. Yolda giderken, ofiste çalışırken, evi temizlerken, mutfakta yemek yaparken podcast dinleyerek bilgi ediniyor, bazen de kahkahalarla gülüyor, hızla akıp giden zamana değer katıyoruz.</value>
+  </data>
+  <data name="AboutTextHow2ndLine" xml:space="preserve">
+    <value>Podbee Media, şovlarıyla dinleyicilerin aktivitelerine eşlik ederken, sponsor markaları da reklamla karşılaşmayan hedef tüketicileriyle buluşturuyor.</value>
+  </data>
+  <data name="AboutTextOurMission" xml:space="preserve">
+    <value>Podbee Media, Türkiye’nin en büyük podcast ağı olma hedefiyle, nitelikli Türkçe podcast yayınları üreterek; podcast dinleme alışkanlığının kazandırılmasını sağlamak için çalışmalar yürütür.</value>
+  </data>
+  <data name="AboutTitleHow" xml:space="preserve">
+    <value>Günün Her Anında Seninleyiz (Ne Yapıyoruz?)</value>
+  </data>
+  <data name="AboutTitleOurMission" xml:space="preserve">
+    <value>Amacımız</value>
+  </data>
+  <data name="AdminAdd" xml:space="preserve">
+    <value>Ekle</value>
+  </data>
+  <data name="AdminAddNew" xml:space="preserve">
+    <value>Yeni Ekle</value>
+  </data>
+  <data name="AdminBack" xml:space="preserve">
+    <value>Geri</value>
+  </data>
+  <data name="AdminBlog" xml:space="preserve">
+    <value>Blog</value>
+  </data>
+  <data name="AdminCancel" xml:space="preserve">
+    <value>İptal</value>
+  </data>
+  <data name="AdminCarousel" xml:space="preserve">
+    <value>Karusel</value>
+  </data>
+  <data name="AdminCategories" xml:space="preserve">
+    <value>Kategoriler</value>
+  </data>
+  <data name="AdminCategory" xml:space="preserve">
+    <value>Kategori</value>
+  </data>
+  <data name="AdminComment" xml:space="preserve">
+    <value>Yorum</value>
+  </data>
+  <data name="AdminCommentDetail" xml:space="preserve">
+    <value>Yorum Detayı</value>
+  </data>
+  <data name="AdminComments" xml:space="preserve">
+    <value>Yorumlar</value>
+  </data>
+  <data name="AdminContacts" xml:space="preserve">
+    <value>İletişim Mesajları</value>
+  </data>
+  <data name="AdminCopy" xml:space="preserve">
+    <value>Kopyala</value>
+  </data>
+  <data name="AdminDashboard" xml:space="preserve">
+    <value>Yönetim Paneli</value>
+  </data>
+  <data name="AdminDelete" xml:space="preserve">
+    <value>Sil</value>
+  </data>
+  <data name="AdminEdit" xml:space="preserve">
+    <value>Düzenle</value>
+  </data>
+  <data name="AdminFooter" xml:space="preserve">
+    <value>Alt Kısım</value>
+  </data>
+  <data name="AdminGeneral" xml:space="preserve">
+    <value>Genel</value>
+  </data>
+  <data name="AdminHeader" xml:space="preserve">
+    <value>Üst Kısım</value>
+  </data>
+  <data name="AdminHi" xml:space="preserve">
+    <value>Merhaba</value>
+  </data>
+  <data name="AdminHomepage" xml:space="preserve">
+    <value>Anasayfa</value>
+  </data>
+  <data name="AdminLanguages" xml:space="preserve">
+    <value>Diller</value>
+  </data>
+  <data name="AdminLink" xml:space="preserve">
+    <value>Bağlantı</value>
+  </data>
+  <data name="AdminMediaLibrary" xml:space="preserve">
+    <value>Medya Kütüphanesi</value>
+  </data>
+  <data name="AdminMember" xml:space="preserve">
+    <value>Üye</value>
+  </data>
+  <data name="AdminMembers" xml:space="preserve">
+    <value>Üyeler</value>
+  </data>
+  <data name="AdminMenu" xml:space="preserve">
+    <value>Menü</value>
+  </data>
+  <data name="AdminNew" xml:space="preserve">
+    <value>Yeni</value>
+  </data>
+  <data name="AdminNewComment" xml:space="preserve">
+    <value>Yeni Yorum</value>
+  </data>
+  <data name="AdminNews" xml:space="preserve">
+    <value>Haber</value>
+  </data>
+  <data name="AdminNewses" xml:space="preserve">
+    <value>Haberler</value>
+  </data>
+  <data name="AdminNewsletters" xml:space="preserve">
+    <value>E-Bülten Abonelikleri</value>
+  </data>
+  <data name="AdminPage" xml:space="preserve">
+    <value>Sayfa</value>
+  </data>
+  <data name="AdminPages" xml:space="preserve">
+    <value>Sayfalar</value>
+  </data>
+  <data name="AdminPodcast" xml:space="preserve">
+    <value>Yayın</value>
+  </data>
+  <data name="AdminPodcasts" xml:space="preserve">
+    <value>Yayınlar</value>
+  </data>
+  <data name="AdminPost" xml:space="preserve">
+    <value>Gönderi</value>
+  </data>
+  <data name="AdminPosts" xml:space="preserve">
+    <value>Gönderiler</value>
+  </data>
+  <data name="AdminRemove" xml:space="preserve">
+    <value>Kaldır</value>
+  </data>
+  <data name="AdminRole" xml:space="preserve">
+    <value>Rol</value>
+  </data>
+  <data name="AdminSave" xml:space="preserve">
+    <value>Kaydet</value>
+  </data>
+  <data name="AdminSlide" xml:space="preserve">
+    <value>Slide</value>
+  </data>
+  <data name="AdminSocial" xml:space="preserve">
+    <value>Sosyal Medya</value>
+  </data>
+  <data name="AdsTextAdvantages" xml:space="preserve">
+    <value>Podbee Media ağında bulunan Podcast yayınları ile yapılacak işbirlikleri sayesinde marka ve kurumlar, hedef kitlesi olan – %94’ü yüksek eğitim seviyesine sahip ve %43’ü bir şeyler öğrenmek ve yeniliklerden haberdar olmak isteyen Podcast dinleyicisine, sesini doğru bir şekilde duyurabilmektedir.</value>
+  </data>
+  <data name="AdsTextAdvantagesFourth" xml:space="preserve">
+    <value>Biz Podbee Media’da temel olarak dört farklı reklam modeliyle ilerliyoruz.</value>
+  </data>
+  <data name="AdsTextAdvantagesSecond" xml:space="preserve">
+    <value>Podcastler size bir topluluğa erişmenin hızlı ve kolay kapısını açıyor! Günümüzde markalar kendilerini, ürünlerini, sahiplendikleri konuları vurgulamak için yaş aralığı, cinsiyet, eğitim durumu vb. parametreler üzerinden oluşturulan hedeflemeleri artık topluluklar üzerinden yakalamaya çalışıyor. Çünkü topluluklar ilgi alanları üzerinden doğru kitleye erişim imkanı sağlıyor. Podcastler sayesinde yeniliklere açık, focus gruplarda keşfedemeyeceğiniz hedef tüketicilerinize ulaşabilir ve hatta onları harekete geçirebilirsiniz.</value>
+  </data>
+  <data name="AdsTextSecondAdvantages" xml:space="preserve">
+    <value>&lt;ul&gt;
+&lt;li&gt;Dinleyicilerin podcast yayıncılarıyla kurduğu bağ,&lt;/li&gt;
+&lt;li&gt;Aktif olarak podcast dinleyen kullanıcıların sadık olması,&lt;/li&gt;
+&lt;li&gt;Eğitim seviyesi ve satın alma gücü yüksek kitleye kolay erişim,&lt;/li&gt;
+&lt;li&gt;Podcast yayıncıları tarafından seslendirilen özel reklam metinlerinin, farklı mecralarda olduğu gibi reklamı geç seçeneğiyle geçilebilir olmadan kesintisiz olarak duyurulması.&lt;/li&gt;
+&lt;/ul&gt;</value>
+  </data>
+  <data name="AdsTitleAdvantages" xml:space="preserve">
+    <value>Podcast Reklamlarının Avantajları</value>
+  </data>
+  <data name="AdsTitleAdvantagesFourth" xml:space="preserve">
+    <value>Podcast reklamı nasıl yapılır?</value>
+  </data>
+  <data name="AdsTitleAdvantagesSecond" xml:space="preserve">
+    <value>Topluluğa Erişim!</value>
+  </data>
+  <data name="AdsTitleAdvantagesThird" xml:space="preserve">
+    <value>Reklamla Karşılaşmayan Hedef Tüketicilere Erişim</value>
+  </data>
+  <data name="AdsTitleSecondAdvantages" xml:space="preserve">
+    <value>Marka ve kurumlar neden podcast reklamlarını tercih etmeli?</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Tümü</value>
+  </data>
+  <data name="AllPodcast" xml:space="preserve">
+    <value>Tüm Şovlar</value>
+  </data>
+  <data name="Answer" xml:space="preserve">
+    <value>Yanıt</value>
+  </data>
+  <data name="Blog" xml:space="preserve">
+    <value>Blog</value>
+  </data>
+  <data name="Browse" xml:space="preserve">
+    <value>Gözat</value>
+  </data>
+  <data name="ButtonActions" xml:space="preserve">
+    <value>İşlemler</value>
+  </data>
+  <data name="ButtonActive" xml:space="preserve">
+    <value>Aktif</value>
+  </data>
+  <data name="ButtonAddSubCategory" xml:space="preserve">
+    <value>Alt Kategori Ekle</value>
+  </data>
+  <data name="ButtonAll" xml:space="preserve">
+    <value>Tümü</value>
+  </data>
+  <data name="ButtonBackToSite" xml:space="preserve">
+    <value>Siteye Dön</value>
+  </data>
+  <data name="ButtonCancel" xml:space="preserve">
+    <value>İptal</value>
+  </data>
+  <data name="ButtonChange" xml:space="preserve">
+    <value>Değiştir</value>
+  </data>
+  <data name="ButtonClickHere" xml:space="preserve">
+    <value>Buraya Tıkla</value>
+  </data>
+  <data name="ButtonConfirm" xml:space="preserve">
+    <value>Onayla</value>
+  </data>
+  <data name="ButtonCopy" xml:space="preserve">
+    <value>Kopyala</value>
+  </data>
+  <data name="ButtonDelete" xml:space="preserve">
+    <value>Sil</value>
+  </data>
+  <data name="ButtonDeleteAll" xml:space="preserve">
+    <value>Tümünü Sil</value>
+  </data>
+  <data name="ButtonDeleteSubCategory" xml:space="preserve">
+    <value>Alt Kategorileri Sil</value>
+  </data>
+  <data name="ButtonDetailedInformation" xml:space="preserve">
+    <value>Detaylı Bilgi</value>
+  </data>
+  <data name="ButtonEdit" xml:space="preserve">
+    <value>Düzenle</value>
+  </data>
+  <data name="ButtonGetOffer" xml:space="preserve">
+    <value>Teklif Al</value>
+  </data>
+  <data name="ButtonLogin" xml:space="preserve">
+    <value>Giriş Yap</value>
+  </data>
+  <data name="ButtonMove" xml:space="preserve">
+    <value>Taşı</value>
+  </data>
+  <data name="ButtonPassive" xml:space="preserve">
+    <value>Pasif</value>
+  </data>
+  <data name="ButtonRegister" xml:space="preserve">
+    <value>Kayıt Ol</value>
+  </data>
+  <data name="ButtonRemove" xml:space="preserve">
+    <value>Çıkar</value>
+  </data>
+  <data name="ButtonSave" xml:space="preserve">
+    <value>Kaydet</value>
+  </data>
+  <data name="ButtonSend" xml:space="preserve">
+    <value>Gönder</value>
+  </data>
+  <data name="ButtonUpdateStatus" xml:space="preserve">
+    <value>Durumu Güncelle</value>
+  </data>
+  <data name="ChooseFile" xml:space="preserve">
+    <value>Dosya seç</value>
+  </data>
+  <data name="CommentAnsweredText" xml:space="preserve">
+    <value>Yorumunuz başka bir kullanıcı veya yönetici tarafından yanıtlandı</value>
+  </data>
+  <data name="CommentSendedText" xml:space="preserve">
+    <value>Yorumunuz yönetici onayından sonra yayınlanacaktır.</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Hata</value>
+  </data>
+  <data name="ErrorAddBlog" xml:space="preserve">
+    <value>Blog ekleme başarısız</value>
+  </data>
+  <data name="ErrorAddCategory" xml:space="preserve">
+    <value>Kategori ekleme başarısız</value>
+  </data>
+  <data name="ErrorAddLanguage" xml:space="preserve">
+    <value>Dil ekleme başarısız</value>
+  </data>
+  <data name="ErrorAddLatestEpisodes" xml:space="preserve">
+    <value>Bölüm ekleme başarısız</value>
+  </data>
+  <data name="ErrorAddPost" xml:space="preserve">
+    <value>Podcast ekleme başarısız</value>
+  </data>
+  <data name="ErrorAddSlide" xml:space="preserve">
+    <value>Slide ekleme başarısız</value>
+  </data>
+  <data name="ErrorAddSocial" xml:space="preserve">
+    <value>Sosyal medya platform ekleme başarısız</value>
+  </data>
+  <data name="ErrorAnswerContact" xml:space="preserve">
+    <value>Mesaj yanıtlama başarısız</value>
+  </data>
+  <data name="ErrorAnswerEmpty" xml:space="preserve">
+    <value>Yanıt Alanı Boş Bırakılamaz</value>
+  </data>
+  <data name="ErrorAuthenticateComment" xml:space="preserve">
+    <value>Lütfen giriş yapın</value>
+  </data>
+  <data name="ErrorCategoryEmpty" xml:space="preserve">
+    <value>Kategori Boş Bırakılamaz</value>
+  </data>
+  <data name="ErrorCheckField" xml:space="preserve">
+    <value>Alanları kontrol edin</value>
+  </data>
+  <data name="ErrorCommentEmpty" xml:space="preserve">
+    <value>Yorum Alanı Boş Bırakılamaz</value>
+  </data>
+  <data name="ErrorCopyBlog" xml:space="preserve">
+    <value>Blog kopyalama başarısız</value>
+  </data>
+  <data name="ErrorCopyCategory" xml:space="preserve">
+    <value>Kategori kopyalama başarısız</value>
+  </data>
+  <data name="ErrorCopyPost" xml:space="preserve">
+    <value>Podcast kopyalama başarısız</value>
+  </data>
+  <data name="ErrorCopySlide" xml:space="preserve">
+    <value>Slide kopyalama başarısız</value>
+  </data>
+  <data name="ErrorDeleteBlog" xml:space="preserve">
+    <value>Blog silme işlemi başarısız</value>
+  </data>
+  <data name="ErrorDeleteCategory" xml:space="preserve">
+    <value>Kategori silinemedi</value>
+  </data>
+  <data name="ErrorDeleteComment" xml:space="preserve">
+    <value>Yorum silme başarısız</value>
+  </data>
+  <data name="ErrorDeleteContact" xml:space="preserve">
+    <value>İletişim mesajı silme işlemi başarısız</value>
+  </data>
+  <data name="ErrorDeleteLanguage" xml:space="preserve">
+    <value>Dil silinemedi</value>
+  </data>
+  <data name="ErrorDeleteLatestEpisode" xml:space="preserve">
+    <value>Bölüm silme başarısız</value>
+  </data>
+  <data name="ErrorDeleteMember" xml:space="preserve">
+    <value>Üye silme başarısız</value>
+  </data>
+  <data name="ErrorDeletePost" xml:space="preserve">
+    <value>Podcast silme işlemi başarısız</value>
+  </data>
+  <data name="ErrorDeleteSlide" xml:space="preserve">
+    <value>Slide silme işlemi başarısız</value>
+  </data>
+  <data name="ErrorDeleteSocial" xml:space="preserve">
+    <value>Sosyal medya platformu silme işlemi başarısız</value>
+  </data>
+  <data name="ErrorDeleteTrailer" xml:space="preserve">
+    <value>Trailer silme işlemi başarısız</value>
+  </data>
+  <data name="ErrorEmail" xml:space="preserve">
+    <value>E-Posta Adresi Hatalı</value>
+  </data>
+  <data name="ErrorEmailEmpty" xml:space="preserve">
+    <value>E-Posta Adresi Boş Bıraklamaz</value>
+  </data>
+  <data name="ErrorEmailExist" xml:space="preserve">
+    <value>Bu E-Posta Adresi İle Kayıtlı Kullanıcı Bulunmaktadır</value>
+  </data>
+  <data name="ErrorEmailInvalid" xml:space="preserve">
+    <value>E-Posta Adresi Geçersiz</value>
+  </data>
+  <data name="ErrorEmailSend" xml:space="preserve">
+    <value>E-Posta Gönderilirken Hata Oluştu</value>
+  </data>
+  <data name="ErrorEmailUndefined" xml:space="preserve">
+    <value>E-posta adresine kayıtlı üyelik bulunmamaktadır</value>
+  </data>
+  <data name="ErrorForgetPassword" xml:space="preserve">
+    <value>Şifre Sıfırlama Başarısız, E-Posta Adresinizi Kontrol Ediniz</value>
+  </data>
+  <data name="ErrorImageEmpty" xml:space="preserve">
+    <value>Görsel Alanı Boş Bırakılamaz</value>
+  </data>
+  <data name="ErrorIncorrectPageType" xml:space="preserve">
+    <value>Hatalı sayfa tipi</value>
+  </data>
+  <data name="ErrorInvalidLanguageName" xml:space="preserve">
+    <value>Geçersiz Dil Adı</value>
+  </data>
+  <data name="ErrorInvalidPageType" xml:space="preserve">
+    <value>Geçersiz Sayfa Tipi</value>
+  </data>
+  <data name="ErrorLangEmpty" xml:space="preserve">
+    <value>Dil Alanı Boş Bırakılamaz</value>
+  </data>
+  <data name="ErrorLastLanguage" xml:space="preserve">
+    <value>En az 1 dil olmalıdır</value>
+  </data>
+  <data name="ErrorLogin" xml:space="preserve">
+    <value>Üye Girişi Başarısız, E-Posta ve Şifrenizi Kontrol Ediniz</value>
+  </data>
+  <data name="ErrorMessageEmpty" xml:space="preserve">
+    <value>Mesaj Alanı Boş Bırakılamaz</value>
+  </data>
+  <data name="ErrorMoveBlog" xml:space="preserve">
+    <value>Blog taşıma başarısız</value>
+  </data>
+  <data name="ErrorMoveCategory" xml:space="preserve">
+    <value>Kategori taşıma başarısız</value>
+  </data>
+  <data name="ErrorMovePost" xml:space="preserve">
+    <value>Podcast taşıma başarısız</value>
+  </data>
+  <data name="ErrorNameEmpty" xml:space="preserve">
+    <value>Ad Alanı Boş Bırakılamaz</value>
+  </data>
+  <data name="ErrorNewPasswordConfirmEmpty" xml:space="preserve">
+    <value>Yeni Şifre Tekrarı Boş Bırakılamaz</value>
+  </data>
+  <data name="ErrorNewPasswordEmpty" xml:space="preserve">
+    <value>Yeni Şifre Boş Bırakılamaz</value>
+  </data>
+  <data name="ErrorNewPasswordMustBeSame" xml:space="preserve">
+    <value>Yeni Şifre Tekrarı Yeni Şifre İle Aynı Olmalıdır</value>
+  </data>
+  <data name="ErrorParentNeedAllLanguages" xml:space="preserve">
+    <value>Üst kategorinin tüm diller için çevirisini ekleyiniz</value>
+  </data>
+  <data name="ErrorPassiveDefaultLanguage" xml:space="preserve">
+    <value>Passive language cannot be default</value>
+  </data>
+  <data name="ErrorPassiveLanguage" xml:space="preserve">
+    <value>Hedef dil pasif durumdadır</value>
+  </data>
+  <data name="ErrorPassword" xml:space="preserve">
+    <value>Şifre Hatalı</value>
+  </data>
+  <data name="ErrorPasswordEmpty" xml:space="preserve">
+    <value>Şifre Boş Bırakılamaz</value>
+  </data>
+  <data name="ErrorPasswordMinLength" xml:space="preserve">
+    <value>Şifre En Az 6 Haneli Olmalıdır</value>
+  </data>
+  <data name="ErrorPrefixEmpty" xml:space="preserve">
+    <value>Kod Alanı Boş Bırakılamaz</value>
+  </data>
+  <data name="ErrorRegister" xml:space="preserve">
+    <value>Kayıt Başarısız</value>
+  </data>
+  <data name="ErrorSameUrl" xml:space="preserve">
+    <value>Aynı URL'e sahip kayıt bulunmaktadır</value>
+  </data>
+  <data name="ErrorSelectPost" xml:space="preserve">
+    <value>Lütfen yayın seçiniz</value>
+  </data>
+  <data name="ErrorSubjectEmpty" xml:space="preserve">
+    <value>Konu Alanı Boş Bırakılamaz</value>
+  </data>
+  <data name="ErrorSurnameEmpty" xml:space="preserve">
+    <value>Soyad Alanı Boş Bırakılamaz</value>
+  </data>
+  <data name="ErrorTitleEmpty" xml:space="preserve">
+    <value>Başlık Alanı Boş Bırakılamaz</value>
+  </data>
+  <data name="ErrorTypeEmpty" xml:space="preserve">
+    <value>Tür Alanı Boş Bırakılamaz</value>
+  </data>
+  <data name="ErrorUndefinedLanguage" xml:space="preserve">
+    <value>Tanımsız Dil</value>
+  </data>
+  <data name="ErrorUpdateBlog" xml:space="preserve">
+    <value>Blog güncelleme başarısız</value>
+  </data>
+  <data name="ErrorUpdateCategory" xml:space="preserve">
+    <value>Kategori güncelleme başarısız</value>
+  </data>
+  <data name="ErrorUpdateComment" xml:space="preserve">
+    <value>Yorum güncelleme başarısız</value>
+  </data>
+  <data name="ErrorUpdateInformation" xml:space="preserve">
+    <value>Kişisel bilgiler güncellenemedi</value>
+  </data>
+  <data name="ErrorUpdateLanguage" xml:space="preserve">
+    <value>Dil güncelleme başarısız</value>
+  </data>
+  <data name="ErrorUpdateLatestEpisodes" xml:space="preserve">
+    <value>Bölüm güncelleme başarısız</value>
+  </data>
+  <data name="ErrorUpdateMember" xml:space="preserve">
+    <value>Üye güncelleme başarısız</value>
+  </data>
+  <data name="ErrorUpdatePost" xml:space="preserve">
+    <value>Podcast güncelleme başarısız</value>
+  </data>
+  <data name="ErrorUpdateSlide" xml:space="preserve">
+    <value>Slide güncelleme başarısız</value>
+  </data>
+  <data name="ErrorUpdateSocial" xml:space="preserve">
+    <value>Sosyal medya platformu güncelleme başarısız</value>
+  </data>
+  <data name="ErrorUpdateWeeklyBees" xml:space="preserve">
+    <value>Weekly Bees güncelleme başarısız</value>
+  </data>
+  <data name="ErrorVoteComment" xml:space="preserve">
+    <value>Yorum oylama işlemi başarısız</value>
+  </data>
+  <data name="FormAlternateCategory" xml:space="preserve">
+    <value>Alternatif Kategoriler</value>
+  </data>
+  <data name="FormBanner" xml:space="preserve">
+    <value>Banner</value>
+  </data>
+  <data name="FormBirthDate" xml:space="preserve">
+    <value>Doğum Tarihi</value>
+  </data>
+  <data name="FormCategory" xml:space="preserve">
+    <value>Kategori</value>
+  </data>
+  <data name="FormCode" xml:space="preserve">
+    <value>Kod</value>
+  </data>
+  <data name="FormComment" xml:space="preserve">
+    <value>Yorum</value>
+  </data>
+  <data name="FormConfirmationStatus" xml:space="preserve">
+    <value>Onay Durumu</value>
+  </data>
+  <data name="FormContent" xml:space="preserve">
+    <value>İçerik</value>
+  </data>
+  <data name="FormDate" xml:space="preserve">
+    <value>Tarih</value>
+  </data>
+  <data name="FormDefault" xml:space="preserve">
+    <value>Ön Tanımlı</value>
+  </data>
+  <data name="FormDescription" xml:space="preserve">
+    <value>Açıklama</value>
+  </data>
+  <data name="FormDirection" xml:space="preserve">
+    <value>Yön</value>
+  </data>
+  <data name="FormDislike" xml:space="preserve">
+    <value>Beğenmedi</value>
+  </data>
+  <data name="FormEmail" xml:space="preserve">
+    <value>E-Posta</value>
+  </data>
+  <data name="FormEpisode" xml:space="preserve">
+    <value>Bölüm</value>
+  </data>
+  <data name="FormIcon" xml:space="preserve">
+    <value>İkon</value>
+  </data>
+  <data name="FormIdentityNumber" xml:space="preserve">
+    <value>T.C. Kimlik No</value>
+  </data>
+  <data name="FormKeywords" xml:space="preserve">
+    <value>Anahtar Kelimeler</value>
+  </data>
+  <data name="FormLanguage" xml:space="preserve">
+    <value>Dil</value>
+  </data>
+  <data name="FormLike" xml:space="preserve">
+    <value>Beğendi</value>
+  </data>
+  <data name="FormMember" xml:space="preserve">
+    <value>Üye</value>
+  </data>
+  <data name="FormMessage" xml:space="preserve">
+    <value>Mesaj</value>
+  </data>
+  <data name="FormName" xml:space="preserve">
+    <value>Ad</value>
+  </data>
+  <data name="FormNewPassword" xml:space="preserve">
+    <value>Yeni Şifre</value>
+  </data>
+  <data name="FormNewPasswordConfirm" xml:space="preserve">
+    <value>Yeni Şifre Tekrar</value>
+  </data>
+  <data name="FormOldPassword" xml:space="preserve">
+    <value>Eski Şifre</value>
+  </data>
+  <data name="FormOrder" xml:space="preserve">
+    <value>Sıralama</value>
+  </data>
+  <data name="FormParent" xml:space="preserve">
+    <value>Üst Kategori</value>
+  </data>
+  <data name="FormPassword" xml:space="preserve">
+    <value>Şifre</value>
+  </data>
+  <data name="FormPhone" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="FormPlatform" xml:space="preserve">
+    <value>Platform</value>
+  </data>
+  <data name="FormPodcast" xml:space="preserve">
+    <value>Podcast</value>
+  </data>
+  <data name="FormPost" xml:space="preserve">
+    <value>Yayınlar</value>
+  </data>
+  <data name="FormPrefix" xml:space="preserve">
+    <value>Ön Ek</value>
+  </data>
+  <data name="FormRemember" xml:space="preserve">
+    <value>Beni Hatırla</value>
+  </data>
+  <data name="FormShowMenu" xml:space="preserve">
+    <value>Menü Aktif</value>
+  </data>
+  <data name="FormStatus" xml:space="preserve">
+    <value>Durum</value>
+  </data>
+  <data name="FormSubject" xml:space="preserve">
+    <value>Konu</value>
+  </data>
+  <data name="FormSurname" xml:space="preserve">
+    <value>Soyad</value>
+  </data>
+  <data name="FormThumbnail" xml:space="preserve">
+    <value>Küçük Görsel</value>
+  </data>
+  <data name="FormTitle" xml:space="preserve">
+    <value>Başlık</value>
+  </data>
+  <data name="FormTrailer" xml:space="preserve">
+    <value>Trailer</value>
+  </data>
+  <data name="FormType" xml:space="preserve">
+    <value>Tür</value>
+  </data>
+  <data name="FormUrl" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="HeaderMemberTitle" xml:space="preserve">
+    <value>Giriş Yap / Kayıt Ol</value>
+  </data>
+  <data name="HomePage" xml:space="preserve">
+    <value>Anasayfa</value>
+  </data>
+  <data name="LanguageSelection" xml:space="preserve">
+    <value>Dil Seçimi</value>
+  </data>
+  <data name="LinkClickHere" xml:space="preserve">
+    <value>Buraya tıkla</value>
+  </data>
+  <data name="LinkForgetPassword" xml:space="preserve">
+    <value>Şifreni mi Unuttun?</value>
+  </data>
+  <data name="LinkLogin" xml:space="preserve">
+    <value>Giriş Yap</value>
+  </data>
+  <data name="LinkRegister" xml:space="preserve">
+    <value>Hesabın yok mu? Kayıt Ol!</value>
+  </data>
+  <data name="LinkSignOut" xml:space="preserve">
+    <value>Çıkış</value>
+  </data>
+  <data name="LoginBeforeComment" xml:space="preserve">
+    <value>Yorum yapmak için giriş yapmalısınız.</value>
+  </data>
+  <data name="MainCategory" xml:space="preserve">
+    <value>Ana Kategori</value>
+  </data>
+  <data name="Man" xml:space="preserve">
+    <value>Erkek</value>
+  </data>
+  <data name="MessageSendedText" xml:space="preserve">
+    <value>Mesajınız incelendikten sonra tarafınıza dönüş sağlanacaktır.</value>
+  </data>
+  <data name="ModalBonusPartSubTitle" xml:space="preserve">
+    <value>Örnek Bonus Bölüm Reklam İçeriği</value>
+  </data>
+  <data name="ModalBonusPartText" xml:space="preserve">
+    <value>&lt;p&gt;Podbee Media ağı içerisinde yer alan podcast serilerinde, yapılacak işbirliği ile markanın kendisini ya da duyurmak istediği kampanya, haber gibi içeriklerin onlar adına yapılacak bonus bir bölüm ile duyurulduğu reklam modeli çalışmasıdır. Bonus bölümde ele alınacak konu, podcast yayınının mevcut diliyle de uyumlu olacak şekilde marka ile birlikte karşılıklı olarak kararlaştırılır. Kaydı alınan bölüm tüm podcast mecralarına yüklenirken işbirliği yapılan markanın ismi bölüm adında geçer. İlgili podcast serisi aktif olarak platformlarda yer aldığı sürece bu bonus bölüm de aynı şekilde seri içerisinde kalır.&lt;/p&gt;</value>
+  </data>
+  <data name="ModalBonusPartTitle" xml:space="preserve">
+    <value>Bonus Bölüm</value>
+  </data>
+  <data name="ModalBrandedShowsSubTitle" xml:space="preserve">
+    <value>Örnek Markalı İçerikler</value>
+  </data>
+  <data name="ModalBrandedShowsText" xml:space="preserve">
+    <value>&lt;p&gt;Markaların kendilerini konumlandırmak istedikleri nokta ya da sahiplenmek istedikleri konular üzerinden ilerleyerek 360 derece proje oluşturma, içerik geliştirme ve diğer tüm prodüksiyonel ve dağıtım ihtiyaçlarının karşılandığı bir reklam modelidir. Oluşturulan kurgu sonrası marka adının podcast adında geçtiği ve markanın kendi podcast serisine sahip olduğu bir yayın türüdür.&lt;/p&gt;</value>
+  </data>
+  <data name="ModalBrandedShowsTitle" xml:space="preserve">
+    <value>Markalı İçerikler</value>
+  </data>
+  <data name="ModalDynamicAdsSubTitle" xml:space="preserve">
+    <value>Örnek Dinamik Reklam İçerikleri</value>
+  </data>
+  <data name="ModalDynamicAdsText" xml:space="preserve">
+    <value>&lt;p&gt;Podbee Media ağı içerisinde yer alan podcast yayınlarının düzenli olarak yaptığı içeriklerde, marka bilinirliği ya da ürün tanıtımı yapmak amacıyla daha fazla kullanıcıya ulaşarak markaların kendilerini duyurabileceği bir reklam modelidir.&lt;/p&gt;
+&lt;p&gt;Anlaşma yapılan süre dahilinde hazırlanan reklam metinleri podcast yayıncısı tarafından seslendirilerek, tüm podcast bölümlerinin girişinde 15 saniye, ortasında 30 saniye ve son 15 saniyesinde kullanılır. Aynı zamanda bölüm açıklamalarında yönlendirme linki veya promosyon kodu gibi eklemeler de ayrıca yapılabilmektedir.&lt;/p&gt;</value>
+  </data>
+  <data name="ModalDynamicAdsTitle" xml:space="preserve">
+    <value>Dinamik Reklam</value>
+  </data>
+  <data name="ModalSponsoredShowSubTitle" xml:space="preserve">
+    <value>Örnek Dizi Sponsorluk İçerikleri</value>
+  </data>
+  <data name="ModalSponsoredShowText" xml:space="preserve">
+    <value>&lt;p&gt;Podbee Media alt yapısı ile hazırlanan podcast dizilerinde yapılacak anlaşma ile markalara diziye sponsor olabilme ya da bölüm içerisinde ürün yerleştirme, karakter ile ürünü birleştirme gibi fırsatların sunulduğu reklam modelidir.&lt;/p&gt;</value>
+  </data>
+  <data name="ModalSponsoredShowTitle" xml:space="preserve">
+    <value>Dizi Sponsorluk</value>
+  </data>
+  <data name="More" xml:space="preserve">
+    <value>Devamı</value>
+  </data>
+  <data name="NewsletterRegister" xml:space="preserve">
+    <value>E-bülten aboneliğiniz gerçekleşmiştir.</value>
+  </data>
+  <data name="NewsletterText" xml:space="preserve">
+    <value>Podbee Media bültenine kayıt olarak; yeni bölüm duyuruları ve podcast dünyasındaki son gelişmelerden ilk sen haberdar olabilirsin.</value>
+  </data>
+  <data name="NoCommentFound" xml:space="preserve">
+    <value>Henüz yorum yapılmamış</value>
+  </data>
+  <data name="NoRecordFound" xml:space="preserve">
+    <value>Kayıt bulunamadı</value>
+  </data>
+  <data name="PageAboutUsTitle" xml:space="preserve">
+    <value>Hakkında</value>
+  </data>
+  <data name="PageActivationErrorText" xml:space="preserve">
+    <value>Aktivasyon linki hatalı veya geçersiz. Yönetici ile iletişime geçebilir ya da yeni aktivasyon linki isteyebilirsiniz.</value>
+  </data>
+  <data name="PageActivationErrorTitle" xml:space="preserve">
+    <value>Aktivasyon Başarısız!</value>
+  </data>
+  <data name="PageActivationReLinkRouteText" xml:space="preserve">
+    <value>Yeni aktivasyon linki için tıklayınız.</value>
+  </data>
+  <data name="PageActivationSuccessText" xml:space="preserve">
+    <value>Üyeliğiniz başarılı bir şekilde aktive edilmiştir.</value>
+  </data>
+  <data name="PageActivationSuccessTitle" xml:space="preserve">
+    <value>Aktivasyon Başarılı!</value>
+  </data>
+  <data name="PageActivationTitle" xml:space="preserve">
+    <value>Aktivasyon</value>
+  </data>
+  <data name="PageAdsSecondSubTitle" xml:space="preserve">
+    <value>HER DAKİKASINA BAĞLI KALINAN İÇERİKLER VE İŞ BİRLİKLERİ</value>
+  </data>
+  <data name="PageAdsSubTitle" xml:space="preserve">
+    <value>PODCAST REKLAMCILIĞI</value>
+  </data>
+  <data name="PageAdsTitle" xml:space="preserve">
+    <value>Reklam</value>
+  </data>
+  <data name="PageBlogTitle" xml:space="preserve">
+    <value>Blog</value>
+  </data>
+  <data name="PageChangePasswordTitle" xml:space="preserve">
+    <value>Şifre Değiştir</value>
+  </data>
+  <data name="PageCommentsTitle" xml:space="preserve">
+    <value>Yorumlar</value>
+  </data>
+  <data name="PageContactUsTitle" xml:space="preserve">
+    <value>İletişim</value>
+  </data>
+  <data name="PageFaqTitle" xml:space="preserve">
+    <value>Sıkça Sorulan Sorular</value>
+  </data>
+  <data name="PageFaqTitleShort" xml:space="preserve">
+    <value>S.S.S.</value>
+  </data>
+  <data name="PageForgetPasswordTitle" xml:space="preserve">
+    <value>Şifremi Unuttum</value>
+  </data>
+  <data name="PageHomeRouteText" xml:space="preserve">
+    <value>Anasayfaya dönmek için linke tıklayınız.</value>
+  </data>
+  <data name="PageInformationCheckMailBoxText" xml:space="preserve">
+    <value>Aktivasyon için lütfen e-posta kutunuzu kontrol ediniz.</value>
+  </data>
+  <data name="PageInformationInActiveTitle" xml:space="preserve">
+    <value>Hesabınız Aktif Değil!</value>
+  </data>
+  <data name="PageInformationNeedActicationText" xml:space="preserve">
+    <value>Hesabınızın kullanıma açılabilmesi için e-posta adresinize gönderilen aktivason mailini onaylamanız gerekmektedir.</value>
+  </data>
+  <data name="PageInformationNeedActicationTitle" xml:space="preserve">
+    <value>Neredeyse Tamam!</value>
+  </data>
+  <data name="PageInformationTitle" xml:space="preserve">
+    <value>Bilgilendirme</value>
+  </data>
+  <data name="PageLatestEpisodesTitle" xml:space="preserve">
+    <value>Son Eklenen Bölümler</value>
+  </data>
+  <data name="PageLoginTitle" xml:space="preserve">
+    <value>Üye Girişi</value>
+  </data>
+  <data name="PageLogoutTitle" xml:space="preserve">
+    <value>Çıkış</value>
+  </data>
+  <data name="PageMemberPanelTitle" xml:space="preserve">
+    <value>Üye Paneli</value>
+  </data>
+  <data name="PagePersonelInformationTitle" xml:space="preserve">
+    <value>Kişisel Bilgiler</value>
+  </data>
+  <data name="PagePodcastTitle" xml:space="preserve">
+    <value>Şovlar</value>
+  </data>
+  <data name="PagePostTitle" xml:space="preserve">
+    <value>Gönderi</value>
+  </data>
+  <data name="PageProfileTitle" xml:space="preserve">
+    <value>Profil</value>
+  </data>
+  <data name="PageReActivationTitle" xml:space="preserve">
+    <value>Yeni Aktivasyon Linki</value>
+  </data>
+  <data name="PageReferencesTitle" xml:space="preserve">
+    <value>Referanslar</value>
+  </data>
+  <data name="PageRegisterTitle" xml:space="preserve">
+    <value>Kayıt Ol</value>
+  </data>
+  <data name="PageResetPasswordTitle" xml:space="preserve">
+    <value>Şifre Sıfırlama</value>
+  </data>
+  <data name="Podcast" xml:space="preserve">
+    <value>Şovlar</value>
+  </data>
+  <data name="Records" xml:space="preserve">
+    <value>Kayıtlar</value>
+  </data>
+  <data name="SeeAll" xml:space="preserve">
+    <value>Tümünü Gör</value>
+  </data>
+  <data name="SelectCategory" xml:space="preserve">
+    <value>Kategori Seçiniz</value>
+  </data>
+  <data name="SelectDirection" xml:space="preserve">
+    <value>Yön Seçiniz</value>
+  </data>
+  <data name="SelectLanguage" xml:space="preserve">
+    <value>Dil Seçiniz</value>
+  </data>
+  <data name="SelectParent" xml:space="preserve">
+    <value>Üst Kategori Seçiniz</value>
+  </data>
+  <data name="SelectPost" xml:space="preserve">
+    <value>Yayın Seç</value>
+  </data>
+  <data name="SelectType" xml:space="preserve">
+    <value>Tür Seçiniz</value>
+  </data>
+  <data name="SendEMail" xml:space="preserve">
+    <value>E-Posta Gönder</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Ayarlar</value>
+  </data>
+  <data name="Share" xml:space="preserve">
+    <value>Paylaş</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>E-posta adresine kayıtlı üyelik bulunmaktadır</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Başarılı</value>
+  </data>
+  <data name="SuccessAddBlog" xml:space="preserve">
+    <value>Blog başarıyla eklendi</value>
+  </data>
+  <data name="SuccessAddCategory" xml:space="preserve">
+    <value>Kategori başarıyla eklendi</value>
+  </data>
+  <data name="SuccessAddLanguage" xml:space="preserve">
+    <value>Dil başarıyla eklendi</value>
+  </data>
+  <data name="SuccessAddLatestEpisodes" xml:space="preserve">
+    <value>Bölüm ekleme başarılı</value>
+  </data>
+  <data name="SuccessAddPost" xml:space="preserve">
+    <value>Podcast başarıyla eklendi</value>
+  </data>
+  <data name="SuccessAddSlide" xml:space="preserve">
+    <value>Slide başarıyla eklendi</value>
+  </data>
+  <data name="SuccessAddSocial" xml:space="preserve">
+    <value>Sosyal medya platformu başarıyla eklendi</value>
+  </data>
+  <data name="SuccessAnswerContact" xml:space="preserve">
+    <value>Mesaj yanıtlama başarılı</value>
+  </data>
+  <data name="SuccessChangePassword" xml:space="preserve">
+    <value>Şifre Değiştirme Başarılı</value>
+  </data>
+  <data name="SuccessComment" xml:space="preserve">
+    <value>Yorum gönderildi</value>
+  </data>
+  <data name="SuccessContact" xml:space="preserve">
+    <value>Mesajınız başarıyla gönderildi</value>
+  </data>
+  <data name="SuccessCopyBlog" xml:space="preserve">
+    <value>Blog kopyalama başarılı</value>
+  </data>
+  <data name="SuccessCopyCategory" xml:space="preserve">
+    <value>Kategori kopyalama başarılı</value>
+  </data>
+  <data name="SuccessCopyPost" xml:space="preserve">
+    <value>Podcast kopyalama başarılı</value>
+  </data>
+  <data name="SuccessCopySlide" xml:space="preserve">
+    <value>Slide kopyalama başarılı</value>
+  </data>
+  <data name="SuccessDeleteBlog" xml:space="preserve">
+    <value>Blog silme işlemi başarılı</value>
+  </data>
+  <data name="SuccessDeleteCategory" xml:space="preserve">
+    <value>Kategori silme işlemi başarılı</value>
+  </data>
+  <data name="SuccessDeleteComment" xml:space="preserve">
+    <value>Yorum silme başarılı</value>
+  </data>
+  <data name="SuccessDeleteContact" xml:space="preserve">
+    <value>İletişim mesajı silme işlemi başarılı</value>
+  </data>
+  <data name="SuccessDeleteLanguage" xml:space="preserve">
+    <value>Dil silme işlemi başarılı</value>
+  </data>
+  <data name="SuccessDeleteLatestEpisode" xml:space="preserve">
+    <value>Bölüm silme başarılı</value>
+  </data>
+  <data name="SuccessDeleteMember" xml:space="preserve">
+    <value>Üye silme başarılı</value>
+  </data>
+  <data name="SuccessDeletePost" xml:space="preserve">
+    <value>Podcast silme işlemi başarılı</value>
+  </data>
+  <data name="SuccessDeleteSlide" xml:space="preserve">
+    <value>Slide silme işlemi başarılı</value>
+  </data>
+  <data name="SuccessDeleteSocial" xml:space="preserve">
+    <value>Sosyal medya platformu silme işlemi başarılı</value>
+  </data>
+  <data name="SuccessDeleteTrailer" xml:space="preserve">
+    <value>Trailer silme işlemi başarılı</value>
+  </data>
+  <data name="SuccessForgetPassword" xml:space="preserve">
+    <value>E-Posta Adresinize Şifre Sıfırlama Bağlantısı Gönderildi</value>
+  </data>
+  <data name="SuccessLanguageChanged" xml:space="preserve">
+    <value>Dil Değiştirildi</value>
+  </data>
+  <data name="SuccessLogin" xml:space="preserve">
+    <value>Üye Girişi Başarılı</value>
+  </data>
+  <data name="SuccessMoveBlog" xml:space="preserve">
+    <value>Blog taşıma başarılı</value>
+  </data>
+  <data name="SuccessMoveCategory" xml:space="preserve">
+    <value>Kategori taşıma başarılı</value>
+  </data>
+  <data name="SuccessMovePost" xml:space="preserve">
+    <value>Podcast taşıma başarılı</value>
+  </data>
+  <data name="SuccessNewsletter" xml:space="preserve">
+    <value>E-Bülten kaydınız başarıyla tamamlandı</value>
+  </data>
+  <data name="SuccessRegister" xml:space="preserve">
+    <value>Kayıt İşlemi Başarılı</value>
+  </data>
+  <data name="SuccessUpdateBlog" xml:space="preserve">
+    <value>Blog güncelleme başarılı</value>
+  </data>
+  <data name="SuccessUpdateCategory" xml:space="preserve">
+    <value>Kategori güncelleme başarılı</value>
+  </data>
+  <data name="SuccessUpdateComment" xml:space="preserve">
+    <value>Yorum güncelleme başarılı</value>
+  </data>
+  <data name="SuccessUpdateInformation" xml:space="preserve">
+    <value>Kişisel bilgiler güncellendi</value>
+  </data>
+  <data name="SuccessUpdateLanguage" xml:space="preserve">
+    <value>Dil güncelleme başarılı</value>
+  </data>
+  <data name="SuccessUpdateLatestEpisodes" xml:space="preserve">
+    <value>Bölüm güncelleme başarılı</value>
+  </data>
+  <data name="SuccessUpdateMember" xml:space="preserve">
+    <value>Üye güncelleme başarılı</value>
+  </data>
+  <data name="SuccessUpdatePost" xml:space="preserve">
+    <value>Podcast güncelleme başarılı</value>
+  </data>
+  <data name="SuccessUpdateSlide" xml:space="preserve">
+    <value>Slide güncelleme başarılı</value>
+  </data>
+  <data name="SuccessUpdateSocial" xml:space="preserve">
+    <value>Sosyal medya platformu güncelleme başarılı</value>
+  </data>
+  <data name="SuccessUpdateWeeklyBees" xml:space="preserve">
+    <value>Weekly Bees güncelleme başarılı</value>
+  </data>
+  <data name="SuccessVoteComment" xml:space="preserve">
+    <value>Yorum başarıyla oylandı</value>
+  </data>
+  <data name="TitleAddress" xml:space="preserve">
+    <value>Adres</value>
+  </data>
+  <data name="TitleInfo" xml:space="preserve">
+    <value>Bilgi</value>
+  </data>
+  <data name="TitleNewsletter" xml:space="preserve">
+    <value>E-Bülten</value>
+  </data>
+  <data name="TypeBlog" xml:space="preserve">
+    <value>Blog</value>
+  </data>
+  <data name="TypeCategory" xml:space="preserve">
+    <value>Kategori</value>
+  </data>
+  <data name="TypeNews" xml:space="preserve">
+    <value>Haber</value>
+  </data>
+  <data name="TypePage" xml:space="preserve">
+    <value>Sayfa</value>
+  </data>
+  <data name="TypePodcast" xml:space="preserve">
+    <value>Podcast</value>
+  </data>
+  <data name="TypeProduct" xml:space="preserve">
+    <value>Ürün</value>
+  </data>
+  <data name="UrlTypeAboutUs" xml:space="preserve">
+    <value>hakkimizda</value>
+  </data>
+  <data name="UrlTypeActivation" xml:space="preserve">
+    <value>aktivasyon</value>
+  </data>
+  <data name="UrlTypeAds" xml:space="preserve">
+    <value>reklam</value>
+  </data>
+  <data name="UrlTypeBlog" xml:space="preserve">
+    <value>blog</value>
+  </data>
+  <data name="UrlTypeCategory" xml:space="preserve">
+    <value>kategori</value>
+  </data>
+  <data name="UrlTypeChangePassword" xml:space="preserve">
+    <value>sifre-degistir</value>
+  </data>
+  <data name="UrlTypeComments" xml:space="preserve">
+    <value>yorumlar</value>
+  </data>
+  <data name="UrlTypeContact" xml:space="preserve">
+    <value>iletisim</value>
+  </data>
+  <data name="UrlTypeContactUs" xml:space="preserve">
+    <value>iletisim</value>
+  </data>
+  <data name="UrlTypeContent" xml:space="preserve">
+    <value>icerik</value>
+  </data>
+  <data name="UrlTypeFaq" xml:space="preserve">
+    <value>sik-sorulan-sorular</value>
+  </data>
+  <data name="UrlTypeForgetPassword" xml:space="preserve">
+    <value>sifremi-unuttum</value>
+  </data>
+  <data name="UrlTypeInformation" xml:space="preserve">
+    <value>bilgilendirme</value>
+  </data>
+  <data name="UrlTypeLatestEpisode" xml:space="preserve">
+    <value>son-eklenen-bolumler</value>
+  </data>
+  <data name="UrlTypeLogin" xml:space="preserve">
+    <value>giris</value>
+  </data>
+  <data name="UrlTypeMember" xml:space="preserve">
+    <value>uye</value>
+  </data>
+  <data name="UrlTypeNews" xml:space="preserve">
+    <value>haber</value>
+  </data>
+  <data name="UrlTypePage" xml:space="preserve">
+    <value>sayfa</value>
+  </data>
+  <data name="UrlTypePersonelInformation" xml:space="preserve">
+    <value>kisisel-bilgiler</value>
+  </data>
+  <data name="UrlTypePodcast" xml:space="preserve">
+    <value>podcast</value>
+  </data>
+  <data name="UrlTypeProduct" xml:space="preserve">
+    <value>urun</value>
+  </data>
+  <data name="UrlTypeProfile" xml:space="preserve">
+    <value>profil</value>
+  </data>
+  <data name="UrlTypeReActivation" xml:space="preserve">
+    <value>yeni-aktivasyon</value>
+  </data>
+  <data name="UrlTypeReference" xml:space="preserve">
+    <value>referanslar</value>
+  </data>
+  <data name="UrlTypeRegister" xml:space="preserve">
+    <value>kayit</value>
+  </data>
+  <data name="UrlTypeResetPassword" xml:space="preserve">
+    <value>sifre-sifirlama</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Uyarı</value>
+  </data>
+  <data name="Woman" xml:space="preserve">
+    <value>Kadın</value>
+  </data>
+  <data name="YourCommentAnswered" xml:space="preserve">
+    <value>Yorumunuz yanıtlandı</value>
+  </data>
+  <data name="YourCommentSended" xml:space="preserve">
+    <value>Yorumunuz alındı</value>
+  </data>
+  <data name="YourMessageAnswered" xml:space="preserve">
+    <value>Mesajınız yanıtlandı</value>
+  </data>
+  <data name="YourMessageSended" xml:space="preserve">
+    <value>Mesajınız başarıyla gönderildi</value>
+  </data>
+</root>

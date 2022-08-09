@@ -1,0 +1,288 @@
+﻿@{
+    ViewBag.Title = LanguageHelper.GetValue("PageFaqTitle");
+    //ViewBag.Description = "Hey corç";
+}
+
+<div class="row row--grid">
+    <!-- breadcrumb -->
+    <div class="col-12">
+        <ul class="breadcrumb">
+            <li class="breadcrumb__item"><a href="@(LanguageHelper.CurrentLanguage == LanguageHelper.DefaultLanguage ? "/" : "/" + LanguageHelper.CurrentLanguage)">@LanguageHelper.GetValue("HomePage")</a></li>
+            <li class="breadcrumb__item breadcrumb__item--active">@LanguageHelper.GetValue("PageFaqTitle")</li>
+        </ul>
+    </div>
+    <!-- end breadcrumb -->
+
+    <div class="col-12 pt-5">
+        <img src="@Url.Content("~/Content/img/about-banner.jpg")" alt="About Us" class="w-100" />
+    </div>
+
+    <!-- title -->
+    <div class="col-12 pt-5">
+        <div class="row flex-lg-row-reverse align-items-center">
+            <div class="col-12 col-lg-6 about-banner">
+                <img src="@Url.Content("~/Content/img/about-banner-2.jpg")" alt="Mission" class="w-100" />
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="main__title">
+                    <h1 class="w-100 mb-4">@LanguageHelper.GetValue("PageFaqTitle")</h1>
+                    <h2 class="w-100">1. Neden Podcast Dinliyoruz?</h2>
+                    <p class="mb-4">
+                        Bekir Ağırdır’ın “Hikayesini Arayan Gelecek” kitabında geleceğimizi şekillendirecek üç konudan bahsediliyor. <strong><em>İklim Krizi</em></strong>,
+                        Göç ve teknolojik gelişmelerin beraberinde getirdiği <strong><em>“Hızlı Yaşam.”</em></strong> Bu kadar hızlı akan hayatın, bilginin içinde hepimiz
+                        bir yerlere yetişmeye, geride kalmamaya çalışıyoruz. Ancak bir gün hala 24 saat ve zamanı efektif değerlendirme, daha eğlenceli hale getirme
+                        arayışının neticesinde karşımıza podcastler çıkıyor. Bilgi almak, gülmek, hayal etmek, ilham almak, kişisel gelişimimizi sağlamak gibi birçok farklı
+                        beklentiye cevap veren podcastleri ücretsiz dinliyoruz.
+                    </p>
+                    <h2 class="w-100">2. Podcast Reklamı Nedir?</h2>
+                    <p>
+                        Podcastler Spotify, Apple Podcasts, Google Podcasts başta olmak üzere birçok platformdan ücretsiz dinleniyor ve yaratıcılar bu platformlardan gelir elde etmiyorlar. İçeriklerin sürdürülebilir olması ve yaratıcıların gelir elde edebilmeleri için Podcast reklamlarının önemi çok büyük. Bu sayede yaratıcılar daha nitelikli içerik üretmeye devam ediyor, markalar hedef kitlelerine ulaşıyor ve etkileşimini arttırıyor.
+                    </p>
+                    <p>
+                        Biz Podbee Media’da temel olarak dört farklı reklam modeliyle ilerliyoruz.<br />
+                        <a href="/@LanguageHelper.GetValue("UrlTypeAds")#ads-models">Detayları için tıklayın</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-6 about-banner">
+                <img src="@Url.Content("~/Content/img/about-slide-2.jpg")" alt="Vision" class="w-100" />
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="main__title">
+                    <h2 class="w-100">3. Size Nasıl Ulaşabilirim?</h2>
+                    <p class="mb-4">
+                        Bizlere iletişim sayfamızdan veya <a href="mailto:info@podbeemedia.com">info@podbeemedia.com</a> üzerinden ulaşabilirsiniz.
+                    </p>
+                    <h2 class="w-100">4. Yeni bölümler ne sıklıkta çıkıyor?</h2>
+                    <p class="mb-4">
+                        Bazı Podcast şovlarımız haftalık olarak çıkarken, bazı şovlarımızın yeni bölümleri dönemsel olarak çıkmakta. Bizi sosyal medya hesaplarımızdan takip ederek, tüm gelişmeler hakkında bilgi sahibi olabilirsiniz.
+                    </p>
+                    <ul class="mb-4">
+                        <li>Instagram: <a href="instagram.com/podbee.media/" target="_blank">instagram.com/podbee.media/</a></li>
+                        <li>Twitter: <a href="twitter.com/podbeemedia" target="_blank">twitter.com/podbeemedia</a></li>
+                        <li>YouTube: <a href="youtube.com/c/PodbeeMedia" target="_blank">youtube.com/c/PodbeeMedia</a></li>
+                    </ul>
+                    <h2 class="w-100">5. Podcastler Nereden Dinlenir?</h2>
+                    <p class="mb-4">
+                        Podcastler RSS Feed ile bir hosting üzerinden farklı platformlara dağıtılır ve ücretsiz dinlenir. Spotify, Apple Podcasts, Google Podcasts Türkiye’de podcastlerin en çok kullanıldığı uygulamalar. Bunun haricinde birçok farklı uygulamadan podcastler yine ücretsiz dinlenebilir.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 pt-5">
+        <div class="row flex-lg-row-reverse align-items-center">
+            <div class="col-12 col-lg-6 about-banner">
+                <img src="@Url.Content("~/Content/img/about-banner-2.jpg")" alt="Mission" class="w-100" />
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="main__title">
+                    <h2 class="w-100">6. Podcast Dizisi Nedir?</h2>
+                    <p>
+                        Podcast dizileri temelini radyo tiyatrosundan alan, fakat tek bir lokasyon değil farklı lokasyon ve atmosferlerin oluşturulmasıyla dinleyicinin hayal gücünün sürekli zorlandığı içeriklerdir. Senaryosu, yönetmeni ve oyuncuları ile önemli bir prodüksiyon ve post prodüksiyon süreci yürütülür. Amacımız dinleyicilerimizin dizileri hayal gücünde izlemelerini sağlamak ve kendilerine eşsiz bir deneyimi yaşatmaktır.
+                    </p>
+                    <p class="mb-4">
+                        Ülkemizde çok iyi hikayeler olduğunu biliyoruz. Görsel dizilere göre düşük prodüksiyon bütçeleri, zaman/ mekandan bağımsız senaryo üretimi gibi avantajlarıyla Podcast Dizileri bu hikayelerin yayınlanmaları için çok önemli bir mecra.
+                    </p>
+                    <h2 class="w-100">7. S.S.S sekmesinde aradığım sorulara cevap bulamadım ne yapmalıyım?</h2>
+                    <p>
+                        Bize <a href="mailto:info@podbeemedia.com">info@podbeemedia.com</a> üzerinden ulaşarak, tüm sorularınızı sorabilirsiniz.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*<div class="col-12 pt-5">
+            <div class="row">
+                <div class="col-12 col-lg-4">
+                    <div class="step">
+                        <span class="step__number">01</span>
+                        <h3 class="step__title">Dinamik Reklam</h3>
+                        <p class="step__text">
+                            <strong>Podcastlerin bir mecra olabilmesi için ülkemizde geliştirmeye devam ettiğimiz reklam modeli.</strong> Bu sayede markalar belirledikleri süre boyunca Podbee Media dinleyicilerine ulaşıp mesajlarını paylaşıyor, ürünlerini tanıtabiliyorlar. Maksimum dinleyiciye erişimin sağlandığı bu reklam modelinde sadece yeni yayınlanan bölümlere değil, arşiv bölümlere de Pre-Mid-Post roll reklamları entegre ediliyor ve kampanyanın bitişiyle birlikte tüm bölümler başka markaların kullanımına açılıyor. Örneklerini aşağıdan dinleyebilirsiniz.
+                            <a href="#">Detaylı bilgi al</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="step">
+                        <span class="step__number">02</span>
+                        <h3 class="step__title">Bonus Bölümler</h3>
+                        <p class="step__text">
+                            <strong>Haftalık düzenli yayınlanan bir podcast şovunda markaya özel bölüm yayınlanmasına bonus bölüm diyoruz.</strong> Yaratıcıların sürecine müdahale etmeden markanın konuşulmasını istediği konuyu ve vermek istediği mesajı dinleyicilerimizle buluşturuyoruz. Dinamik reklamdan farklı olarak, bonus bölüm süresiz olarak yayında kalıyor fakat dinamik reklamda eriştiğimiz kişi sayısına ulaşamıyor. Örnek bölümlere aşağıdan ulaşabilirsiniz.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="step">
+                        <span class="step__number">03</span>
+                        <h3 class="step__title">Branded Podcast</h3>
+                        <p class="step__text">
+                            <strong>Branded Podcast’ler markanın içerik üreticisi olduğu, Podbee Media’nın gelen briefe istinaden yaratıcıyı, formatı, prodüksiyonu</strong>, post-prodüksiyonu, yayına alma ve raporlama gibi süreçlerin tümünü yürüttüğü ve anahtar teslim içerik ürettiği projelerdir. Branded podcastler ile markalar mesaj ve ürünlerini ön plana çıkarır, hedef kitlesiyle duygusal bağını kuvvetlendirir.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-6 about-banner">
+                    <img src="@Url.Content("~/Content/img/about-slide-2.jpg")" alt="Vision" class="w-100" />
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="main__title">
+                        <h2 class="w-100">Podcast Dizisi Nedir?</h2>
+                        <p>
+                            Podcast dizileri temelini radyo tiyatrosundan alan, fakat tek bir lokasyon değil farklı lokasyon ve atmosferlerin oluşturulmasıyla dinleyicinin hayal gücünün sürekli zorlandığı içeriklerdir. Senaryosu, yönetmeni ve oyuncuları ile önemli bir prodüksiyon ve post prodüksiyon süreci yürütülür. Amacımız dinleyicilerimizin dizileri hayal gücünde izlemelerini sağlamak ve kendilerine eşsiz bir deneyimi yaşatmaktır.
+                        </p>
+                        <p class="pb-4">
+                            Ülkemizde çok iyi hikayeler olduğunu biliyoruz. Görsel dizilere göre düşük prodüksiyon bütçeleri, zaman/ mekandan bağımsız senaryo üretimi gibi avantajlarıyla Podcast Dizileri bu hikayelerin yayınlanmaları için çok önemli bir mecra.
+                        </p>
+                        <h2 class="w-100">Podcastler Nereden Dinlenir?</h2>
+                        <p>
+                            Podcastler RSS Feed ile bir hosting üzerinden farklı platformlara dağıtılır ve ücretsiz dinlenir. Spotify, Apple Podcasts, Google Podcasts Türkiye’de podcastlerin en çok kullanıldığı uygulamalar. Bunun haricinde birçok farklı uygulamadan podcastler yine ücretsiz dinlenebilir.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 pt-5">
+            <img src="@Url.Content("~/Content/img/about-banner.jpg")" alt="About Us" class="w-100" />
+        </div>
+
+        <div class="col-12 pt-5">
+            <div class="row align-items-center justify-content-center text-center">
+                <div class="col-12">
+                    <div class="main__title">
+                        <h1 class="w-100 mb-4 justify-content-center text-center">Reklam</h1>
+                        <h2 class="w-100 justify-content-center text-center">Topluluğa Erişim!</h2>
+                        <p class="mb-4">Podcastler size bir topluluğa erişmenin hızlı ve kolay kapısını açıyor! Günümüzde markalar kendilerini, ürünlerini, sahiplendikleri konuları vurgulamak için yaş aralığı, cinsiyet, eğitim durumu vb. parametreler üzerinden oluşturulan hedeflemeleri artık topluluklar üzerinden yakalamaya çalışıyor. Çünkü topluluklar ilgi alanları üzerinden doğru kitleye erişim imkanı sağlıyor. Podcastler sayesinde yeniliklere açık, focus gruplarda keşfedemeyeceğiniz hedef tüketicilerinize ulaşabilir ve hatta onları harekete geçirebilirsiniz.</p>
+                        <h2 class="w-100 justify-content-center text-center">
+                            Reklamla Karşılaşmayan Hedef Tüketicilere Erişim
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 pt-4">
+            <div class="row mx-0">
+                <div class="col-12 col-lg-4 pt-4 d-flex text-center">
+                    <div class="w-100 h-100 d-flex flex-column align-items-center justify-content-center pb-3 by-the-numbers">
+                        <span class="number">%75’i</span>
+                        <span>18-34 yaş aralığında</span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 pt-4 d-flex text-center">
+                    <div class="w-100 h-100 d-flex flex-column align-items-center justify-content-center pb-3 by-the-numbers">
+                        <span class="number">%90’ı</span>
+                        <span>üniversite mezunu ya da olacak</span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 pt-4 d-flex text-center">
+                    <div class="w-100 h-100 d-flex flex-column align-items-center justify-content-center pb-3 by-the-numbers">
+                        <span class="number">%80’inin</span>
+                        <span>en az bir adet premium üyeliği olan ve bu sayede <strong>Reklamla Karşılaşmayan</strong></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 pt-5">
+            <div class="row align-items-center justify-content-center text-center">
+                <div class="col-12">
+                    <div class="main__title">
+                        <p class="mb-4">
+                            Sosyal medyada ise karşısına çıkan reklamlarda “geç”e tıklayan bir kitle<br />
+                            Yani tüm markaların ulaşmak isteyip ulaşamadığı bir kitle podcast dinleyicileri.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 pt-5 px-0">
+            <div class="row py-3 light-bg">
+                <div class="col-12">
+                    <div class="row align-items-center justify-content-center text-center">
+                        <div class="col-12">
+                            <div class="main__title m-0">
+                                <p class="mb-4">
+                                    Podbee Media üzerinde yapılan reklam çalışmalarının ROAS (Return on Ad Spend) oranı %200’e kadar çıkıyor.<br />
+                                    Bir yandan da dinledikleri yaratıcılar podcast üretmeye devam etsin diye onların sponsorlarını destekleyecek, hatta onlara bizzat sponsor olacak kadar da içeriğine sadık bir kitle.<br />
+                                    Erişilemeyen tüketicilere en bağlı oldukları mecra üzerinden kişiye özel mesajlarla ulaşmak istiyorsanız Podbee Media ile iletişime geçin.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 pt-5">
+            <div class="row">
+                <div class="col-12 col-lg-6 d-flex">
+                    <div class="step">
+                        <span class="step__number">01</span>
+                        <h3 class="step__title">Dinamik Reklam</h3>
+                        <p class="step__text">
+                            Podcastlerin bir mecra olabilmesi için ülkemizde geliştirmeye devam ettiğimiz reklam modeli. Bu sayede markalar belirledikleri süre boyunca Podbee Media dinleyicilerine ulaşıp mesajlarını paylaşıyor, ürünlerini tanıtabiliyorlar. Maksimum dinleyiciye erişimin sağlandığı bu reklam modelinde sadece yeni yayınlanan bölümlere değil, arşiv bölümlere de Pre-Mid-Post roll reklamları entegre ediliyor ve kampanyanın bitişiyle birlikte tüm bölümler başka markaların kullanımına açılıyor. Örneklerini aşağıdan dinleyebilirsiniz.
+                            <a href="#">Detaylı bilgi al</a>
+                        </p>
+                        <audio controls="controls" class="w-100 mt-4">
+                            <source src="~/Content/mp3/Europcar_uzayzaman.mp3" type="audio/mpeg" />
+                        </audio>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 d-flex">
+                    <div class="step">
+                        <span class="step__number">02</span>
+                        <h3 class="step__title">Bonus Bölüm</h3>
+                        <p class="step__text">
+                            Haftalık düzenli yayınlanan bir podcast şovunda markaya özel bölüm yayınlanmasına bonus bölüm diyoruz. Yaratıcıların sürecine müdahale etmeden markanın konuşulmasını istediği konuyu ve vermek istediği mesajı dinleyicilerimizle buluşturuyoruz. Dinamik reklamdan farklı olarak, bonus bölüm süresiz olarak yayında kalıyor fakat dinamik reklamda eriştiğimiz kişi sayısına ulaşamıyor. Örnek bölümlere aşağıdan ulaşabilirsiniz.
+                        </p>
+                        <audio controls="controls" class="w-100 mt-4">
+                            <source src="~/Content/mp3/Europcar_uzayzaman.mp3" type="audio/mpeg" />
+                        </audio>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 d-flex">
+                    <div class="step">
+                        <span class="step__number">03</span>
+                        <h3 class="step__title">Branded Podcast</h3>
+                        <p class="step__text">
+                            Branded Podcast’ler markanın içerik üreticisi olduğu, Podbee Media’nın gelen briefe istinaden yaratıcıyı, formatı, prodüksiyonu, post-prodüksiyonu, yayına alma ve raporlama gibi süreçlerin tümünü yürüttüğü ve anahtar teslim içerik ürettiği projelerdir. Branded podcastler ile markalar mesaj ve ürünlerini ön plana çıkarır, hedef kitlesiyle duygusal bağını kuvvetlendirir.
+                        </p>
+                        <audio controls="controls" class="w-100 mt-4">
+                            <source src="~/Content/mp3/Europcar_uzayzaman.mp3" type="audio/mpeg" />
+                        </audio>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 d-flex">
+                    <div class="step">
+                        <span class="step__number">04</span>
+                        <h3 class="step__title">Seri Sponsorlukları</h3>
+                        <p class="step__text">
+                            <strong>Branded Podcast’ler markanın içerik üreticisi olduğu, Podbee Media’nın gelen briefe istinaden yaratıcıyı, formatı, prodüksiyonu</strong>, post-prodüksiyonu, yayına alma ve raporlama gibi süreçlerin tümünü yürüttüğü ve anahtar teslim içerik ürettiği projelerdir. Branded podcastler ile markalar mesaj ve ürünlerini ön plana çıkarır, hedef kitlesiyle duygusal bağını kuvvetlendirir.
+                        </p>
+                        <audio controls="controls" class="w-100 mt-4">
+                            <source src="~/Content/mp3/Europcar_uzayzaman.mp3" type="audio/mpeg" />
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+
+</div>
+<script type="text/javascript">
+    var type = "Faq";
+</script>

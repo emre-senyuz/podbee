@@ -1,0 +1,49 @@
+﻿@model PodBeeMedia.Models.Member
+@{
+    string title = User.Identity.IsAuthenticated ? Model.Name + " " + Model.Surname : LanguageHelper.GetValue("HeaderMemberTitle");
+}
+<div class="position-relative drop-down">
+    <button class="btn drop-down-toggle border-0 rounded-0" type="button" data-js="drop-down-toggle" data-target="member-menu">
+        @Html.SvgIcon("ui-user", new { role = "img", title = title, width = "20", height = "20" })
+    </button>
+    @if (User.Identity.IsAuthenticated)
+    {
+        <ul class="position-absolute drop-down-menu right p-3 d-none" data-js="drop-down-menu" data-id="member-menu">
+            <li><a class="drop-down-item" href="@LanguageMethods.GetLanguageUrl("UrlTypeMember", LanguageHelper.GetValue("UrlTypeProfile"))">@LanguageHelper.GetValue("PageProfileTitle")</a></li>
+            <li><a class="drop-down-item" href="@LanguageMethods.GetLanguageUrl("UrlTypeMember", LanguageHelper.GetValue("UrlTypeChangePassword"))">@LanguageHelper.GetValue("PageChangePasswordTitle")</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="drop-down-item" href="/logout">@LanguageHelper.GetValue("PageLogoutTitle")</a></li>
+        </ul>
+    }
+    else
+    {
+        <div class="position-absolute drop-down-menu right p-3 d-none" data-js="drop-down-menu" data-id="member-menu">
+            <form action="/member/login" class="row" data-js="header-login-form" method="post">
+                @Html.AntiForgeryToken()
+                <div class="col-12 notifies" data-js="header-login-message"></div>
+                <div class="form-group col-12">
+                    <label for="Email" class="small">@LanguageHelper.GetValue("FormEmail")</label>
+                    @Html.TextBox("Email", null, new { @class = "form-control" })
+                </div>
+                <div class="form-group col-12">
+                    <label for="Password" class="small">@LanguageHelper.GetValue("FormPassword")</label>
+                    @Html.Password("Password", null, new { @class = "form-control" })
+                </div>
+                <div class="col-12">
+                    <div class="form-group form-check">
+                        @Html.CheckBox("Remember", new { @class = "form-check-input" })
+                        <label class="form-check-label" for="Remember">@LanguageHelper.GetValue("FormRemember")</label>
+                    </div>
+                </div>
+                <div class="form-group col-12">
+                    <span class="btn btn-primary" data-js="button-header-login">@LanguageHelper.GetValue("ButtonLogin")</span>
+                </div>
+                <div class="col-12">
+                    <div class="dropdown-divider"></div>
+                    <a href="@LanguageMethods.GetLanguageUrl("UrlTypeMember", LanguageHelper.GetValue("UrlTypeRegister"))">@LanguageHelper.GetValue("LinkRegister")</a>
+                    <a href="@LanguageMethods.GetLanguageUrl("UrlTypeMember", LanguageHelper.GetValue("UrlTypeForgetPassword"))">@LanguageHelper.GetValue("LinkForgetPassword")</a>
+                </div>
+            </form>
+        </div>
+    }
+</div>

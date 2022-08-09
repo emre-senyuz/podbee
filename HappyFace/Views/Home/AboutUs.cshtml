@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = LanguageHelper.GetValue("PageAboutUsTitle");
+    //ViewBag.Description = "Hey corç";
+}
+
+<div class="row row--grid">
+    <!-- breadcrumb -->
+    <div class="col-12">
+        <ul class="breadcrumb">
+            <li class="breadcrumb__item"><a href="@(LanguageHelper.CurrentLanguage == LanguageHelper.DefaultLanguage ? "/" : "/" + LanguageHelper.CurrentLanguage)">@LanguageHelper.GetValue("HomePage")</a></li>
+            <li class="breadcrumb__item breadcrumb__item--active">@LanguageHelper.GetValue("PageAboutUsTitle")</li>
+        </ul>
+    </div>
+    <!-- end breadcrumb -->
+
+    <div class="col-12 pt-5">
+        <img src="@Url.Content("~/Content/img/about-banner.jpg")" alt="About Us" class="w-100" />
+    </div>
+
+    <!-- title -->
+    <div class="col-12 pt-5">
+        <div class="row flex-lg-row-reverse align-items-center">
+            <div class="col-12 col-lg-6 about-banner">
+                <img src="@Url.Content("~/Content/img/about-banner-2.jpg")" alt="Mission" class="w-100" />
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="main__title">
+                    <h1 class="w-100 mb-4">@LanguageHelper.GetValue("PageAboutUsTitle")</h1>
+                    @*<h2 class="w-100">@LanguageHelper.GetValue("AboutTitleOurMission")</h2>*@
+                    @*<p>@LanguageHelper.GetValue("AboutTextOurMission")</p>*@
+                    <p>@LanguageHelper.GetValue("AboutTextAbout")</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-6 about-banner">
+                <img src="@Url.Content("~/Content/img/about-slide-2.jpg")" alt="Vision" class="w-100" />
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="main__title">
+                    <h2 class="w-100">@LanguageHelper.GetValue("AboutTitleHow")</h2>
+                    <p>@LanguageHelper.GetValue("AboutTextHow")</p>
+                    <p>@LanguageHelper.GetValue("AboutTextHow2ndLine")</p>
+                    <p>
+                        <a href="/@LanguageHelper.GetValue("UrlTypeFaq")">@LanguageHelper.GetValue("PageFaqTitle")</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var type = "AboutUs";
+</script>

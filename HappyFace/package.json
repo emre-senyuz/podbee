@@ -1,0 +1,31 @@
+{
+  "name": "PodBeeMedia",
+  "version": "1.0.0",
+  "description": "PodBeeMedia CMS Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "createJson": "node StyleBuilder.js",
+    "buildCss": "node StyleBuilder.js && grunt buildcss",
+    "buildAll": "node StyleBuilder.js && grunt all"
+  },
+  "author": "Major Designer",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.4.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-critical": "^2.0.1",
+    "grunt-run": "^0.8.1",
+    "grunt-svgmin": "^6.0.0",
+    "grunt-svgstore": "^2.0.0"
+  },
+  "dependencies": {
+    "grunt-cli": "^1.4.3",
+    "sass": "^1.49.9",
+    "xml2js": "^0.4.19"
+  }
+}

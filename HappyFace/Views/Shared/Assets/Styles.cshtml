@@ -1,0 +1,17 @@
+﻿@if (SiteVariables.GetState("Production") == "true")
+{
+    <link href="@Url.Content("~/Public/css/style.min.css")" rel="stylesheet" type="text/css" />
+}
+else
+{
+    <link href="@Url.Content("~/Public/css/style.css")" rel="stylesheet" type="text/css" />
+}
+<link href="@Url.Content("~/Content/css/Views/Content/Imports/bootstrap-reboot.min.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/css/Views/Content/Imports/bootstrap-grid.min.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/css/Views/Content/Imports/owl.carousel.min.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/css/Views/Content/Imports/magnific-popup.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/css/Views/Content/Imports/select2.min.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/css/Views/Content/Imports/paymentfont.min.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/css/Views/Content/Imports/slider-radio.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/css/Views/Content/Imports/plyr.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/css/Views/Content/Imports/main.css")" rel="stylesheet" type="text/css" />

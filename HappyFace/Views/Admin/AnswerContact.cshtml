@@ -1,0 +1,109 @@
+﻿@model AdminContactDetailModel
+@{
+    ViewBag.Title = LanguageHelper.GetValue("AdminContacts") + " - " + Model.Contact.Subject;
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="kt-subheader kt-grid__item" id="kt_subheader">
+    <div class="kt-subheader__main">
+        <h3 class="kt-subheader__title">
+            @Model.Contact.Subject
+        </h3>
+        <span class="kt-subheader__separator kt-hidden"></span>
+        <div class="kt-subheader__breadcrumbs">
+            <a href="/dashboard" class="kt-subheader__breadcrumbs-home"><i class="flaticon2-shelter"></i></a>
+            <span class="kt-subheader__breadcrumbs-separator"></span>
+            <a href="/contacts" class="kt-subheader__breadcrumbs-link">
+                @LanguageHelper.GetValue("AdminContacts")
+            </a>
+            <span class="kt-subheader__breadcrumbs-separator"></span>
+            <span class="kt-subheader__breadcrumbs-link">
+                @LanguageHelper.GetValue("AdminEdit")
+            </span>
+        </div>
+    </div>
+    <div class="kt-subheader__toolbar">
+        <div class="d-flex kt-subheader__wrapper">
+            <a href="/contacts" class="btn btn-clean btn-bold btn-sm btn-icon-h kt-margin-l-10">
+                <i class="la la-long-arrow-left"></i> @LanguageHelper.GetValue("AdminBack")
+            </a>
+        </div>
+    </div>
+</div>
+<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
+    <div class="kt-portlet">
+        <div class="kt-portlet__head">
+            <div class="kt-portlet__head-label">
+                <h3 class="kt-portlet__head-title">
+                    @Model.Contact.Subject
+                </h3>
+            </div>
+        </div>
+        <div class="kt-portlet__body">
+            <div class="kt-section mb-0">
+                <div class="kt-section__content">
+                    <table class="table table-striped mb-0">
+                        <tbody>
+                            <tr>
+                                <th scope="row">@LanguageHelper.GetValue("FormName")</th>
+                                <td>@Model.Contact.Name</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">@LanguageHelper.GetValue("FormEmail")</th>
+                                <td>@Model.Contact.Email</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">@LanguageHelper.GetValue("FormSubject")</th>
+                                <td>@Model.Contact.Subject</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">@LanguageHelper.GetValue("FormMessage")</th>
+                                <td>@Model.Contact.Message</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="kt-portlet mb-0">
+        <div class="kt-portlet__head">
+            <div class="kt-portlet__head-label">
+                <h3 class="kt-portlet__head-title">
+                    @LanguageHelper.GetValue("Answer")
+                </h3>
+            </div>
+        </div>
+        @if (Model.Answer != null && Model.Answer.ID > 0)
+        {
+            <div class="kt-portlet__body">
+                <div class="kt-section mb-0">
+                    <div class="kt-section__content">
+                        @Html.Raw(Model.Answer.Content)
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <form action="/answer-contact" method="post" class="kt-form mb-0" data-js="answer-contact" enctype="multipart/form-data">
+                @Html.AntiForgeryToken()
+                @Html.Hidden("Email", Model.Contact.Email)
+                @Html.Hidden("ContactID", Model.Contact.ID)
+                <div class="kt-portlet__body">
+                    <div class="form-group mb-0">
+                        <textarea class="form-control" id="Content" name="Content" data-js="Content"></textarea>
+                    </div>
+                </div>
+                <div class="kt-portlet__foot">
+                    <div class="kt-form__actions">
+                        <button type="button" class="btn btn-success" data-js="answer">@LanguageHelper.GetValue("ButtonSend")</button>
+                        <button type="button" class="btn btn-danger" data-js="delete-record" data-id="@Model.Contact.ID">@LanguageHelper.GetValue("ButtonDelete")</button>
+                    </div>
+                </div>
+            </form>
+        }
+    </div>
+</div>
+@section scripts{
+    <script defer src="@Url.Content("~/Scripts/views/Admin/Contact.js")"></script>
+}

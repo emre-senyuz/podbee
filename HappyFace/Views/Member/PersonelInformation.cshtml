@@ -1,0 +1,94 @@
+﻿@model RegisterModel
+@{
+    ViewBag.Title = LanguageHelper.GetValue("PagePersonelInformationTitle");
+}
+<div class="row row--grid">
+    <!-- breadcrumb -->
+    <div class="col-12">
+        <ul class="breadcrumb">
+            <li class="breadcrumb__item"><a href="@(LanguageHelper.CurrentLanguage == LanguageHelper.DefaultLanguage ? "/" : "/" + LanguageHelper.CurrentLanguage)">@LanguageHelper.GetValue("HomePage")</a></li>
+            <li class="breadcrumb__item breadcrumb__item--active">@LanguageHelper.GetValue("PagePersonelInformationTitle")</li>
+        </ul>
+    </div>
+    <!-- end breadcrumb -->
+    <!-- title -->
+    <div class="col-12">
+        <div class="main__title main__title--page">
+            <h1>@LanguageHelper.GetValue("PageMemberPanelTitle")</h1>
+        </div>
+    </div>
+    <!-- end title -->
+    <!-- sign in -->
+    <div class="col-12">
+        @Html.Partial("_MemberNav", Model.Member)
+        <div class="sign">
+            <div class="justify-content-start sign__content">
+                <!-- authorization form -->
+                <div class="col-12 col-lg-6 px-0">
+                    <form action="/member/personel-information" class="sign__form" data-js="personel-information-form" method="post">
+                        @Html.AntiForgeryToken()
+                        @Html.Hidden("ID", Model.Member.ID)
+                        @Html.Hidden("Status", Model.Member.Status)
+                        @Html.Hidden("Activated", Model.Member.Activated)
+                        @if (!String.IsNullOrEmpty(ViewBag.Message))
+                        {
+                            <p>@ViewBag.Message</p>
+                        }
+                        <div class="w-100" data-js="personel-information-message"></div>
+                        <div class="sign__group">
+                            @Html.TextBox("Name", Model.Member.Name, new { @class = "sign__input", @placeholder = LanguageHelper.GetValue("FormName") })
+                        </div>
+                        <div class="sign__group">
+                            @Html.TextBox("Surname", Model.Member.Surname, new { @class = "sign__input", @placeholder = LanguageHelper.GetValue("FormSurname") })
+                        </div>
+                        <div class="sign__group">
+                            @Html.TextBox("Email", Model.Member.Email, new { @class = "sign__input", @placeholder = LanguageHelper.GetValue("FormEmail") })
+                        </div>
+                        <div class="sign__group">
+                            @Html.TextBox("Phone", Model.Member.Phone, new { @class = "sign__input", @placeholder = LanguageHelper.GetValue("FormPhone") })
+                        </div>
+                        <div class="sign__group">
+                            @Html.TextBox("IdentityNumber", Model.Member.IdentityNumber, new { @class = "sign__input", maxlength = "11", @placeholder = LanguageHelper.GetValue("FormIdentityNumber") })
+                        </div>
+                        <div class="sign__group">
+                            @Html.TextBox("BirthDate", Model.Member.BirthDate, new { @class = "sign__input", autocomplete = "off", data_js = "BirthDate", @placeholder = LanguageHelper.GetValue("FormBirthDate") })
+                        </div>
+                        <div class="sign__group">
+                            <select class="sign__input" id="GenderID" name="GenderID">
+                                <option value="0">Seçiniz</option>
+                                @foreach (var gender in Model.Genders)
+                                {
+                                    <option value="@gender.ID" @(Model.Member.GenderID == gender.ID ? " selected" : "")>@LanguageHelper.GetValue(gender.Title)</option>
+                                }
+                            </select>
+                        </div>
+
+                        <button class="sign__btn" type="button" data-js="button-personel-information">@LanguageHelper.GetValue("ButtonSave")</button>
+                    </form>
+                </div>
+                <!-- end authorization form -->
+            </div>
+        </div>
+    </div>
+    <!-- end sign in -->
+</div>
+@section preloads{
+    @if (SiteVariables.GetState("Production") == "true")
+    {
+        <link rel="preload" href="@Url.Content("~/Public/js/personel.information.min.js")" as="script">
+    }
+    else
+    {
+        <link rel="preload" href="@Url.Content("~/Scripts/views/Member/Personel.Information.js")" as="script">
+    }
+}
+@section scripts{
+    @if (SiteVariables.GetState("Production") == "true")
+    {
+        <script defer src="@Url.Content("~/Public/js/personel.information.min.js")" type="text/javascript"></script>
+    }
+    else
+    {
+        <script defer src="@Url.Content("~/Scripts/views/Member/Personel.Information.js")" type="text/javascript"></script>
+    }
+}

@@ -1,0 +1,67 @@
+﻿@model PostListModel
+@{
+    ViewBag.Title = LanguageHelper.GetValue("PagePodcastTitle");
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string selected = Request.QueryString["category"] != null ? Request.QueryString["category"].ToString() : "";
+}
+
+<div class="row row--grid">
+    <!-- breadcrumb -->
+    <div class="col-12">
+        <ul class="breadcrumb">
+            <li class="breadcrumb__item"><a href="@(LanguageHelper.CurrentLanguage == LanguageHelper.DefaultLanguage ? "/" : "/" + LanguageHelper.CurrentLanguage)">@LanguageHelper.GetValue("HomePage")</a></li>
+            <li class="breadcrumb__item breadcrumb__item--active">@LanguageHelper.GetValue("PagePodcastTitle")</li>
+        </ul>
+    </div>
+    <!-- end breadcrumb -->
+    <!-- title -->
+    <div class="col-12">
+        <div class="main__title main__title--page">
+            <h1>@LanguageHelper.GetValue("PagePodcastTitle")</h1>
+        </div>
+    </div>
+</div>
+
+<div class="row row--grid">
+    <div class="col-12">
+        @if (Model.Categories.Count() > 0)
+        {
+            <div class="main__filter">
+                <div class="slider-radio">
+                    <input type="radio" name="grade" id="all" value="0" checked="checked"><label for="all">@LanguageHelper.GetValue("All")</label>
+                    @foreach (var category in Model.Categories.OrderBy(c => c.Carousel))
+                    {
+                        <input type="radio" name="grade" id="@Html.Raw("category" + category.SharedID)" value="@category.SharedID"><label for="@Html.Raw("category" + category.SharedID)" data-url="@category.Url">@category.Title</label>
+                    }
+                </div>
+            </div>
+        }
+        <div class="row row--grid">
+            @Html.Partial("_PodcastList", Model.Posts)
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var type = "Podcast";
+</script>
+@section scripts{
+    <script defer type="text/javascript">
+        var _selected = '@selected';
+        window.onload = function () {
+            $('#podcast').addClass('sidebar__nav-link--active');
+            $('[name=grade]').on('change', function () {
+                var _val = $(this).val();
+                if (_val == 0) $('[data-js=podcast-item]').removeClass('d-none');
+                else {
+                    //$('[data-js=podcast-item]:not([data-category-id=' + _val + '])').addClass('d-none');
+                    //$('[data-js=podcast-item][data-category-id=' + _val + ']').removeClass('d-none');
+                    var _cats = $('[data-js=podcast-item]').filter((i, cat) => cat.dataset.categoryId.indexOf(_val) != -1);
+                    $('[data-js=podcast-item]').addClass('d-none');
+                    _cats.removeClass('d-none');
+                    $('[data-js=podcast-item]:not(.d-none)').length ? $('[data-js=no-record]').addClass('d-none') : $('[data-js=no-record]').removeClass('d-none');
+                }
+            });
+            !!_selected && $('[data-url=' + _selected + ']').click();
+        }
+    </script>
+}

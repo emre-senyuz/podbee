@@ -1,0 +1,31 @@
+﻿@model List<Category>
+<nav class="col">
+    <ul class="list-inline">
+        @foreach (var category in Model)
+        {
+            <li class="list-inline-item">
+                <a href="/@category.Url" class="text-dark">@category.Title</a>
+                @if (category.Sub.Count > 0 && category.Sub.Any(s => s.MenuActive))
+                {
+                    @GetSubMenu(category.Sub);
+                }
+            </li>
+        }
+    </ul>
+</nav>
+@functions{
+    private MvcHtmlString GetSubMenu(List<Category> categories) {
+        string menu = string.Empty;
+        string item = string.Empty;
+        foreach (var category in categories)
+        {
+            item += "<a href=\"/" + category.Url + "\" class=\"text-dark\">" + category.Title + "</a>";
+            if (category.Sub.Count > 0 && category.Sub.Any(s => s.MenuActive))
+            {
+                item += GetSubMenu(category.Sub);
+            }
+            menu += "<li class=\"list-inline-item\">" + item + "</li>";
+        }
+        return MvcHtmlString.Create("<ul class=\"d-none list-inline\">" + menu + "</ul>");
+    }
+}

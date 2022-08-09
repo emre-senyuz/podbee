@@ -1,0 +1,456 @@
+﻿@model AdminPostDetailModel
+@{
+    ViewBag.Title = LanguageHelper.GetValue("AdminPodcasts") + " - " + Model.Post.Title;
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="kt-subheader kt-grid__item" id="kt_subheader">
+    <div class="kt-subheader__main">
+        <h3 class="kt-subheader__title">
+            @Model.Post.Title
+        </h3>
+        <span class="kt-subheader__separator kt-hidden"></span>
+        <div class="kt-subheader__breadcrumbs">
+            <a href="/dashboard" class="kt-subheader__breadcrumbs-home"><i class="flaticon2-shelter"></i></a>
+            <span class="kt-subheader__breadcrumbs-separator"></span>
+            <a href="/posts" class="kt-subheader__breadcrumbs-link">
+                @LanguageHelper.GetValue("AdminPodcasts")
+            </a>
+            <span class="kt-subheader__breadcrumbs-separator"></span>
+            <span class="kt-subheader__breadcrumbs-link">
+                @LanguageHelper.GetValue("AdminEdit")
+            </span>
+        </div>
+    </div>
+    <div class="kt-subheader__toolbar">
+        <div class="d-flex kt-subheader__wrapper">
+            <a href="/posts" class="btn btn-clean btn-bold btn-sm btn-icon-h kt-margin-l-10">
+                <i class="la la-long-arrow-left"></i> @LanguageHelper.GetValue("AdminBack")
+            </a>
+            <a href="/new-post" class="btn btn-label-success btn-bold btn-sm btn-icon-h kt-margin-l-10">
+                <i class="flaticon2-plus"></i> @LanguageHelper.GetValue("AdminAddNew")
+            </a>
+        </div>
+    </div>
+</div>
+<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
+    <div class="kt-portlet kt-portlet--tabs mb-0">
+        <div class="kt-portlet__head">
+            <div class="kt-portlet__head-label">
+                <h3 class="kt-portlet__head-title">
+                    @Model.Post.Title
+                </h3>
+            </div>
+            <div class="kt-portlet__head-toolbar">
+                <ul class="nav nav-tabs nav-tabs-bold nav-tabs-line nav-tabs-line-right nav-tabs-line-brand" role="tablist" data-js="post-language-tab">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#kt_portlet_@Model.Post.Lang" data-lang="@Model.Post.Lang" role="tab" aria-selected="true">
+                            @Model.Languages.FirstOrDefault(l => l.Prefix == Model.Post.Lang).Title
+                        </a>
+                    </li>
+                    @foreach (var language in Model.Languages.Where(l => l.Prefix != LanguageHelper.DefaultLanguage))
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#kt_portlet_@language.Prefix" data-lang="@language.Prefix" role="tab" aria-selected="false">
+                                @language.Title
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+        <div class="kt-portlet__body p-0">
+            <div class="tab-content">
+                <div class="tab-pane active" id="kt_portlet_@Model.Post.Lang" role="tabpanel">
+                    <form action="/edit-post" method="post" class="kt-form mb-0" data-js="edit-post" data-type="post-form" enctype="multipart/form-data">
+                        @Html.AntiForgeryToken()
+                        @Html.Hidden("ID", Model.Post.ID)
+                        @Html.Hidden("SharedID", Model.Post.SharedID, new { @data_js = "sharedid" })
+                        <div class="kt-portlet__body">
+                            <div class="form-group">
+                                <label for="Title">
+                                    @LanguageHelper.GetValue("FormTitle")
+                                </label>
+                                <input type="text" class="form-control" id="Title" name="Title" data-js="title" value="@Model.Post.Title">
+                            </div>
+                            <div class="form-group">
+                                <label for="Description">
+                                    @LanguageHelper.GetValue("FormDescription")
+                                </label>
+                                <input type="text" class="form-control" id="Description" name="Description" value="@Model.Post.Description">
+                            </div>
+                            <div class="form-group">
+                                <label for="Keywords">
+                                    @LanguageHelper.GetValue("FormKeywords")
+                                </label>
+                                <input type="text" class="form-control" id="Keywords" name="Keywords" value="@Model.Post.Keywords">
+                            </div>
+                            <div class="form-group">
+                                <label for="Carousel">
+                                    @LanguageHelper.GetValue("FormOrder")
+                                </label>
+                                <input type="text" class="form-control" id="Carousel" name="Carousel" value="@Model.Post.Carousel">
+                            </div>
+                            <div class="form-group">
+                                <label for="Url">
+                                    @LanguageHelper.GetValue("FormUrl")
+                                </label>
+                                <input type="text" class="form-control" id="Url" name="Url" data-js="url" value="@Model.Post.Url">
+                            </div>
+                            <div class="form-group">
+                                <label for="Content">
+                                    @LanguageHelper.GetValue("FormContent")
+                                </label>
+                                <textarea class="form-control" id="Content" name="Content" data-js="Content">@Model.Post.Content</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="CategoryID">
+                                    @LanguageHelper.GetValue("FormCategory")
+                                </label>
+                                <select class="custom-select form-control" id="CategoryID" name="CategoryID" data-js="category">
+                                    <option value="0" selected="selected">@LanguageHelper.GetValue("SelectCategory")</option>
+                                    @foreach (var category in Model.Categories.Categories)
+                                    {
+                                        <option value="@category.ID" @(category.ID == Model.Post.CategoryID ? " selected" : "")>@category.Title</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="Alternates">
+                                    @LanguageHelper.GetValue("FormAlternateCategory")
+                                </label>
+                                <select class="custom-select form-control mb-2" id="Alternates" name="Alternates" multiple>
+                                    @foreach (var category in Model.Categories.Categories)
+                                    {
+                                        <option value="@category.ID" @(!string.IsNullOrEmpty(Model.Post.Alternates) && Model.Post.Alternates.Contains(category.ID.ToString()) ? " selected" : "")>@category.Title</option>
+                                    }
+                                </select>
+                                @if (!string.IsNullOrEmpty(Model.Post.Alternates))
+                                {
+                                    <a href="javascript:void(0);" onclick="$(this).prev().val('');" class="btn-link">Temizle</a>
+                                }
+                            </div>
+                            @Html.Hidden("Lang", LanguageHelper.DefaultLanguage)
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="Thumbnail">
+                                            @LanguageHelper.GetValue("FormThumbnail")
+                                        </label>
+                                        <div></div>
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="Thumbnail" name="Thumbnail">
+                                            <label class="custom-file-label" data-button-text="@LanguageHelper.GetValue("Browse")">@LanguageHelper.GetValue("ChooseFile")</label>
+                                        </div>
+                                        @if (!string.IsNullOrEmpty(Model.Post.Thumbnail))
+                                        {
+                                            <div class="pt-3">
+                                                <img src="@Model.Post.Thumbnail" alt="@Model.Post.Title Thumbnail" class="img-fluid" />
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group mb-0">
+                                        <label for="Banner">
+                                            @LanguageHelper.GetValue("FormBanner")
+                                        </label>
+                                        <div></div>
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="Banner" name="Banner">
+                                            <label class="custom-file-label" data-button-text="@LanguageHelper.GetValue("Browse")">@LanguageHelper.GetValue("ChooseFile")</label>
+                                        </div>
+                                        @if (!string.IsNullOrEmpty(Model.Post.Banner))
+                                        {
+                                            <div class="pt-3">
+                                                <img src="@Model.Post.Banner" alt="@Model.Post.Title Banner" class="img-fluid" />
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="IFrame">
+                                    @LanguageHelper.GetValue("FormPodcast")
+                                </label>
+                                <input type="text" class="form-control" id="IFrame" name="IFrame" value="@Model.Post.IFrame">
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-@(!string.IsNullOrEmpty(Model.Post.Trailer) ? "6" : "12")">
+                                    <div class="form-group">
+                                        <label for="Trailer">
+                                            @LanguageHelper.GetValue("FormTrailer")
+                                        </label>
+                                        <div></div>
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="Trailer" name="Trailer">
+                                            <label class="custom-file-label" data-button-text="@LanguageHelper.GetValue("Browse")">@LanguageHelper.GetValue("ChooseFile")</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                @if (!string.IsNullOrEmpty(Model.Post.Trailer))
+                                {
+                                    <div class="col-lg-6 d-flex align-items-center">
+                                        <audio controls class="w-100">
+                                            <source src="@Model.Post.Trailer" type="audio/mpeg">
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                        <button type="button" class="btn btn-sm btn-clean btn-icon btn-icon-md ml-3" data-js="delete-trailer" data-id="@Model.Post.ID" title="@LanguageHelper.GetValue("Delete")">
+                                            <i class="la la-times text-danger"></i>
+                                        </button>
+                                    </div>
+                                }
+                            </div>
+                            <div class="form-group">
+                                <label for="Spotify">
+                                    Spotify
+                                </label>
+                                <input type="text" class="form-control" id="Spotify" name="Spotify" value="@Model.Post.Spotify">
+                            </div>
+                            <div class="form-group">
+                                <label for="ApplePodcasts">
+                                    Apple Podcasts
+                                </label>
+                                <input type="text" class="form-control" id="ApplePodcasts" name="ApplePodcasts" value="@Model.Post.ApplePodcasts">
+                            </div>
+                            <div class="form-group">
+                                <label for="Deezer">
+                                    Deezer
+                                </label>
+                                <input type="text" class="form-control" id="Deezer" name="Deezer" value="@Model.Post.Deezer">
+                            </div>
+                            <div class="form-group">
+                                <label for="GooglePodcasts">
+                                    Google Podcasts
+                                </label>
+                                <input type="text" class="form-control" id="GooglePodcasts" name="GooglePodcasts" value="@Model.Post.GooglePodcasts">
+                            </div>
+                            <div class="form-group row mb-0">
+                                <label class="col-3 col-form-label" for="Status">
+                                    @LanguageHelper.GetValue("FormStatus")
+                                </label>
+                                <div class="col-3">
+                                    <span class="kt-switch">
+                                        <label>
+                                            @Html.CheckBox("Status", Model.Post.Status, new { @data_js = "status" })
+                                            <span></span>
+                                        </label>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        @if (Model.Posts.Count != Model.Languages.Count - 1)
+                        {
+                            <div class="kt-portlet__foot">
+                                <div class="kt-form__actions">
+                                    <button type="button" class="btn btn-success" data-js="update-single-post">@LanguageHelper.GetValue("ButtonSave")</button>
+                                    <button type="button" class="btn btn-danger" data-js="delete-record" data-id="@Model.Post.ID">@LanguageHelper.GetValue("ButtonDelete")</button>
+                                </div>
+                            </div>
+                        }
+                    </form>
+                </div>
+                @foreach (var language in Model.Languages.Where(l => l.Prefix != LanguageHelper.DefaultLanguage))
+                {
+                    PostModel post = Model.Posts.Any(p => p.Lang == language.Prefix) ? Model.Posts.FirstOrDefault(p => p.Lang == language.Prefix) : new PostModel();
+                    <div class="tab-pane" id="kt_portlet_@language.Prefix" role="tabpanel">
+                        <form action="/@(post.ID > 0 ? "edit" : "new")-post" method="post" class="kt-form mb-0" data-js="@(post.ID > 0 ? "edit" : "new")-post" data-type="post-form" enctype="multipart/form-data">
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" name="ID" value="@post.ID" />
+                            <input type="hidden" name="SharedID" value="@Model.Post.SharedID" />
+                            <div class="kt-portlet__body">
+                                <div class="form-group">
+                                    <label for="Title">
+                                        @LanguageHelper.GetValue("FormTitle")
+                                    </label>
+                                    <input type="text" class="form-control" id="Title" name="Title" data-js="title" value="@post.Title">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Description">
+                                        @LanguageHelper.GetValue("FormDescription")
+                                    </label>
+                                    <input type="text" class="form-control" id="Description" name="Description" value="@post.Description">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Keywords">
+                                        @LanguageHelper.GetValue("FormKeywords")
+                                    </label>
+                                    <input type="text" class="form-control" id="Keywords" name="Keywords" value="@post.Keywords">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Carousel">
+                                        @LanguageHelper.GetValue("FormOrder")
+                                    </label>
+                                    <input type="text" class="form-control" id="Carousel" name="Carousel" value="@post.Carousel">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Url">
+                                        @LanguageHelper.GetValue("FormUrl")
+                                    </label>
+                                    <input type="text" class="form-control" id="Url" name="Url" data-js="url" value="@post.Url">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Content">
+                                        @LanguageHelper.GetValue("FormContent")
+                                    </label>
+                                    <textarea class="form-control" id="Content" name="Content" data-js="Content">@post.Content</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="CategoryID">
+                                        @LanguageHelper.GetValue("FormCategory")
+                                    </label>
+                                    <div></div>
+                                    <select class="custom-select form-control" id="CategoryID" name="CategoryID" data-js="categorytrigger" disabled="disabled">
+                                        <option value="0" selected="selected">@LanguageHelper.GetValue("SelectCategory")</option>
+                                        @foreach (var category in Model.Categories.Categories)
+                                        {
+                                            <option value="@category.SharedID" @(category.SharedID == Model.Post.CategoryID ? " selected" : "")>@category.Title</option>
+                                        }
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Alternates">
+                                        @LanguageHelper.GetValue("FormAlternateCategory")
+                                    </label>
+                                    <select class="custom-select form-control mb-2" id="Alternates" name="Alternates" multiple>
+                                        @foreach (var category in Model.Categories.Categories)
+                                        {
+                                            <option value="@category.ID" @(!string.IsNullOrEmpty(post.Alternates) && post.Alternates.Contains(category.ID.ToString()) ? " selected" : "")>@category.Title</option>
+                                        }
+                                    </select>
+                                    @if (!string.IsNullOrEmpty(Model.Post.Alternates))
+                                    {
+                                        <a href="javascript:void(0);" onclick="$(this).prev().val('');" class="btn-link">Temizle</a>
+                                    }
+                                </div>
+                                @Html.Hidden("Lang", language.Prefix)
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="Thumbnail">
+                                                @LanguageHelper.GetValue("FormThumbnail")
+                                            </label>
+                                            <div></div>
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="Thumbnail" name="Thumbnail">
+                                                <label class="custom-file-label" data-button-text="@LanguageHelper.GetValue("Browse")">@LanguageHelper.GetValue("ChooseFile")</label>
+                                            </div>
+                                            @if (!string.IsNullOrEmpty(post.Thumbnail))
+                                            {
+                                                <div class="pt-3">
+                                                    <img src="@post.Thumbnail" alt="@post.Title Thumbnail" class="img-fluid" />
+                                                </div>
+                                            }
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-0">
+                                            <label for="Banner">
+                                                @LanguageHelper.GetValue("FormBanner")
+                                            </label>
+                                            <div></div>
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="Banner" name="Banner">
+                                                <label class="custom-file-label" data-button-text="@LanguageHelper.GetValue("Browse")">@LanguageHelper.GetValue("ChooseFile")</label>
+                                            </div>
+                                            @if (!string.IsNullOrEmpty(post.Banner))
+                                            {
+                                                <div class="pt-3">
+                                                    <img src="@post.Banner" alt="@post.Title Banner" class="img-fluid" />
+                                                </div>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="IFrame">
+                                        @LanguageHelper.GetValue("FormPodcast")
+                                    </label>
+                                    <input type="text" class="form-control" id="IFrame" name="IFrame" value="@Model.Post.IFrame">
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-@(!string.IsNullOrEmpty(post.Trailer) ? "6" : "12")">
+                                        <div class="form-group">
+                                            <label for="Trailer">
+                                                @LanguageHelper.GetValue("FormTrailer")
+                                            </label>
+                                            <div></div>
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="Trailer" name="Trailer">
+                                                <label class="custom-file-label" data-button-text="@LanguageHelper.GetValue("Browse")">@LanguageHelper.GetValue("ChooseFile")</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @if (!string.IsNullOrEmpty(post.Trailer))
+                                    {
+                                        <div class="col-lg-6 d-flex align-items-center">
+                                            <audio controls class="w-100">
+                                                <source src="@post.Trailer" type="audio/mpeg">
+                                                Your browser does not support the audio element.
+                                            </audio>
+                                        </div>
+                                    }
+                                </div>
+                                <div class="form-group">
+                                    <label for="Spotify">
+                                        Spotify
+                                    </label>
+                                    <input type="text" class="form-control" id="Spotify" name="Spotify" value="@post.Spotify">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ApplePodcasts">
+                                        Apple Podcasts
+                                    </label>
+                                    <input type="text" class="form-control" id="ApplePodcasts" name="ApplePodcasts" value="@post.ApplePodcasts">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Deezer">
+                                        Deezer
+                                    </label>
+                                    <input type="text" class="form-control" id="Deezer" name="Deezer" value="@post.Deezer">
+                                </div>
+                                <div class="form-group">
+                                    <label for="GooglePodcasts">
+                                        Google Podcasts
+                                    </label>
+                                    <input type="text" class="form-control" id="GooglePodcasts" name="GooglePodcasts" value="@post.GooglePodcasts">
+                                </div>
+                                <input type="hidden" name="Status" value="@(Model.Post.Status ? "true" : "false")" data-js="statustrigger" />
+                            </div>
+                            @if (Model.Posts.Count != Model.Languages.Count - 1)
+                            {
+                                if (post.ID == 0)
+                                {
+                                    <div class="kt-portlet__foot">
+                                        <div class="kt-form__actions">
+                                            <button type="button" class="btn btn-success" data-js="add-single-post">@LanguageHelper.GetValue("ButtonSave")</button>
+                                        </div>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="kt-portlet__foot">
+                                        <div class="kt-form__actions">
+                                            <button type="button" class="btn btn-success" data-js="update-single-post">@LanguageHelper.GetValue("ButtonSave")</button>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                        </form>
+                    </div>
+                }
+            </div>
+        </div>
+        @if (Model.Posts.Count > 0 && !Model.Posts.Any(c => c.ID == 0))
+        {
+            <div class="kt-portlet__foot">
+                <div class="kt-form__actions">
+                    <button type="button" class="btn btn-success" data-js="update-all-posts">@LanguageHelper.GetValue("ButtonSave")</button>
+                    <button type="button" class="btn btn-danger" data-js="delete-record" data-sharedid="@Model.Post.SharedID">@LanguageHelper.GetValue("ButtonDelete")</button>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+@section scripts{
+    <script defer src="@Url.Content("~/Scripts/views/Admin/Post.js")"></script>
+}
